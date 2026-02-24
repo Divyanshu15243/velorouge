@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -15,7 +15,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10%;
 
-    --primary: 348 80% 42%;
+    --primary: 4 82% 50%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 0 0% 96%;
@@ -24,7 +24,7 @@
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 348 80% 42%;
+    --accent: 4 82% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -32,7 +32,7 @@
 
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 348 80% 42%;
+    --ring: 4 82% 50%;
 
     --radius: 0.25rem;
 
@@ -50,7 +50,7 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
 
     --font-display: 'Playfair Display', Georgia, serif;
-    --font-body: 'DM Sans', system-ui, sans-serif;
+    --font-body: 'Cormorant Garamond', Georgia, serif;
   }
 
   .dark {
@@ -60,7 +60,7 @@
     --card-foreground: 0 0% 95%;
     --popover: 0 0% 12%;
     --popover-foreground: 0 0% 95%;
-    --primary: 348 80% 50%;
+    --primary: 4 82% 50%;
     --primary-foreground: 0 0% 100%;
     --secondary: 0 0% 18%;
     --secondary-foreground: 0 0% 95%;
@@ -72,15 +72,15 @@
     --destructive-foreground: 0 0% 95%;
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 348 80% 50%;
+    --ring: 4 82% 50%;
     --sidebar-background: 0 0% 10%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 348 80% 50%;
+    --sidebar-primary: 4 82% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 0 0% 15%;
     --sidebar-accent-foreground: 0 0% 95%;
     --sidebar-border: 0 0% 20%;
-    --sidebar-ring: 348 80% 50%;
+    --sidebar-ring: 4 82% 50%;
   }
 }
 

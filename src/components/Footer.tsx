@@ -1,10 +1,12 @@
+import logo from "@/assets/logo3.png";
+
 const Footer = () => (
   <footer className="bg-dark border-t border-dark-surface text-dark-foreground/60 py-12">
     <div className="container">
       <div className="flex flex-col md:flex-row justify-between items-start gap-8">
         <div>
-          <a href="#" className="font-display text-xl font-bold text-dark-foreground">
-            Velo<span className="text-primary">Rouge</span>
+          <a href="#" className="flex items-center">
+            <img src={logo} alt="VeloRouge" className="h-10" />
           </a>
           <p className="mt-2 text-sm max-w-xs">Premium bike experiences in Strasbourg, France.</p>
         </div>

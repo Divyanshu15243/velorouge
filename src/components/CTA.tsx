@@ -1,6 +1,10 @@
+import ctaBg from "@/assets/bg.jpg";
+
 const CTA = () => (
-  <section className="py-32 bg-dark text-dark-foreground text-center">
-    <div className="container max-w-2xl">
+  <section className="relative py-32 text-dark-foreground text-center overflow-hidden">
+    <img src={ctaBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+    <div className="absolute inset-0 bg-dark/80" />
+    <div className="container max-w-2xl relative z-10">
       <h2 className="font-display text-4xl md:text-6xl font-black leading-tight">
         Strasbourg is
         <br />

@@ -1,22 +1,55 @@
 import { Check } from "lucide-react";
 
 const plans = [
-  { name: "Single", price: "€12", period: "/ride", features: ["One-time ride", "Any route", "Basic support"] },
-  { name: "Explorer", price: "€39", period: "/mo", features: ["4 rides/month", "Priority booking", "Route recommendations"], popular: true },
-  { name: "Weekly", price: "€19", period: "/wk", features: ["Unlimited weekday rides", "Flexible schedule", "Email support"] },
-  { name: "Go Monthly", price: "€69", period: "/mo", features: ["Unlimited rides", "All routes", "24/7 support", "Guest passes"] },
+  { 
+    name: "Tourist", 
+    price: "€29", 
+    period: "/ride", 
+    features: [
+      "Guided city experience",
+      "Scenic routes across Strasbourg",
+      "Photo stops & local insights",
+      "Beginner-friendly training"
+    ],
+    cta: "Book your ride"
+  },
+  { 
+    name: "Delivery Crew", 
+    price: "€24", 
+    period: "/week", 
+    features: [
+      "Fast daily mobility",
+      "Flexible weekly plans",
+      "Reliable and cost-efficient",
+      "Priority support"
+    ],
+    popular: true,
+    cta: "Start riding"
+  },
+  { 
+    name: "Local & Students", 
+    price: "€59", 
+    period: "/month", 
+    features: [
+      "Unlimited weekday rides",
+      "Campus & city access",
+      "Smart subscription pricing",
+      "Perfect for daily commute"
+    ],
+    cta: "Get started"
+  },
 ];
 
 const Pricing = () => (
   <section id="pricing" className="py-24 bg-dark text-dark-foreground">
     <div className="container">
       <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">
-        Your city.
+        One city.
         <br />
-        Your <em className="text-primary">pace.</em>
+        Three ways to  <em className="text-primary">move.</em>
       </h2>
 
-      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {plans.map((p) => (
           <div
             key={p.name}
@@ -43,7 +76,7 @@ const Pricing = () => (
                   : "border border-dark-foreground/20 text-dark-foreground hover:border-dark-foreground/40"
               }`}
             >
-              Get started
+              {p.cta || "Get started"}
             </a>
           </div>
         ))}

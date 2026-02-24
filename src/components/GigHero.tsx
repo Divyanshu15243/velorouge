@@ -1,4 +1,4 @@
-import gigimage from "@/assets/gig.png"; 
+import gigimage from "@/assets/hi.png"; 
 const GigHero = () => {
   return (
     <section className="grid md:grid-cols-2 min-h-[900px]">

@@ -14,10 +14,10 @@ const Gallery = () => (
 
       <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="aspect-[4/3] overflow-hidden">
-          <img src={gallery1} alt="Cafe terrace at night" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+          <img src={gallery2} alt="Petite France district" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
         </div>
         <div className="aspect-[4/3] overflow-hidden">
-          <img src={gallery2} alt="Petite France district" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+          <img src={gallery1} alt="Cafe terrace at night" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
         </div>
         <div className="aspect-[4/3] overflow-hidden">
           <img src={gallery3} alt="Indoor plant" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />

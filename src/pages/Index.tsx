@@ -24,8 +24,6 @@ const Index = () => (
     <Pricing />
     <Gallery />
     <ReliableSection />
-    <DeliverSection />
-    <Difference />
     <GigHero />
     <Features />
     <CTA />
