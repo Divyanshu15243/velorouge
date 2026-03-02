@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
 import rideSundowner from "@/assets/ride-sundowner.jpg";
-import rideMarket from "@/assets/market.png";
+import rideMarket from "@/assets/Bar Hop Petite France.png";
 import rideRiver from "@/assets/ride-river.jpg";
 import rideLocal from "@/assets/ride-local.jpg";
 
@@ -21,7 +22,7 @@ const Rides = () => (
 
       <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {rides.map((r) => (
-          <div key={r.title} className="group cursor-pointer">
+          <Link key={r.title} to="/visitors" className="group cursor-pointer">
             <div className="relative overflow-hidden aspect-[3/4]">
               <img
                 src={r.img}
@@ -37,7 +38,7 @@ const Rides = () => (
             </div>
             <h3 className="mt-4 font-display text-lg font-bold">{r.title}</h3>
             <p className="text-muted-foreground text-sm">From {r.price}</p>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
