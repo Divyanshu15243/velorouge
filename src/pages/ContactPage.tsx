@@ -30,7 +30,7 @@ const ContactPage = () => {
             Let's <em className="text-primary">talk.</em>
           </h1>
           <p className="mt-6 text-dark-foreground/60 max-w-lg text-lg">
-            Questions, partnerships, or just want to say hi? We'd love to hear from you.
+            Questions, partnerships, Day Tours, Group Booking, or just want to say hi? We'd love to hear from you.
           </p>
         </div>
       </section>
@@ -90,8 +90,8 @@ const ContactPage = () => {
                     >
                       <option value="" disabled>Select a topic</option>
                       <option>General inquiry</option>
-                      <option>Rides & bookings</option>
-                      <option>Subscriptions</option>
+                      <option>Day tours</option>
+                      <option>Group booking</option>
                       <option>Partnership</option>
                       <option>Press & media</option>
                     </select>

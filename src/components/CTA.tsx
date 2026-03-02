@@ -1,4 +1,4 @@
-import ctaBg from "@/assets/bg.jpg";
+import ctaBg from "@/assets/homebg.jpg";
 
 const CTA = () => (
   <section className="relative py-32 text-dark-foreground text-center overflow-hidden">

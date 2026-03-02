@@ -55,7 +55,7 @@ const SafeSmartPage = () => (
                   </div>
                   <div>
                     <h3 className="font-display text-lg font-bold">{f.title}</h3>
-                    <p className="text-sm text-muted-foreground mt-1">{f.desc}</p>
+                    <p className="text-base text-muted-foreground mt-1">{f.desc}</p>
                   </div>
                 </div>
               ))}
@@ -89,7 +89,7 @@ const SafeSmartPage = () => (
                   </div>
                   <div>
                     <h3 className="font-display text-lg font-bold">{f.title}</h3>
-                    <p className="text-sm text-dark-foreground/60 mt-1">{f.desc}</p>
+                    <p className="text-base text-dark-foreground/60 mt-1">{f.desc}</p>
                   </div>
                 </div>
               ))}

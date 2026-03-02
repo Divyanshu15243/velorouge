@@ -129,28 +129,28 @@ const FMDPage = () => {
               <span className="text-2xl font-bold text-primary">1</span>
             </div>
             <h3 className="font-display text-xl font-bold mb-3">Rent Your E-Bike</h3>
-            <p className="text-muted-foreground text-sm">Rent your electric bike for daily commuting.</p>
+            <p className="text-base text-muted-foreground">Rent your electric bike for daily commuting.</p>
           </div>
           <div className="text-center">
             <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl font-bold text-primary">2</span>
             </div>
             <h3 className="font-display text-xl font-bold mb-3">Get Your Invoice</h3>
-            <p className="text-muted-foreground text-sm">We provide a compliant invoice including: "Electric bike rental for home-to-work commuting – Eligible for FMD"</p>
+            <p className="text-base text-muted-foreground">We provide a compliant invoice including: "Electric bike rental for home-to-work commuting – Eligible for FMD"</p>
           </div>
           <div className="text-center">
             <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl font-bold text-primary">3</span>
             </div>
             <h3 className="font-display text-xl font-bold mb-3">Submit to HR</h3>
-            <p className="text-muted-foreground text-sm">Submit the invoice to your HR department.</p>
+            <p className="text-base text-muted-foreground">Submit the invoice to your HR department.</p>
           </div>
           <div className="text-center">
             <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl font-bold text-primary">4</span>
             </div>
             <h3 className="font-display text-xl font-bold mb-3">Get Reimbursed</h3>
-            <p className="text-muted-foreground text-sm">Your employer reimburses you (up to €900/year).</p>
+            <p className="text-base text-muted-foreground">Your employer reimburses you (up to €900/year).</p>
           </div>
         </div>
         <div className="text-center mt-12">
@@ -217,32 +217,32 @@ const FMDPage = () => {
           <div className="bg-background p-6 rounded-lg">
             <Building2 className="w-12 h-12 text-primary mb-4" />
             <h3 className="font-display text-xl font-bold mb-3">Corporate Fleet Packages</h3>
-            <p className="text-muted-foreground text-sm">Tailored solutions for your team size</p>
+            <p className="text-base text-muted-foreground">Tailored solutions for your team size</p>
           </div>
           <div className="bg-background p-6 rounded-lg">
             <FileText className="w-12 h-12 text-primary mb-4" />
             <h3 className="font-display text-xl font-bold mb-3">Centralized Invoicing</h3>
-            <p className="text-muted-foreground text-sm">Monthly consolidated billing</p>
+            <p className="text-base text-muted-foreground">Monthly consolidated billing</p>
           </div>
           <div className="bg-background p-6 rounded-lg">
             <Users className="w-12 h-12 text-primary mb-4" />
             <h3 className="font-display text-xl font-bold mb-3">FMD Implementation</h3>
-            <p className="text-muted-foreground text-sm">Complete guidance and support</p>
+            <p className="text-base text-muted-foreground">Complete guidance and support</p>
           </div>
           <div className="bg-background p-6 rounded-lg">
             <Headphones className="w-12 h-12 text-primary mb-4" />
             <h3 className="font-display text-xl font-bold mb-3">Dedicated Support</h3>
-            <p className="text-muted-foreground text-sm">Priority assistance for your company</p>
+            <p className="text-base text-muted-foreground">Priority assistance for your company</p>
           </div>
           <div className="bg-background p-6 rounded-lg">
             <Users className="w-12 h-12 text-primary mb-4" />
             <h3 className="font-display text-xl font-bold mb-3">Employee Onboarding</h3>
-            <p className="text-muted-foreground text-sm">Seamless setup for your team</p>
+            <p className="text-base text-muted-foreground">Seamless setup for your team</p>
           </div>
           <div className="bg-background p-6 rounded-lg">
             <TrendingUp className="w-12 h-12 text-primary mb-4" />
             <h3 className="font-display text-xl font-bold mb-3">Tax Benefits</h3>
-            <p className="text-muted-foreground text-sm">Maximize your company's tax advantages</p>
+            <p className="text-base text-muted-foreground">Maximize your company's tax advantages</p>
           </div>
         </div>
         <div className="text-center">
@@ -276,7 +276,7 @@ const FMDPage = () => {
               </button>
               {openFaq === index && (
                 <div className="px-6 pb-6">
-                  <p className="text-muted-foreground">{faq.a}</p>
+                  <p className="text-base text-muted-foreground">{faq.a}</p>
                 </div>
               )}
             </div>

@@ -144,7 +144,7 @@ const AboutPage = () => {
             <div key={v.title}>
               <v.icon className="w-8 h-8 text-primary mb-4" />
               <h3 className="font-display text-xl font-bold mb-2">{v.title}</h3>
-              <p className="text-sm text-dark-foreground/60">{v.desc}</p>
+              <p className="text-base text-dark-foreground/60">{v.desc}</p>
             </div>
           ))}
         </div>
@@ -203,7 +203,7 @@ const AboutPage = () => {
               </button>
               {openFaq === i && (
                 <div className="px-6 pb-6">
-                  <p className="text-muted-foreground text-sm leading-relaxed">{faq.a}</p>
+                  <p className="text-base text-muted-foreground leading-relaxed">{faq.a}</p>
                 </div>
               )}
             </div>
