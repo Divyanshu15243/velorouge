@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import rideSundowner from "@/assets/ride-sundowner.jpg";
-import rideMarket from "@/assets/ride-market.jpg";
+import rideMarket from "@/assets/Bar Hop Petite France.png";
 import rideRiver from "@/assets/ride-river.jpg";
 import rideLocal from "@/assets/ride-local.jpg";
 import { Clock, MapPin, Users, Star } from "lucide-react";
@@ -17,7 +17,7 @@ const rides = [
     time: "18:00 – 20:30",
     groupSize: "per person",
     rating: "4.9",
-    description: "'We know exactly where to be in Strasbourg at 7:30pm. It isn't the cathedral square.' This is the hero product. It sells the feeling of a city alive with golden light, water reflections, and the particular buzz of early evening in France. The goal is not to show them Strasbourg — it is to make them feel they have discovered it.",
+    description: "We know exactly where to be in Strasbourg at 7:30pm. It isn't the cathedral square. This is the hero product. It sells the feeling of a city alive with golden light, water reflections, and the particular buzz of early evening in France. The goal is not to show them Strasbourg — it is to make them feel they have discovered it.",
   },
   {
     img: rideMarket,
@@ -29,19 +29,19 @@ const rides = [
     time: "20:00 – 23:00",
     groupSize: "per person",
     rating: "4.8",
-    description: "'This is not a pub crawl. It is a curated tasting route through four centuries of Alsatian drinking culture.' Strasbourg has one of the most compelling bar cultures in France — a unique blend of French wine tradition and German beer culture, with winstubs that have barely changed since the 1600s. This tour makes it legible and social without being touristy.",
+    description: "This is not a pub crawl. It is a curated tasting route through four centuries of Alsatian drinking culture. Strasbourg has one of the most compelling bar cultures in France — a unique blend of French wine tradition and German beer culture, with winstubs that have barely changed since the 1600s. This tour makes it legible and social without being touristy.",
   },
   {
     img: rideRiver,
     title: "Hidden Strasbourg",
     subtitle: "The courtyards, passages, and corners the guidebooks forgot.",
     price: "€24",
-    tag: "SEGWAY + WALKING",
+    tag: "E-BIKE",
     duration: "2 hrs",
     time: "09:00 – 11:00 or 15:00 – 17:00",
     groupSize: "per person",
     rating: "4.9",
-    description: "'We spent six months finding the 11 things in Strasbourg that no tour ever shows. This is all 11 of them.' This is the product for the curious traveller who has 'done' the cathedral and Petite France and wants to go deeper. Segway to connect the dots, walk to enter the spaces. A mix of architectural surprise, urban legend, and sensory detail.",
+    description: "We spent six months finding the 11 things in Strasbourg that no tour ever shows. This is all 11 of them. This is the product for the curious traveller who has 'done' the cathedral and Petite France and wants to go deeper. Segway to connect the dots, walk to enter the spaces. A mix of architectural surprise, urban legend, and sensory detail.",
   },
   {
     img: rideLocal,
@@ -53,7 +53,7 @@ const rides = [
     time: "10:00 – 13:30",
     groupSize: "per person",
     rating: "4.7",
-    description: "'No other city in Europe lets you casually cycle between two countries before lunch. We do it every Saturday.' Strasbourg's unique position on the French-German border is its single most powerful asset for tourism — and almost no operator exploits it properly. This route crosses the Rhine on the Passerelle Mimram (a magnificent pedestrian bridge), passes through the Jardin des Deux Rives, and lands in the German city of Kehl for a coffee and a cultural contrast.",
+    description: "No other city in Europe lets you casually cycle between two countries before lunch. We do it every Saturday. Strasbourg's unique position on the French-German border is its single most powerful asset for tourism — and almost no operator exploits it properly. This route crosses the Rhine on the Passerelle Mimram (a magnificent pedestrian bridge), passes through the Jardin des Deux Rives, and lands in the German city of Kehl for a coffee and a cultural contrast.",
   },
 ];
 

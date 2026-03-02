@@ -4,10 +4,10 @@ import rideRiver from "@/assets/ride-river.jpg";
 import rideLocal from "@/assets/ride-local.jpg";
 
 const rides = [
-  { img: rideSundowner, title: "Strasbourg Sundowner", price: "€59", tag: "Bestseller" },
-  { img: rideMarket, title: "Bites & Market Run", price: "€39", tag: null },
-  { img: rideRiver, title: "Rhine River Route", price: "€59", tag: "Popular" },
-  { img: rideLocal, title: "Strasbourg Local Ride", price: "€49", tag: null },
+  { img: rideSundowner, title: "Strasbourg Sundowner", price: "€29", tag: "Bestseller" },
+  { img: rideMarket, title: "Bar Hop Petite France", price: "€35", tag: null },
+  { img: rideRiver, title: "Hidden Strasbourg", price: "€24", tag: "Popular" },
+  { img: rideLocal, title: "Rhine Border Run", price: "€39", tag: null },
 ];
 
 const Rides = () => (

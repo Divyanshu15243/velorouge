@@ -29,7 +29,7 @@ const Difference = () => (
           {features.map((f) => (
             <div key={f.title} className="border-l-2 border-primary pl-4">
               <h3 className="text-white text-sm font-medium mb-2">{f.title}</h3>
-              <p className="text-[#7a726e] text-xs leading-relaxed">{f.desc}</p>
+              <p className="text-[#7a726e] text-sm leading-relaxed">{f.desc}</p>
             </div>
           ))}
         </div>

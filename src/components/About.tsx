@@ -13,7 +13,7 @@ const About = () => (
         Not your typical <em className="text-primary">e-bike rental.</em>
       </h2>
       <p className="mt-6 text-muted-foreground max-w-xl text-lg">
-        VeloRouge is a premium e-bike subscription & ride experience platform based in Strasbourg. 
+        VéloRouge is a premium e-bike subscription & ride experience platform based in Strasbourg. 
         We believe every ride should tell a story.
       </p>
 
@@ -25,7 +25,7 @@ const About = () => (
             </div>
             <div>
               <div className="text-2xl font-bold font-display">{s.value}</div>
-              <div className="text-sm text-muted-foreground">{s.label}</div>
+              <div className="text-base text-muted-foreground">{s.label}</div>
             </div>
           </div>
         ))}

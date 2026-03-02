@@ -5,14 +5,14 @@ import smartGps from "@/assets/gps.png";
 import { Shield, MapPin, Bell, Smartphone, Lock, Eye, Zap, Wifi } from "lucide-react";
 
 const safetyFeatures = [
-  { icon: Shield, title: "Theft protection", desc: "Every VeloRouge e-bike is covered against theft. GPS-tracked 24/7 with instant alerts if moved without authorization." },
+  { icon: Shield, title: "Theft protection", desc: "Every VéloRouge e-bike is covered against theft. GPS-tracked 24/7 with instant alerts if moved without authorization." },
   { icon: Lock, title: "Smart lock", desc: "Lock and unlock your e-bike from your phone. No keys, no codes — just tap and go." },
   { icon: Bell, title: "Accident detection", desc: "Built-in sensors detect falls and impacts. Emergency contacts are notified automatically if you don't respond." },
   { icon: Eye, title: "Night visibility", desc: "Integrated LED lights with auto-brightness. Be seen from 200m+ in any condition." },
 ];
 
 const smartFeatures = [
-  { icon: MapPin, title: "Live GPS tracking", desc: "Know where your e-bike is at all times. Real-time location visible in the VeloRouge app." },
+  { icon: MapPin, title: "Live GPS tracking", desc: "Know where your e-bike is at all times. Real-time location visible in the VéloRouge app." },
   { icon: Smartphone, title: "App control", desc: "Manage your e-bike, track rides, check maintenance status, and book routes — all from one app." },
   { icon: Zap, title: "Battery monitoring", desc: "For e-bike subscribers, monitor battery level and find the nearest charging point." },
   { icon: Wifi, title: "OTA updates", desc: "Your e-bike gets smarter over time. Firmware updates are pushed wirelessly, improving performance automatically." },
@@ -32,7 +32,7 @@ const SafeSmartPage = () => (
           Ride <em className="text-primary">smart.</em>
         </h1>
         <p className="mt-6 text-dark-foreground/60 max-w-lg text-lg">
-          Every VeloRouge e-bike is equipped with cutting-edge safety and smart technology.
+          Every VéloRouge e-bike is equipped with cutting-edge safety and smart technology.
         </p>
       </div>
     </section>

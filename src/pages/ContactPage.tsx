@@ -30,7 +30,7 @@ const ContactPage = () => {
             Let's <em className="text-primary">talk.</em>
           </h1>
           <p className="mt-6 text-dark-foreground/60 max-w-lg text-lg">
-            Questions, partnerships, Day Tours, Group Booking, or just want to say hi? We'd love to hear from you.
+            Questions, Day Tours, Group Booking, or just want to say hi? We'd love to hear from you.
           </p>
         </div>
       </section>
@@ -92,7 +92,7 @@ const ContactPage = () => {
                       <option>General inquiry</option>
                       <option>Day tours</option>
                       <option>Group booking</option>
-                      <option>Partnership</option>
+                      <option>corporate</option>
                       <option>Press & media</option>
                     </select>
                   </div>
@@ -128,7 +128,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <div className="font-semibold text-sm">{c.label}</div>
-                      <div className="text-muted-foreground text-sm">{c.value}</div>
+                      <div className="text-base text-muted-foreground">{c.value}</div>
                     </div>
                   </div>
                 ))}

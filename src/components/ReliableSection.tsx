@@ -13,10 +13,10 @@ const ReliableSection = () => (
             <em className="text-primary">Yours.</em>
           </h2>
           <p className="mt-6 text-dark-foreground/70 max-w-md">
-            A VeloRouge subscription means an e-bike that's always ready, always maintained,
+            A VéloRouge subscription means an e-bike that's always ready, always maintained,
             and always yours. No queues, no docking stations — just freedom on two wheels.
           </p>
-          <ul className="mt-6 space-y-3 text-sm text-dark-foreground/70">
+          <ul className="mt-6 space-y-3 text-base text-dark-foreground/70">
             <li className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
               Personal e-bike assigned to you

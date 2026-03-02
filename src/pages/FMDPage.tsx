@@ -121,7 +121,7 @@ const FMDPage = () => {
     <section className="py-24 bg-background">
       <div className="container">
         <h2 className="font-display text-4xl md:text-5xl font-black leading-tight mb-16 text-center">
-          How to Benefit from FMD with <em className="text-primary">VeloRouge</em>
+          How to Benefit from FMD with <em className="text-primary">VéloRouge</em>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="text-center">
@@ -167,7 +167,7 @@ const FMDPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="font-display text-4xl md:text-5xl font-black leading-tight mb-8">
-              Are VeloRouge rentals <em className="text-primary">eligible?</em>
+              Are VéloRouge rentals <em className="text-primary">eligible?</em>
             </h2>
             <div className="bg-green-100 border-2 border-green-500 rounded-lg p-8 mb-8">
               <div className="flex items-center gap-3 mb-4">

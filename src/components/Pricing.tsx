@@ -62,7 +62,7 @@ const Pricing = () => (
             </div>
             <ul className="mt-6 space-y-3 flex-1">
               {p.features.map((f) => (
-                <li key={f} className="flex items-center gap-2 text-sm text-dark-foreground/70">
+                <li key={f} className="flex items-center gap-2 text-base text-dark-foreground/70">
                   <Check className="w-4 h-4 text-primary flex-shrink-0" />
                   {f}
                 </li>

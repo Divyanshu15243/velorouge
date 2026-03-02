@@ -5,7 +5,7 @@ import gallery3 from "@/assets/2.png";
 const Gallery = () => (
   <section className="py-24 bg-background">
     <div className="container">
-      <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">#VeloRouge</p>
+      <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">#VéloRouge</p>
       <h2 className="font-display text-4xl md:text-5xl font-black leading-tight max-w-md">
         This is what a day
         <br />
