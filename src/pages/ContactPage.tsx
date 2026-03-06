@@ -4,18 +4,48 @@ import Footer from "@/components/Footer";
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
 
 const contactInfo = [
-  { icon: MapPin, label: "Address", value: "12 Rue des Moulins, 67000 Strasbourg, France" },
-  { icon: Mail, label: "Email", value: "hello@velorouge.fr" },
-  { icon: Phone, label: "Phone", value: "+33 3 88 00 00 00" },
+  { icon: MapPin, label: "Address", value: "16 Avenue De La Paix, 67000 Strasbourg, France" },
+  { icon: Mail, label: "Email", value: "info@velorouge.fr" },
+  { icon: Phone, label: "Phone", value: "+33 622 810716" },
   { icon: Clock, label: "Hours", value: "Mon–Sat: 8:00 – 20:00" },
 ];
 
 const ContactPage = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    
+    try {
+      const response = await fetch('https://formspree.io/f/mkoqnnyn', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          _replyto: formData.email,
+          _subject: `VeloRouge Contact: ${formData.subject}`
+        })
+      });
+      
+      if (response.ok) {
+        setSubmitted(true);
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+    }
   };
 
   return (
@@ -57,7 +87,10 @@ const ContactPage = () => {
                       <label className="block text-sm font-medium mb-2">First name</label>
                       <input
                         type="text"
+                        name="firstName"
                         required
+                        value={formData.firstName}
+                        onChange={(e) => setFormData({...formData, firstName: e.target.value})}
                         className="w-full border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                         placeholder="Jean"
                       />
@@ -66,7 +99,10 @@ const ContactPage = () => {
                       <label className="block text-sm font-medium mb-2">Last name</label>
                       <input
                         type="text"
+                        name="lastName"
                         required
+                        value={formData.lastName}
+                        onChange={(e) => setFormData({...formData, lastName: e.target.value})}
                         className="w-full border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                         placeholder="Dupont"
                       />
@@ -76,7 +112,10 @@ const ContactPage = () => {
                     <label className="block text-sm font-medium mb-2">Email</label>
                     <input
                       type="email"
+                      name="email"
                       required
+                      value={formData.email}
+                      onChange={(e) => setFormData({...formData, email: e.target.value})}
                       className="w-full border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                       placeholder="jean@example.com"
                     />
@@ -84,8 +123,10 @@ const ContactPage = () => {
                   <div>
                     <label className="block text-sm font-medium mb-2">Subject</label>
                     <select
+                      name="subject"
                       className="w-full border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-                      defaultValue=""
+                      value={formData.subject}
+                      onChange={(e) => setFormData({...formData, subject: e.target.value})}
                       required
                     >
                       <option value="" disabled>Select a topic</option>
@@ -99,8 +140,11 @@ const ContactPage = () => {
                   <div>
                     <label className="block text-sm font-medium mb-2">Message</label>
                     <textarea
+                      name="message"
                       required
                       rows={5}
+                      value={formData.message}
+                      onChange={(e) => setFormData({...formData, message: e.target.value})}
                       className="w-full border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-none"
                       placeholder="Tell us how we can help…"
                     />
