@@ -14,7 +14,7 @@ const ReliableSection = () => (
           </h2>
           <p className="mt-6 text-dark-foreground/70 max-w-md">
             A VéloRouge subscription means an e-bike that's always ready, always maintained,
-            and always yours. No queues, no docking stations — just freedom on two wheels.
+            and always yours. No queues, no docking stations — just freedom on Tourde wheel.
           </p>
           <ul className="mt-6 space-y-3 text-base text-dark-foreground/70">
             <li className="flex items-center gap-2">

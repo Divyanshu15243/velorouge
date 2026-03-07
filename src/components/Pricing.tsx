@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 const plans = [
   { 
     name: "Tourist & Visitors", 
-    price: "€29", 
+    price: "€49", 
     period: "/ride", 
     features: [
       "Guided city experience",
@@ -15,7 +15,7 @@ const plans = [
   },
   { 
     name: "Residents & Students", 
-    price: "€24", 
+    price: "€15", 
     period: "/week", 
     features: [
       "Fast daily mobility",
@@ -28,7 +28,7 @@ const plans = [
   },
   { 
     name: " Delivery Crew", 
-    price: "€59", 
+    price: "€99", 
     period: "/month", 
     features: [
       "Unlimited weekday rides",
