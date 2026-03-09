@@ -6,28 +6,28 @@ const ReliableSection = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div>
           <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">
-            Reliable.
+            Fiable.
             <br />
             Local.
             <br />
-            <em className="text-primary">Yours.</em>
+            <em className="text-primary">À vous.</em>
           </h2>
           <p className="mt-6 text-dark-foreground/70 max-w-md">
-            A VéloRouge subscription means an e-bike that's always ready, always maintained,
-            and always yours. No queues, no docking stations — just freedom on Tourde wheel.
+            Un abonnement VéloRouge signifie un vélo électrique toujours prêt, toujours entretenu,
+            et toujours à vous. Pas de files d'attente, pas de stations d'accueil — juste la liberté sur deux roues.
           </p>
           <ul className="mt-6 space-y-3 text-base text-dark-foreground/70">
             <li className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
-              Personal e-bike assigned to you
+              Vélo électrique personnel assigné à vous
             </li>
             <li className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
-              Maintained weekly by our local team
+              Entretenu chaque semaine par notre équipe locale
             </li>
             <li className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
-              Swap models anytime, no extra cost
+              Changez de modèle à tout moment, sans frais supplémentaires
             </li>
           </ul>
         </div>

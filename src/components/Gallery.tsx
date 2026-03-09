@@ -7,9 +7,9 @@ const Gallery = () => (
     <div className="container">
       <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">#VéloRouge</p>
       <h2 className="font-display text-4xl md:text-5xl font-black leading-tight max-w-md">
-        This is what a day
+        Voici à quoi ressemble
         <br />
-        in Strasbourg <em className="text-primary">looks like.</em>
+        une journée à <em className="text-primary">Strasbourg.</em>
       </h2>
 
       <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4">

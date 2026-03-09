@@ -6,31 +6,31 @@ const DeliverSection = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div>
           <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">
-            Deliver faster.
+            Livrez plus vite.
             <br />
-            Own your bike.
+            Possédez votre vélo.
             <br />
-            Change your <em className="text-primary">life.</em>
+            Changez votre <em className="text-primary">vie.</em>
           </h2>
           <p className="mt-6 text-dark-foreground/70 max-w-md">
-            With VeloRouge, you get a premium e-bike delivered right to your door. 
-            No deposits, no hassle — just hop on and ride.
+            Avec VeloRouge, vous obtenez un vélo électrique premium livré directement à votre porte. 
+            Pas de dépôt, pas de tracas — montez simplement et roulez.
           </p>
           <div className="mt-8 flex gap-8">
             <div>
-              <div className="font-display text-3xl font-bold">€21,500</div>
-              <div className="text-sm text-dark-foreground/50">saved by riders/yr</div>
+              <div className="font-display text-3xl font-bold">21 500€</div>
+              <div className="text-sm text-dark-foreground/50">économisés par les cyclistes/an</div>
             </div>
             <div>
               <div className="font-display text-3xl font-bold text-primary">98%</div>
-              <div className="text-sm text-dark-foreground/50">satisfaction rate</div>
+              <div className="text-sm text-dark-foreground/50">taux de satisfaction</div>
             </div>
           </div>
           <a
             href="#"
             className="inline-block mt-8 bg-primary text-primary-foreground px-8 py-3 font-semibold text-sm hover:bg-primary/90 transition-colors"
           >
-            Start riding today
+            Commencez à rouler aujourd'hui
           </a>
         </div>
         <div className="aspect-square overflow-hidden rounded-full">

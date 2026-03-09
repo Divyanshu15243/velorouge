@@ -13,25 +13,25 @@ const Hero = () => (
       <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-black text-dark-foreground leading-[0.95] max-w-3xl">
         Strasbourg
         <br />
-        hits <em className="text-primary">different</em>
+        frappe <em className="text-primary">différemment</em>
         <br />
-        at dusk.
+        au crépuscule.
       </h1>
       <p className="mt-6 text-dark-foreground/70 max-w-md text-lg">
-        Discover Strasbourg like never before on our curated e-bike experiences.
+        Découvrez Strasbourg comme jamais auparavant lors de nos expériences vélo électrique organisées.
       </p>
       <div className="mt-8 flex flex-wrap gap-4">
         <a
           href="#rides"
           className="bg-primary text-primary-foreground px-8 py-3 font-semibold text-sm hover:bg-primary/90 transition-colors"
         >
-          EXPLORE RIDES
+          EXPLORER LES CIRCUITS
         </a>
         <a
           href="#pricing"
           className="border border-dark-foreground/30 text-dark-foreground px-8 py-3 font-semibold text-sm hover:border-dark-foreground/60 transition-colors"
         >
-          EXPLORE E-BIKES
+          EXPLORER LES VÉLOS ÉLECTRIQUES
         </a>
       </div>
     </div>

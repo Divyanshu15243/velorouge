@@ -4,11 +4,11 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const links = [
-  { label: "Home", to: "/" },
-  { label: "About us", to: "/about" },
-  { label: "Visitors", to: "/visitors" },
-  { label: "Residents", to: "/residents" },
-  { label: "Safe & Smart", to: "/safe-smart" },
+  { label: "Accueil", to: "/" },
+  { label: "À propos", to: "/about" },
+  { label: "Visiteurs", to: "/visitors" },
+  { label: "Résidents", to: "/residents" },
+  { label: "Sûr & Intelligent", to: "/safe-smart" },
   { label: "Contact", to: "/contact" },
 ];
 

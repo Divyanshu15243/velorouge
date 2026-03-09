@@ -4,10 +4,10 @@ import Footer from "@/components/Footer";
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
 
 const contactInfo = [
-  { icon: MapPin, label: "Address", value: "16 Avenue De La Paix, 67000 Strasbourg, France" },
+  { icon: MapPin, label: "Adresse", value: "16 Avenue De La Paix, 67000 Strasbourg, France" },
   { icon: Mail, label: "Email", value: "info@velorouge.fr" },
-  { icon: Phone, label: "Phone", value: "+33 622 810716" },
-  { icon: Clock, label: "Hours", value: "Mon–Sat: 8:00 – 20:00" },
+  { icon: Phone, label: "Téléphone", value: "+33 622 810716" },
+  { icon: Clock, label: "Horaires", value: "Lun–Sam : 8h00 – 20h00" },
 ];
 
 const ContactPage = () => {
@@ -57,10 +57,10 @@ const ContactPage = () => {
         <div className="container">
           <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">Contact</p>
           <h1 className="font-display text-5xl md:text-7xl font-black leading-[0.95] max-w-3xl">
-            Let's <em className="text-primary">talk.</em>
+            Parlons-<em className="text-primary">en.</em>
           </h1>
           <p className="mt-6 text-dark-foreground/60 max-w-lg text-lg">
-            Questions, Day Tours, Group Booking, or just want to say hi? We'd love to hear from you.
+            Questions, circuits d'une journée, réservation de groupe, ou simplement envie de dire bonjour ? Nous serions ravis de vous entendre.
           </p>
         </div>
       </section>
@@ -72,19 +72,19 @@ const ContactPage = () => {
             {/* Form */}
             <div>
               <h2 className="font-display text-3xl font-black mb-8">
-                Send us a <em className="text-primary">message.</em>
+                Envoyez-nous un <em className="text-primary">message.</em>
               </h2>
 
               {submitted ? (
                 <div className="p-8 border border-primary/30 bg-primary/5">
-                  <h3 className="font-display text-2xl font-bold text-primary">Thank you!</h3>
-                  <p className="mt-2 text-muted-foreground">We'll get back to you within 24 hours.</p>
+                  <h3 className="font-display text-2xl font-bold text-primary">Merci !</h3>
+                  <p className="mt-2 text-muted-foreground">Nous vous répondrons dans les 24 heures.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium mb-2">First name</label>
+                      <label className="block text-sm font-medium mb-2">Prénom</label>
                       <input
                         type="text"
                         name="firstName"
@@ -96,7 +96,7 @@ const ContactPage = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium mb-2">Last name</label>
+                      <label className="block text-sm font-medium mb-2">Nom</label>
                       <input
                         type="text"
                         name="lastName"
@@ -121,7 +121,7 @@ const ContactPage = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">Subject</label>
+                    <label className="block text-sm font-medium mb-2">Sujet</label>
                     <select
                       name="subject"
                       className="w-full border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
@@ -129,12 +129,12 @@ const ContactPage = () => {
                       onChange={(e) => setFormData({...formData, subject: e.target.value})}
                       required
                     >
-                      <option value="" disabled>Select a topic</option>
-                      <option>General inquiry</option>
-                      <option>Day tours</option>
-                      <option>Group booking</option>
-                      <option>corporate</option>
-                      <option>Press & media</option>
+                      <option value="" disabled>Sélectionnez un sujet</option>
+                      <option>Demande générale</option>
+                      <option>Circuits d'une journée</option>
+                      <option>Réservation de groupe</option>
+                      <option>Entreprise</option>
+                      <option>Presse & médias</option>
                     </select>
                   </div>
                   <div>
@@ -146,14 +146,14 @@ const ContactPage = () => {
                       value={formData.message}
                       onChange={(e) => setFormData({...formData, message: e.target.value})}
                       className="w-full border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-none"
-                      placeholder="Tell us how we can help…"
+                      placeholder="Dites-nous comment nous pouvons vous aider…"
                     />
                   </div>
                   <button
                     type="submit"
                     className="bg-primary text-primary-foreground px-10 py-3 font-semibold text-sm hover:bg-primary/90 transition-colors"
                   >
-                    SEND MESSAGE
+                    ENVOYER LE MESSAGE
                   </button>
                 </form>
               )}
@@ -162,7 +162,7 @@ const ContactPage = () => {
             {/* Info */}
             <div>
               <h2 className="font-display text-3xl font-black mb-8">
-                Find <em className="text-primary">us.</em>
+                Trouvez-<em className="text-primary">nous.</em>
               </h2>
               <div className="space-y-6">
                 {contactInfo.map((c) => (

@@ -1,28 +1,28 @@
 import differenceimg from "@/assets/difference.png";
 const features = [
-  { title: "Zero Downtime Guarantee", desc: "If your e-bike has a problem mid-ride, we deliver a replacement. No questions." },
-  { title: "Full Maintenance Included", desc: "Every rental and subscription includes complete mechanical cover." },
-  { title: "Central Location", desc: "3-minute walk from Place Kléber. Easy pickup, easy return." },
-  { title: "Flexible Plans", desc: "Hourly tourists to monthly residents — we have your ride covered." },
-  { title: "Eco-Friendly", desc: "Replace 45,000 car km per year with zero-emission rides." },
-  { title: "Simple App", desc: "Book, unlock, and navigate — all in one tap." },
+  { title: "Garantie zéro temps d'arrêt", desc: "Si votre vélo électrique a un problème en cours de route, nous livrons un remplacement. Sans questions." },
+  { title: "Entretien complet inclus", desc: "Chaque location et abonnement comprend une couverture mécanique complète." },
+  { title: "Emplacement central", desc: "À 3 minutes à pied de la Place Kléber. Retrait facile, retour facile." },
+  { title: "Forfaits flexibles", desc: "Des touristes horaires aux résidents mensuels — nous avons votre trajet couvert." },
+  { title: "Écologique", desc: "Remplacez 45 000 km de voiture par an par des trajets zéro émission." },
+  { title: "Application simple", desc: "Réservez, déverrouillez et naviguez — tout en un seul clic." },
 ];
 
 const Difference = () => (
   <section className="grid md:grid-cols-2 min-h-[900px]">
     <div className="bg-[#1a1612] flex items-center justify-center px-12 lg:px-20">
       <div className="max-w-xl">
-        <p className="text-primary text-xs tracking-[0.2em] uppercase mb-8">THE VELOROUGE DIFFERENCE</p>
+        <p className="text-primary text-xs tracking-[0.2em] uppercase mb-8">LA DIFFÉRENCE VELOROUGE</p>
         
         <h2 className="font-display text-white text-5xl lg:text-6xl font-bold leading-tight mb-8">
-          Reliable.<br />
+          Fiable.<br />
           Local.<br />
-          <em className="text-primary">Yours.</em>
+          <em className="text-primary">À vous.</em>
         </h2>
         
         <p className="text-[#7a726e] text-lg mb-12 leading-relaxed italic">
-          Every e-bike is maintained daily. Every route is ridden monthly.<br />
-          We don't rent out equipment — we hand you a city.
+          Chaque vélo électrique est entretenu quotidiennement. Chaque itinéraire est parcouru mensuellement.<br />
+          Nous ne louons pas d'équipement — nous vous remettons une ville.
         </p>
         
         <div className="grid grid-cols-2 gap-x-12 gap-y-8">
@@ -46,7 +46,7 @@ const Difference = () => (
       <div className="absolute bottom-20 left-14 bg-primary p-9 w-60">
         <div className="font-display text-white text-6xl font-bold leading-none">98%</div>
         <div className="text-white/75 text-[10px] tracking-[0.12em] uppercase mt-2.5 leading-relaxed">
-          E-BIKE AVAILABILITY RATE.<br />INDUSTRY STANDARD IS 71%.
+          TAUX DE DISPONIBILITÉ DES VÉLOS.<br />LA NORME INDUSTRIELLE EST DE 71%.
         </div>
       </div>
     </div>

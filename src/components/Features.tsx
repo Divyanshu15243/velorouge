@@ -1,12 +1,12 @@
 import { Shield, Wrench, MapPin, Bike, DollarSign } from "lucide-react";
 
 const features = [
-  { icon: MapPin, title: "GPS tracking", desc: "Real-time location tracking for peace of mind. Never lose your ride." },
-  { icon: Bike, title: "Segway + E-bike rides", desc: "Choose between premium e-bikes and Segways for your adventure. Perfect for all skill levels." },
-  { icon: Shield, title: "Theft protection", desc: "Every e-bike is covered against theft and damage. Ride worry-free." },
-  { icon: MapPin, title: "Curated routes", desc: "Hand-picked routes by local Strasbourg experts. Discover hidden gems." },
-  { icon: Wrench, title: "Free maintenance", desc: "Regular tune-ups and repairs at no extra cost. Always ride-ready." },
-  { icon: DollarSign, title: "Average savings", desc: "Save up to €23,700 over 5 years compared to ownership. Smart investment." },
+  { icon: MapPin, title: "Suivi GPS", desc: "Suivi de localisation en temps réel pour votre tranquillité d'esprit. Ne perdez jamais votre vélo." },
+  { icon: Bike, title: "Segway + Vélos électriques", desc: "Choisissez entre des vélos électriques premium et des Segways pour votre aventure. Parfait pour tous les niveaux." },
+  { icon: Shield, title: "Protection contre le vol", desc: "Chaque vélo électrique est couvert contre le vol et les dommages. Roulez sans souci." },
+  { icon: MapPin, title: "Itinéraires organisés", desc: "Itinéraires sélectionnés par des experts locaux de Strasbourg. Découvrez des joyaux cachés." },
+  { icon: Wrench, title: "Entretien gratuit", desc: "Réglages et réparations réguliers sans frais supplémentaires. Toujours prêt à rouler." },
+  { icon: DollarSign, title: "Économies moyennes", desc: "Économisez jusqu'à 23 700€ sur 5 ans par rapport à la propriété. Investissement intelligent." },
 ];
 
 const Features = () => (
@@ -15,11 +15,11 @@ const Features = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
         <div>
           <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">
-            Everything
+            Tout ce dont
             <br />
-            you need
+            vous avez besoin
             <br />
-            to <em className="text-primary">ride.</em>
+            pour <em className="text-primary">rouler.</em>
           </h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">

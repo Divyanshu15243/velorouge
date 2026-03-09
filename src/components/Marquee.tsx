@@ -1,5 +1,5 @@
 const Marquee = () => {
-  const text = "100% curated rides in Strasbourg  •  12 unique routes to discover  •  Delivered to your door in under 24h  •  ";
+  const text = "100% circuits organisés à Strasbourg  •  12 itinéraires uniques à découvrir  •  Livré à votre porte en moins de 24h  •  ";
   return (
     <div className="bg-primary text-primary-foreground py-[60px] px-12 overflow-hidden relative">
       <div className="flex animate-marquee whitespace-nowrap">

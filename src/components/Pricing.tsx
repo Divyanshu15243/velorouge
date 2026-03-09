@@ -2,41 +2,41 @@ import { Check } from "lucide-react";
 
 const plans = [
   { 
-    name: "Tourist & Visitors", 
-    price: "€49", 
-    period: "/ride", 
+    name: "Touristes & Visiteurs", 
+    price: "49€", 
+    period: "/circuit", 
     features: [
-      "Guided city experience",
-      "Scenic routes across Strasbourg",
-      "Photo stops & local insights",
-      "Beginner-friendly training"
+      "Expérience guidée de la ville",
+      "Itinéraires panoramiques à travers Strasbourg",
+      "Arrêts photo & conseils locaux",
+      "Formation adaptée aux débutants"
     ],
-    cta: "Book Now"
+    cta: "Réserver maintenant"
   },
   { 
-    name: "Residents & Students", 
-    price: "€15", 
-    period: "/week", 
+    name: "Résidents & Étudiants", 
+    price: "15€", 
+    period: "/semaine", 
     features: [
-      "Fast daily mobility",
-      "Flexible weekly plans",
-      "Reliable and cost-efficient",
-      "Priority support"
+      "Mobilité quotidienne rapide",
+      "Forfaits hebdomadaires flexibles",
+      "Fiable et économique",
+      "Support prioritaire"
     ],
     popular: true,
-    cta: "Commit Now"
+    cta: "S'engager maintenant"
   },
   { 
-    name: " Delivery Crew", 
-    price: "€99", 
-    period: "/month", 
+    name: "Équipe de livraison", 
+    price: "99€", 
+    period: "/mois", 
     features: [
-      "Unlimited weekday rides",
-      "Campus & city access",
-      "Smart subscription pricing",
-      "Perfect for daily commute"
+      "Trajets illimités en semaine",
+      "Accès campus & ville",
+      "Tarification d'abonnement intelligente",
+      "Parfait pour les trajets quotidiens"
     ],
-    cta: "Rent Now"
+    cta: "Louer maintenant"
   },
 ];
 
@@ -44,9 +44,9 @@ const Pricing = () => (
   <section id="pricing" className="py-24 bg-dark text-dark-foreground">
     <div className="container">
       <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">
-        One city.
+        Une ville.
         <br />
-        Three ways to  <em className="text-primary">move.</em>
+        Trois façons de <em className="text-primary">bouger.</em>
       </h2>
 
       <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -76,7 +76,7 @@ const Pricing = () => (
                   : "border border-dark-foreground/20 text-dark-foreground hover:border-dark-foreground/40"
               }`}
             >
-              {p.cta || "Get started"}
+              {p.cta || "Commencer"}
             </a>
           </div>
         ))}

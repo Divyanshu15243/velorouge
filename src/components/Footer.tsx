@@ -10,23 +10,23 @@ const Footer = () => (
           <a href="#" className="flex items-center">
             <img src={logo} alt="VeloRouge" className="h-10" />
           </a>
-          <p className="mt-2 text-sm max-w-xs">Premium e-bike experiences in Strasbourg, France.</p>
+          <p className="mt-2 text-sm max-w-xs">Expériences vélo électrique premium à Strasbourg, France.</p>
         </div>
         <div className="flex gap-12 text-sm">
           <div className="space-y-2">
-            <div className="text-dark-foreground font-semibold mb-3">Company</div>
-            <a href="#" className="block hover:text-dark-foreground transition-colors">About</a>
-            <a href="#" className="block hover:text-dark-foreground transition-colors">Careers</a>
+            <div className="text-dark-foreground font-semibold mb-3">Entreprise</div>
+            <a href="#" className="block hover:text-dark-foreground transition-colors">À propos</a>
+            <a href="#" className="block hover:text-dark-foreground transition-colors">Carrières</a>
             <a href="#" className="block hover:text-dark-foreground transition-colors">Contact</a>
           </div>
           <div className="space-y-2">
-            <div className="text-dark-foreground font-semibold mb-3">Product</div>
-            <a href="#" className="block hover:text-dark-foreground transition-colors">Rides</a>
-            <a href="#" className="block hover:text-dark-foreground transition-colors">Pricing</a>
+            <div className="text-dark-foreground font-semibold mb-3">Produit</div>
+            <a href="#" className="block hover:text-dark-foreground transition-colors">Circuits</a>
+            <a href="#" className="block hover:text-dark-foreground transition-colors">Tarifs</a>
             <a href="#" className="block hover:text-dark-foreground transition-colors">FAQ</a>
           </div>
           <div className="space-y-2">
-            <div className="text-dark-foreground font-semibold mb-3">Social</div>
+            <div className="text-dark-foreground font-semibold mb-3">Réseaux sociaux</div>
             <a href="http://instagram.com/velorougefrance" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-dark-foreground transition-colors">
               <Instagram className="w-4 h-4" />
               Instagram

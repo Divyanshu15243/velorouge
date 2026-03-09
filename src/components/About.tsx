@@ -1,20 +1,20 @@
 import { Bike, MapPin, Clock } from "lucide-react";
 
 const stats = [
-  { icon: Bike, value: "80+", label: "E-bikes available" },
-  { icon: MapPin, value: "12", label: "Routes curated" },
-  { icon: Clock, value: "4,500+", label: "Happy riders" },
+  { icon: Bike, value: "80+", label: "Vélos électriques disponibles" },
+  { icon: MapPin, value: "12", label: "Itinéraires organisés" },
+  { icon: Clock, value: "4 500+", label: "Cyclistes heureux" },
 ];
 
 const About = () => (
   <section className="py-24 bg-background">
     <div className="container">
       <h2 className="font-display text-4xl md:text-5xl font-black leading-tight max-w-lg">
-        Not your typical <em className="text-primary">e-bike rental.</em>
+        Pas votre <em className="text-primary">location de vélo électrique</em> typique.
       </h2>
       <p className="mt-6 text-muted-foreground max-w-xl text-lg">
-        VéloRouge is a premium e-bike subscription & ride experience platform based in Strasbourg. 
-        We believe every ride should tell a story.
+        VéloRouge est une plateforme premium d'abonnement et d'expérience vélo électrique basée à Strasbourg. 
+        Nous croyons que chaque trajet devrait raconter une histoire.
       </p>
 
       <div className="mt-12 flex flex-wrap gap-8">

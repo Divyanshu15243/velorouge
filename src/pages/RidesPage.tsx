@@ -9,51 +9,51 @@ import { Clock, MapPin, Users, Star } from "lucide-react";
 const rides = [
   {
     img: rideSundowner,
-    title: "Strasbourg Sundowner",
-    subtitle: "Chase the last light. The Ill canals at golden hour.",
-    price: "€29",
-    tag: "E-BIKE",
-    duration: "2.5 hrs",
-    time: "18:00 – 20:30",
-    groupSize: "per person",
+    title: "Coucher de soleil à Strasbourg",
+    subtitle: "Chassez la dernière lumière. Les canaux de l'Ill à l'heure dorée.",
+    price: "29€",
+    tag: "VÉLO ÉLECTRIQUE",
+    duration: "2,5 h",
+    time: "18h00 – 20h30",
+    groupSize: "par personne",
     rating: "4.9",
-    description: "We know exactly where to be in Strasbourg at 7:30pm. It isn't the cathedral square. This is the hero product. It sells the feeling of a city alive with golden light, water reflections, and the particular buzz of early evening in France. The goal is not to show them Strasbourg — it is to make them feel they have discovered it.",
+    description: "Nous savons exactement où être à Strasbourg à 19h30. Ce n'est pas la place de la cathédrale. C'est le produit phare. Il vend le sentiment d'une ville vivante avec une lumière dorée, des reflets d'eau et l'ambiance particulière du début de soirée en France. L'objectif n'est pas de leur montrer Strasbourg — c'est de leur faire sentir qu'ils l'ont découvert.",
   },
   {
     img: rideMarket,
-    title: "Bar Hop Petite France",
-    subtitle: "Four bars. Two wheels. Zero regrets.",
-    price: "€35",
-    tag: "E-BIKE",
-    duration: "3 hrs",
-    time: "20:00 – 23:00",
-    groupSize: "per person",
+    title: "Tournée des bars Petite France",
+    subtitle: "Quatre bars. Deux roues. Zéro regret.",
+    price: "35€",
+    tag: "VÉLO ÉLECTRIQUE",
+    duration: "3 h",
+    time: "20h00 – 23h00",
+    groupSize: "par personne",
     rating: "4.8",
-    description: "This is not a pub crawl. It is a curated tasting route through four centuries of Alsatian drinking culture. Strasbourg has one of the most compelling bar cultures in France — a unique blend of French wine tradition and German beer culture, with winstubs that have barely changed since the 1600s. This tour makes it legible and social without being touristy.",
+    description: "Ce n'est pas une tournée des bars. C'est un itinéraire de dégustation organisé à travers quatre siècles de culture de la boisson alsacienne. Strasbourg possède l'une des cultures de bar les plus captivantes de France — un mélange unique de tradition vinicole française et de culture de la bière allemande, avec des winstubs qui ont à peine changé depuis les années 1600. Cette visite la rend lisible et sociale sans être touristique.",
   },
   {
     img: rideRiver,
-    title: "Hidden Strasbourg",
-    subtitle: "The courtyards, passages, and corners the guidebooks forgot.",
-    price: "€24",
-    tag: "E-BIKE",
-    duration: "2 hrs",
-    time: "09:00 – 11:00 or 15:00 – 17:00",
-    groupSize: "per person",
+    title: "Strasbourg caché",
+    subtitle: "Les cours, passages et coins que les guides ont oubliés.",
+    price: "24€",
+    tag: "VÉLO ÉLECTRIQUE",
+    duration: "2 h",
+    time: "09h00 – 11h00 ou 15h00 – 17h00",
+    groupSize: "par personne",
     rating: "4.9",
-    description: "We spent six months finding the 11 things in Strasbourg that no tour ever shows. This is all 11 of them. This is the product for the curious traveller who has 'done' the cathedral and Petite France and wants to go deeper. Segway to connect the dots, walk to enter the spaces. A mix of architectural surprise, urban legend, and sensory detail.",
+    description: "Nous avons passé six mois à trouver les 11 choses à Strasbourg qu'aucune visite ne montre jamais. Voici les 11. C'est le produit pour le voyageur curieux qui a 'fait' la cathédrale et la Petite France et veut aller plus loin. Segway pour relier les points, marche pour entrer dans les espaces. Un mélange de surprise architecturale, de légende urbaine et de détail sensoriel.",
   },
   {
     img: rideLocal,
-    title: "Rhine Border Run",
-    subtitle: "France to Germany in 45 minutes. Coffee on the other side.",
-    price: "€39",
-    tag: "E-BIKE",
-    duration: "3.5 hrs",
-    time: "10:00 – 13:30",
-    groupSize: "per person",
+    title: "Frontière du Rhin",
+    subtitle: "De la France à l'Allemagne en 45 minutes. Café de l'autre côté.",
+    price: "39€",
+    tag: "VÉLO ÉLECTRIQUE",
+    duration: "3,5 h",
+    time: "10h00 – 13h30",
+    groupSize: "par personne",
     rating: "4.7",
-    description: "No other city in Europe lets you casually cycle between two countries before lunch. We do it every Saturday. Strasbourg's unique position on the French-German border is its single most powerful asset for tourism — and almost no operator exploits it properly. This route crosses the Rhine on the Passerelle Mimram (a magnificent pedestrian bridge), passes through the Jardin des Deux Rives, and lands in the German city of Kehl for a coffee and a cultural contrast.",
+    description: "Aucune autre ville d'Europe ne vous permet de faire du vélo entre deux pays avant le déjeuner. Nous le faisons tous les samedis. La position unique de Strasbourg à la frontière franco-allemande est son atout le plus puissant pour le tourisme — et presque aucun opérateur ne l'exploite correctement. Cet itinéraire traverse le Rhin sur la Passerelle Mimram (un magnifique pont piétonnier), passe par le Jardin des Deux Rives et arrive dans la ville allemande de Kehl pour un café et un contraste culturel.",
   },
 ];
 
@@ -64,14 +64,14 @@ const RidesPage = () => (
     {/* Hero */}
     <section className="pt-32 pb-16 bg-dark text-dark-foreground">
       <div className="container">
-        <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">Our rides</p>
+        <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">Nos circuits</p>
         <h1 className="font-display text-5xl md:text-7xl font-black leading-[0.95] max-w-3xl">
-          Four ways to feel
+          Quatre façons de ressentir
           <br />
           <em className="text-primary">Strasbourg.</em>
         </h1>
         <p className="mt-6 text-dark-foreground/60 max-w-lg text-lg">
-          Each ride is hand-crafted by locals who know every cobblestone, café, and hidden canal.
+          Chaque trajet est conçu à la main par des locaux qui connaissent chaque pavé, café et canal caché.
         </p>
       </div>
     </section>
@@ -103,7 +103,7 @@ const RidesPage = () => (
 
               <div className="mt-8 flex items-center gap-6">
                 <a href="#" className="bg-primary text-primary-foreground px-8 py-3 font-semibold text-sm hover:bg-primary/90 transition-colors">
-                  BOOK NOW — {r.price} / {r.groupSize}
+                  RÉSERVER MAINTENANT — {r.price} / {r.groupSize}
                 </a>
               </div>
             </div>

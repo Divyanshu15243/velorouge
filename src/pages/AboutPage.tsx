@@ -8,23 +8,23 @@ import { Bike, Heart, Users, Globe, ChevronDown } from "lucide-react";
 import { useState } from "react";
 
 const values = [
-  { icon: Bike, title: "Freedom first", desc: "Mobility should feel effortless. No queues, no confusion — just explore the city at your own pace." },
-  { icon: Heart, title: "Local love", desc: "Every route is designed by people who live in Strasbourg, so visitors discover both iconic landmarks and hidden gems." },
-  { icon: Users, title: "Community driven", desc: "Our travelers and riders help shape new experiences. From route suggestions to feature requests, we listen." },
-  { icon: Globe, title: "Sustainability", desc: "Every ride replaces a car trip and supports sustainable travel. We're committed to making Strasbourg greener, one pedal at a time." },
+  { icon: Bike, title: "Liberté d'abord", desc: "La mobilité doit être sans effort. Pas de files d'attente, pas de confusion — explorez simplement la ville à votre rythme." },
+  { icon: Heart, title: "Amour local", desc: "Chaque itinéraire est conçu par des personnes qui vivent à Strasbourg, afin que les visiteurs découvrent à la fois des monuments emblématiques et des joyaux cachés." },
+  { icon: Users, title: "Communauté", desc: "Nos voyageurs et cyclistes contribuent à façonner de nouvelles expériences. Des suggestions d'itinéraires aux demandes de fonctionnalités, nous écoutons." },
+  { icon: Globe, title: "Durabilité", desc: "Chaque trajet remplace un trajet en voiture et soutient les déplacements durables. Nous nous engageons à rendre Strasbourg plus vert, un coup de pédale à la fois." },
 ];
 
 const faqs = [
-  { q: "Do I need experience to ride a Segway?", a: "Not at all. Before every guided tour, our team provides a short training session to make sure you feel comfortable and confident. Most riders get the hang of it within minutes." },
-  { q: "Is it safe to ride?", a: "Yes. Safety is our top priority. All rides include basic instructions, and our vehicles are regularly inspected and maintained. Guided tours are led by trained staff to ensure a smooth and safe experience." },
-  { q: "How do I book a tour or ride?", a: "You can book directly through our website or via the VéloRouge app. Simply choose your preferred date, time, and experience, then confirm your booking in just a few clicks." },
-  { q: "Where do the tours take place?", a: "Our tours operate in Strasbourg and selected nearby areas in Alsace. Routes include historic streets, scenic canals, and key landmarks." },
-  { q: "What should I wear for the ride?", a: "We recommend comfortable clothing and flat shoes. In colder or rainy weather, a light jacket is a good idea. Please avoid very loose items that could interfere with riding." },
-  { q: "Is there an age or weight limit?", a: "Yes. Riders usually need to be at least 12–14 years old (depending on the tour type) and fall within the standard safety weight limits for Segways or e-bikes. Exact requirements are shown during booking." },
-  { q: "Do you offer student discounts?", a: "Yes! We offer special student-friendly pricing and subscription options. Student status may need to be verified through the app or during booking." },
-  { q: "How does the app-based ride work?", a: "Download the VéloRouge app, find a nearby vehicle, scan the QR code, and start your ride. Payment is handled directly in the app, and you can end your ride at designated parking zones." },
-  { q: "What happens if it rains?", a: "Light rain usually doesn't stop tours. However, for safety reasons, tours may be rescheduled in case of severe weather. If that happens, we'll help you choose a new time." },
-  { q: "Can I cancel or reschedule my booking?", a: "Yes. Cancellations or rescheduling are possible within the timeframe stated in our booking policy. Full details are provided at checkout." },
+  { q: "Ai-je besoin d'expérience pour conduire un Segway ?", a: "Pas du tout. Avant chaque visite guidée, notre équipe propose une courte session de formation pour vous assurer de vous sentir à l'aise et confiant. La plupart des cyclistes maîtrisent en quelques minutes." },
+  { q: "Est-ce sûr de rouler ?", a: "Oui. La sécurité est notre priorité absolue. Tous les trajets incluent des instructions de base, et nos véhicules sont régulièrement inspectés et entretenus. Les visites guidées sont dirigées par du personnel formé pour garantir une expérience fluide et sûre." },
+  { q: "Comment réserver une visite ou un trajet ?", a: "Vous pouvez réserver directement via notre site Web ou via l'application VéloRouge. Choisissez simplement votre date, heure et expérience préférées, puis confirmez votre réservation en quelques clics." },
+  { q: "Où se déroulent les visites ?", a: "Nos visites se déroulent à Strasbourg et dans certaines zones voisines en Alsace. Les itinéraires incluent des rues historiques, des canaux pittoresques et des monuments clés." },
+  { q: "Que dois-je porter pour le trajet ?", a: "Nous recommandons des vêtements confortables et des chaussures plates. Par temps froid ou pluvieux, une veste légère est une bonne idée. Veuillez éviter les articles très amples qui pourraient interférer avec la conduite." },
+  { q: "Y a-t-il une limite d'âge ou de poids ?", a: "Oui. Les cyclistes doivent généralement avoir au moins 12 à 14 ans (selon le type de visite) et se situer dans les limites de poids de sécurité standard pour les Segways ou les vélos électriques. Les exigences exactes sont indiquées lors de la réservation." },
+  { q: "Proposez-vous des réductions étudiantes ?", a: "Oui ! Nous proposons des tarifs spéciaux adaptés aux étudiants et des options d'abonnement. Le statut d'étudiant peut devoir être vérifié via l'application ou lors de la réservation." },
+  { q: "Comment fonctionne le trajet basé sur l'application ?", a: "Téléchargez l'application VéloRouge, trouvez un véhicule à proximité, scannez le code QR et commencez votre trajet. Le paiement est géré directement dans l'application et vous pouvez terminer votre trajet dans les zones de stationnement désignées." },
+  { q: "Que se passe-t-il s'il pleut ?", a: "Une pluie légère n'arrête généralement pas les visites. Cependant, pour des raisons de sécurité, les visites peuvent être reprogrammées en cas de mauvais temps. Si cela se produit, nous vous aiderons à choisir un nouveau créneau." },
+  { q: "Puis-je annuler ou reprogrammer ma réservation ?", a: "Oui. Les annulations ou les reprogrammations sont possibles dans le délai indiqué dans notre politique de réservation. Tous les détails sont fournis lors du paiement." },
 ];
 
 const timeline = [
@@ -47,13 +47,13 @@ const AboutPage = () => {
       <img src={aboutHero} alt="Strasbourg aerial view" className="absolute inset-0 w-full h-full object-cover opacity-30" />
       <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/60 to-transparent" />
       <div className="container relative z-10">
-        <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">About us</p>
+        <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">À propos</p>
         <h1 className="font-display text-5xl md:text-7xl font-black text-dark-foreground leading-[0.95] max-w-3xl">
-          Born in
+          Né à
           <br />
           <em className="text-primary">Strasbourg.</em>
           <br />
-          Built for explorers.
+          Conçu pour les explorateurs.
         </h1>
       </div>
     </section>
@@ -64,21 +64,21 @@ const AboutPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">
-              We started with a
+              Nous avons commencé avec une
               <br />
               simple <em className="text-primary">question.</em>
             </h2>
             <p className="mt-6 text-muted-foreground text-lg max-w-md">
-              Why should discovering a new city feel slow, crowded, and complicated?
+              Pourquoi découvrir une nouvelle ville devrait-il être lent, encombré et compliqué ?
             </p>
             <p className="mt-4 text-muted-foreground max-w-md">
-              No waiting. No confusing routes. No missed hidden spots.
+              Pas d'attente. Pas d'itinéraires confus. Pas de lieux cachés manqués.
             </p>
             <p className="mt-4 text-muted-foreground max-w-md">
-              VéloRouge was created to help people explore Strasbourg in a smarter, more enjoyable way — whether you live here or are visiting for a day.
+              VéloRouge a été créé pour aider les gens à explorer Strasbourg de manière plus intelligente et plus agréable — que vous viviez ici ou que vous soyez en visite pour une journée.
             </p>
             <p className="mt-4 text-muted-foreground max-w-md">
-              Today, we help thousands of travelers and locals discover Strasbourg through curated routes, guided tours, and premium mobility designed for real experiences.
+              Aujourd'hui, nous aidons des milliers de voyageurs et de locaux à découvrir Strasbourg à travers des itinéraires organisés, des visites guidées et une mobilité premium conçue pour de vraies expériences.
             </p>
           </div>
           <div className="aspect-video overflow-hidden">
@@ -97,33 +97,33 @@ const AboutPage = () => {
           </div>
           <div>
             <h2 className="font-display text-4xl md:text-5xl font-black leading-tight mb-8">
-              Built for travelers.
+              Conçu pour les voyageurs.
               <br />
-              Loved by <em className="text-primary">locals.</em>
+              Aimé par les <em className="text-primary">locaux.</em>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mb-12">
-              From first-time visitors to frequent explorers, VéloRouge makes it easy to see more of Strasbourg in less time.
+              Des visiteurs pour la première fois aux explorateurs fréquents, VéloRouge facilite la découverte de Strasbourg en moins de temps.
             </p>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                <span className="text-muted-foreground">Guided city tours with local experts</span>
+                <span className="text-muted-foreground">Visites guidées de la ville avec des experts locaux</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                <span className="text-muted-foreground">Scenic routes through historic districts</span>
+                <span className="text-muted-foreground">Itinéraires panoramiques à travers les quartiers historiques</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                <span className="text-muted-foreground">Photo stops at iconic landmarks</span>
+                <span className="text-muted-foreground">Arrêts photo aux monuments emblématiques</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                <span className="text-muted-foreground">Beginner-friendly, no experience needed</span>
+                <span className="text-muted-foreground">Adapté aux débutants, aucune expérience requise</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                <span className="text-muted-foreground">Flexible options for short visits and day trips</span>
+                <span className="text-muted-foreground">Options flexibles pour les courtes visites et les excursions d'une journée</span>
               </li>
             </ul>
           </div>
@@ -135,9 +135,9 @@ const AboutPage = () => {
     <section className="py-24 bg-dark text-dark-foreground">
       <div className="container">
         <h2 className="font-display text-4xl md:text-5xl font-black leading-tight mb-16">
-          What we
+          Ce que nous
           <br />
-          stand <em className="text-primary">for.</em>
+          défendons <em className="text-primary">.</em>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {values.map((v) => (
@@ -155,22 +155,22 @@ const AboutPage = () => {
     <section className="py-24 bg-background">
       <div className="container">
         <h2 className="font-display text-4xl md:text-5xl font-black leading-tight mb-12 text-center">
-          Why travelers choose
+          Pourquoi les voyageurs choisissent
           <br />
           <em className="text-primary">VéloRouge</em>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="text-center">
             <div className="text-primary text-3xl font-bold mb-2">★★★★★</div>
-            <p className="text-muted-foreground">Rated among the best ways to explore Strasbourg</p>
+            <p className="text-muted-foreground">Classé parmi les meilleures façons d'explorer Strasbourg</p>
           </div>
           <div className="text-center">
             <div className="text-primary text-3xl font-bold mb-2">30+</div>
-            <p className="text-muted-foreground">Countries represented</p>
+            <p className="text-muted-foreground">Pays représentés</p>
           </div>
           <div className="text-center">
             <div className="text-primary text-3xl font-bold mb-2">100%</div>
-            <p className="text-muted-foreground">Beginner-friendly</p>
+            <p className="text-muted-foreground">Adapté aux débutants</p>
           </div>
         </div>
       </div>
@@ -179,7 +179,7 @@ const AboutPage = () => {
     {/* Trust Marquee - Full Width */}
     <div className="w-full bg-primary text-primary-foreground py-6 overflow-hidden">
       <div className="flex animate-marquee whitespace-nowrap">
-        <span className="font-display text-xl italic font-normal tracking-wide mx-4" style={{color: 'rgba(245, 240, 232, 0.9)'}}>Safe and beginner-friendly  •  Premium e-bikes and Segways  •  Flexible booking and app-based access  •  Multilingual support  •  Safe and beginner-friendly  •  Premium e-bikes and Segways  •  Flexible booking and app-based access  •  Multilingual support  •  </span>
+        <span className="font-display text-xl italic font-normal tracking-wide mx-4" style={{color: 'rgba(245, 240, 232, 0.9)'}}>Sûr et adapté aux débutants  •  Vélos électriques et Segways premium  •  Réservation flexible et accès via application  •  Support multilingue  •  Sûr et adapté aux débutants  •  Vélos électriques et Segways premium  •  Réservation flexible et accès via application  •  Support multilingue  •  </span>
       </div>
     </div>
 
@@ -187,9 +187,9 @@ const AboutPage = () => {
     <section className="py-24 bg-background">
       <div className="container max-w-3xl">
         <h2 className="font-display text-4xl md:text-5xl font-black leading-tight mb-16 text-center">
-          Frequently asked
+          Questions
           <br />
-          <em className="text-primary">questions.</em>
+          <em className="text-primary">fréquentes.</em>
         </h2>
         <div className="space-y-4">
           {faqs.map((faq, i) => (
@@ -218,18 +218,18 @@ const AboutPage = () => {
       <div className="absolute inset-0 bg-dark/80" />
       <div className="container max-w-2xl relative z-10">
         <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">
-          Ready to explore
+          Prêt à explorer
           <br />
-          <em className="text-primary">Strasbourg?</em>
+          <em className="text-primary">Strasbourg ?</em>
         </h2>
         <p className="mt-6 text-dark-foreground/70 text-lg">
-          Book your guided ride today and see more in less time.
+          Réservez votre trajet guidé aujourd'hui et voyez plus en moins de temps.
         </p>
         <a
           href="#"
           className="inline-block mt-8 bg-primary text-primary-foreground px-10 py-4 font-semibold text-sm hover:bg-primary/90 transition-colors"
         >
-          Book your experience
+          Réservez votre expérience
         </a>
       </div>
     </section>
