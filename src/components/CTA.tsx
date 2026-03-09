@@ -6,19 +6,19 @@ const CTA = () => (
     <div className="absolute inset-0 bg-dark/80" />
     <div className="container max-w-2xl relative z-10">
       <h2 className="font-display text-4xl md:text-6xl font-black leading-tight">
-        Strasbourg vous
+        Strasbourg
         <br />
-        attend <em className="text-primary">vous.</em>
+        n'attend que <em className="text-primary">vous.</em>
       </h2>
       <p className="mt-6 text-dark-foreground/60 text-lg">
-        Rejoignez des milliers de cyclistes explorant la ville sur deux roues.
+        Rejoignez les milliers d'explorateurs qui sillonnent la ville sur deux roues.
       </p>
       <div className="mt-10 flex flex-wrap justify-center gap-4">
         <a
           href="#"
           className="bg-primary text-primary-foreground px-10 py-4 font-semibold text-sm hover:bg-primary/90 transition-colors"
         >
-          COMMENCER
+          C'EST PARTI
         </a>
         <a
           href="#"

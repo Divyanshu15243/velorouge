@@ -21,12 +21,12 @@ const Footer = () => (
           </div>
           <div className="space-y-2">
             <div className="text-dark-foreground font-semibold mb-3">Produit</div>
-            <a href="#" className="block hover:text-dark-foreground transition-colors">Circuits</a>
+            <a href="#" className="block hover:text-dark-foreground transition-colors">Balades</a>
             <a href="#" className="block hover:text-dark-foreground transition-colors">Tarifs</a>
             <a href="#" className="block hover:text-dark-foreground transition-colors">FAQ</a>
           </div>
           <div className="space-y-2">
-            <div className="text-dark-foreground font-semibold mb-3">Réseaux sociaux</div>
+            <div className="text-dark-foreground font-semibold mb-3">Réseaux</div>
             <a href="http://instagram.com/velorougefrance" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-dark-foreground transition-colors">
               <Instagram className="w-4 h-4" />
               Instagram
@@ -39,7 +39,7 @@ const Footer = () => (
         </div>
       </div>
       <div className="mt-12 pt-8 border-t border-dark-surface text-xs">
-        © 2026 VeloRouge. All rights reserved.
+        © 2026 VéloRouge. Tous droits réservés.
       </div>
     </div>
   </footer>

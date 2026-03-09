@@ -5,11 +5,11 @@ import gallery3 from "@/assets/2.png";
 const Gallery = () => (
   <section className="py-24 bg-background">
     <div className="container">
-      <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">#VéloRouge</p>
+      <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">#VÉLOROUGE</p>
       <h2 className="font-display text-4xl md:text-5xl font-black leading-tight max-w-md">
-        Voici à quoi ressemble
+        Une journée à Strasbourg,
         <br />
-        une journée à <em className="text-primary">Strasbourg.</em>
+        ça ressemble à <em className="text-primary">ça.</em>
       </h2>
 
       <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4">

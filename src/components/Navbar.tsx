@@ -8,7 +8,7 @@ const links = [
   { label: "À propos", to: "/about" },
   { label: "Visiteurs", to: "/visitors" },
   { label: "Résidents", to: "/residents" },
-  { label: "Sûr & Intelligent", to: "/safe-smart" },
+  { label: "Sécurité & Tech", to: "/safe-smart" },
   { label: "Contact", to: "/contact" },
 ];
 

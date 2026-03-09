@@ -2,41 +2,42 @@ import { Check } from "lucide-react";
 
 const plans = [
   { 
-    name: "Touristes & Visiteurs", 
-    price: "49€", 
-    period: "/circuit", 
+    name: "Visiteurs & Touristes", 
+    price: "29€", 
+    period: "/balade", 
     features: [
-      "Expérience guidée de la ville",
-      "Itinéraires panoramiques à travers Strasbourg",
-      "Arrêts photo & conseils locaux",
-      "Formation adaptée aux débutants"
+      "Parcours guidé par un local passionné",
+      "Itinéraires secrets, loin des foules",
+      "Pauses photo aux spots les plus instagrammables",
+      "Accessible à tous, même débutants"
     ],
     cta: "Réserver maintenant"
   },
   { 
     name: "Résidents & Étudiants", 
-    price: "15€", 
+    price: "24€", 
     period: "/semaine", 
     features: [
-      "Mobilité quotidienne rapide",
-      "Forfaits hebdomadaires flexibles",
+      "Votre vélo du quotidien, sans les contraintes",
+      "Formules souples à la semaine",
       "Fiable et économique",
-      "Support prioritaire"
+      "Assistance prioritaire"
     ],
     popular: true,
-    cta: "S'engager maintenant"
+    cta: "Je m'abonne"
   },
   { 
-    name: "Équipe de livraison", 
-    price: "99€", 
+    name: "Livreurs & Coursiers", 
+    price: "150€", 
     period: "/mois", 
+    subtitle: "propriétaire en 12 mois",
     features: [
+      "Location-vente : le vélo devient le vôtre",
       "Trajets illimités en semaine",
-      "Accès campus & ville",
-      "Tarification d'abonnement intelligente",
-      "Parfait pour les trajets quotidiens"
+      "Entretien inclus, zéro surprise",
+      "L'outil de travail qui vous appartient"
     ],
-    cta: "Louer maintenant"
+    cta: "Démarrer mon parcours"
   },
 ];
 
@@ -46,7 +47,7 @@ const Pricing = () => (
       <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">
         Une ville.
         <br />
-        Trois façons de <em className="text-primary">bouger.</em>
+        Trois façons de la <em className="text-primary">vivre.</em>
       </h2>
 
       <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

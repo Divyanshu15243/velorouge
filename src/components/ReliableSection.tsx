@@ -13,21 +13,20 @@ const ReliableSection = () => (
             <em className="text-primary">À vous.</em>
           </h2>
           <p className="mt-6 text-dark-foreground/70 max-w-md">
-            Un abonnement VéloRouge signifie un vélo électrique toujours prêt, toujours entretenu,
-            et toujours à vous. Pas de files d'attente, pas de stations d'accueil — juste la liberté sur deux roues.
+            Un abonnement VéloRouge, c'est un vélo toujours prêt, toujours entretenu, toujours à votre disposition. Pas de files d'attente, pas de bornes — juste la liberté sur deux roues.
           </p>
           <ul className="mt-6 space-y-3 text-base text-dark-foreground/70">
             <li className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
-              Vélo électrique personnel assigné à vous
+              Un vélo électrique attritré, rien qu'à vous
             </li>
             <li className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
-              Entretenu chaque semaine par notre équipe locale
+              Entretien hebdomadaire par notre équipe locale
             </li>
             <li className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
-              Changez de modèle à tout moment, sans frais supplémentaires
+              Changez de modèle quand vous voulez, sans frais
             </li>
           </ul>
         </div>

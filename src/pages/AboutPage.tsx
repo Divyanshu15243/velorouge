@@ -8,10 +8,10 @@ import { Bike, Heart, Users, Globe, ChevronDown } from "lucide-react";
 import { useState } from "react";
 
 const values = [
-  { icon: Bike, title: "Liberté d'abord", desc: "La mobilité doit être sans effort. Pas de files d'attente, pas de confusion — explorez simplement la ville à votre rythme." },
-  { icon: Heart, title: "Amour local", desc: "Chaque itinéraire est conçu par des personnes qui vivent à Strasbourg, afin que les visiteurs découvrent à la fois des monuments emblématiques et des joyaux cachés." },
-  { icon: Users, title: "Communauté", desc: "Nos voyageurs et cyclistes contribuent à façonner de nouvelles expériences. Des suggestions d'itinéraires aux demandes de fonctionnalités, nous écoutons." },
-  { icon: Globe, title: "Durabilité", desc: "Chaque trajet remplace un trajet en voiture et soutient les déplacements durables. Nous nous engageons à rendre Strasbourg plus vert, un coup de pédale à la fois." },
+  { icon: Bike, title: "La liberté avant tout", desc: "Se déplacer devrait être un plaisir. Pas de files, pas de casse-tête — explorez la ville à votre rythme." },
+  { icon: Heart, title: "L'amour du local", desc: "Chaque parcours est imaginé par des gens qui vivent à Strasbourg. Les visiteurs découvrent les incontournables et les pépites secrètes." },
+  { icon: Users, title: "Porté par la communauté", desc: "Nos voyageurs et cyclistes façonnent les nouvelles expériences. Des suggestions d'itinéraires aux demandes de fonctionnalités — on écoute." },
+  { icon: Globe, title: "Engagé pour la planète", desc: "Chaque balade remplace un trajet en voiture et soutient le voyage durable. Nous rendons Strasbourg plus verte, un coup de pédale à la fois." },
 ];
 
 const faqs = [
@@ -53,7 +53,7 @@ const AboutPage = () => {
           <br />
           <em className="text-primary">Strasbourg.</em>
           <br />
-          Conçu pour les explorateurs.
+          Conçu pour les curieux.
         </h1>
       </div>
     </section>
@@ -64,21 +64,21 @@ const AboutPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">
-              Nous avons commencé avec une
+              Tout a commencé
               <br />
-              simple <em className="text-primary">question.</em>
+              par une <em className="text-primary">question.</em>
             </h2>
             <p className="mt-6 text-muted-foreground text-lg max-w-md">
-              Pourquoi découvrir une nouvelle ville devrait-il être lent, encombré et compliqué ?
+              Pourquoi découvrir une ville devrait-il être lent, bondé et compliqué ?
             </p>
             <p className="mt-4 text-muted-foreground max-w-md">
-              Pas d'attente. Pas d'itinéraires confus. Pas de lieux cachés manqués.
+              Plus d'attente. Plus d'itinéraires confus. Plus de trésors cachés ratés.
             </p>
             <p className="mt-4 text-muted-foreground max-w-md">
-              VéloRouge a été créé pour aider les gens à explorer Strasbourg de manière plus intelligente et plus agréable — que vous viviez ici ou que vous soyez en visite pour une journée.
+              VéloRouge est né pour réinventer la façon dont on explore Strasbourg — que vous soyez de passage pour une journée ou résident depuis toujours.
             </p>
             <p className="mt-4 text-muted-foreground max-w-md">
-              Aujourd'hui, nous aidons des milliers de voyageurs et de locaux à découvrir Strasbourg à travers des itinéraires organisés, des visites guidées et une mobilité premium conçue pour de vraies expériences.
+              Aujourd'hui, nous accompagnons des milliers de voyageurs et de Strasbourgeois à travers des parcours sur mesure, des visites guidées et une mobilité premium conçue pour vivre de vraies expériences.
             </p>
           </div>
           <div className="aspect-video overflow-hidden">
@@ -97,17 +97,17 @@ const AboutPage = () => {
           </div>
           <div>
             <h2 className="font-display text-4xl md:text-5xl font-black leading-tight mb-8">
-              Conçu pour les voyageurs.
+              Pensé pour les voyageurs.
               <br />
-              Aimé par les <em className="text-primary">locaux.</em>
+              Adopté par les <em className="text-primary">locaux.</em>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mb-12">
-              Des visiteurs pour la première fois aux explorateurs fréquents, VéloRouge facilite la découverte de Strasbourg en moins de temps.
+              Du premier visiteur à l'explorateur chevronné, VéloRouge vous permet de voir plus de Strasbourg en moins de temps.
             </p>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                <span className="text-muted-foreground">Visites guidées de la ville avec des experts locaux</span>
+                <span className="text-muted-foreground">Visites guidées par des experts locaux</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
@@ -115,15 +115,15 @@ const AboutPage = () => {
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                <span className="text-muted-foreground">Arrêts photo aux monuments emblématiques</span>
+                <span className="text-muted-foreground">Pauses photo devant les monuments emblématiques</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                <span className="text-muted-foreground">Adapté aux débutants, aucune expérience requise</span>
+                <span className="text-muted-foreground">Accessible aux débutants, aucune expérience requise</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                <span className="text-muted-foreground">Options flexibles pour les courtes visites et les excursions d'une journée</span>
+                <span className="text-muted-foreground">Formules flexibles pour les courts séjours et excursions</span>
               </li>
             </ul>
           </div>
@@ -135,9 +135,9 @@ const AboutPage = () => {
     <section className="py-24 bg-dark text-dark-foreground">
       <div className="container">
         <h2 className="font-display text-4xl md:text-5xl font-black leading-tight mb-16">
-          Ce que nous
+          Ce en quoi
           <br />
-          défendons <em className="text-primary">.</em>
+          nous <em className="text-primary">croyons.</em>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {values.map((v) => (
@@ -162,15 +162,15 @@ const AboutPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="text-center">
             <div className="text-primary text-3xl font-bold mb-2">★★★★★</div>
-            <p className="text-muted-foreground">Classé parmi les meilleures façons d'explorer Strasbourg</p>
+            <p className="text-muted-foreground">Élu parmi les meilleures façons de découvrir Strasbourg</p>
           </div>
           <div className="text-center">
             <div className="text-primary text-3xl font-bold mb-2">30+</div>
-            <p className="text-muted-foreground">Pays représentés</p>
+            <p className="text-muted-foreground">pays représentés</p>
           </div>
           <div className="text-center">
             <div className="text-primary text-3xl font-bold mb-2">100%</div>
-            <p className="text-muted-foreground">Adapté aux débutants</p>
+            <p className="text-muted-foreground">accessible aux débutants</p>
           </div>
         </div>
       </div>
@@ -223,13 +223,13 @@ const AboutPage = () => {
           <em className="text-primary">Strasbourg ?</em>
         </h2>
         <p className="mt-6 text-dark-foreground/70 text-lg">
-          Réservez votre trajet guidé aujourd'hui et voyez plus en moins de temps.
+          Réservez votre balade guidée aujourd'hui et voyez plus en moins de temps.
         </p>
         <a
           href="#"
           className="inline-block mt-8 bg-primary text-primary-foreground px-10 py-4 font-semibold text-sm hover:bg-primary/90 transition-colors"
         >
-          Réservez votre expérience
+          Réserver mon expérience
         </a>
       </div>
     </section>
