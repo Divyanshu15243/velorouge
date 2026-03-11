@@ -1,30 +1,35 @@
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/1.png";
 import gallery3 from "@/assets/2.png";
+import { useTranslation } from "react-i18next";
 
-const Gallery = () => (
-  <section className="py-24 bg-background">
-    <div className="container">
-      <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">#VÉLOROUGE</p>
-      <h2 className="font-display text-4xl md:text-5xl font-black leading-tight max-w-md">
-        Une journée à Strasbourg,
-        <br />
-        ça ressemble à <em className="text-primary">ça.</em>
-      </h2>
+const Gallery = () => {
+  const { t } = useTranslation();
 
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="aspect-[4/3] overflow-hidden">
-          <img src={gallery2} alt="Petite France district" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
-        </div>
-        <div className="aspect-[4/3] overflow-hidden">
-          <img src={gallery1} alt="Cafe terrace at night" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
-        </div>
-        <div className="aspect-[4/3] overflow-hidden">
-          <img src={gallery3} alt="Indoor plant" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+  return (
+    <section className="py-24 bg-background">
+      <div className="container">
+        <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">#VELOROUGE</p>
+        <h2 className="font-display text-4xl md:text-5xl font-black leading-tight max-w-md">
+          A day in Strasbourg,
+          <br />
+          looks like <em className="text-primary">this.</em>
+        </h2>
+
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="aspect-[4/3] overflow-hidden">
+            <img src={gallery2} alt="Petite France district" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+          </div>
+          <div className="aspect-[4/3] overflow-hidden">
+            <img src={gallery1} alt="Cafe terrace at night" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+          </div>
+          <div className="aspect-[4/3] overflow-hidden">
+            <img src={gallery3} alt="Indoor plant" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default Gallery;
