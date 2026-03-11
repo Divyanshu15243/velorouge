@@ -18,8 +18,8 @@ const GigHero = () => {
           
           <div className="flex flex-col sm:flex-row gap-8 sm:gap-16 mb-8 md:mb-12">
             <div>
-              <div className="text-white text-2xl md:text-4xl font-serif font-bold">23 700€</div>
-              <div className="text-white/60 text-xs tracking-[0.15em] uppercase mt-2">d'économies sur 5 ans</div>
+              <div className="text-white text-2xl md:text-4xl font-serif font-bold whitespace-nowrap">125 Euros/Mois* HT</div>
+              <div className="text-white/60 text-xs tracking-[0.15em] uppercase mt-2">Abonnement de 12 mois</div>
             </div>
             <div>
               <div className="text-white text-2xl md:text-4xl font-serif font-bold">95%</div>
