@@ -2,16 +2,11 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
-
-const contactInfo = [
-  { icon: MapPin, label: "Adresse", value: "16 Avenue De La Paix, 67000 Strasbourg, France" },
-  { icon: Mail, label: "Email", value: "info@velorouge.fr" },
-  { icon: Phone, label: "Téléphone", value: "+33 622 810716" },
-  { icon: Clock, label: "Horaires", value: "Lun–Sam : 8h00 – 20h00" },
-];
+import { useTranslation } from 'react-i18next';
 
 const ContactPage = () => {
   const [submitted, setSubmitted] = useState(false);
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -19,6 +14,13 @@ const ContactPage = () => {
     subject: '',
     message: ''
   });
+
+  const contactInfo = [
+    { icon: MapPin, label: t('contact.address'), value: "16 Avenue De La Paix, 67000 Strasbourg, France" },
+    { icon: Mail, label: t('contact.email'), value: "info@velorouge.fr" },
+    { icon: Phone, label: t('contact.phone'), value: "+33 622 810716" },
+    { icon: Clock, label: t('contact.hours'), value: t('contact.hoursValue') },
+  ];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -55,12 +57,12 @@ const ContactPage = () => {
       {/* Hero */}
       <section className="pt-32 pb-16 bg-dark text-dark-foreground">
         <div className="container">
-          <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">Contact</p>
+          <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">{t('contact.tag')}</p>
           <h1 className="font-display text-5xl md:text-7xl font-black leading-[0.95] max-w-3xl">
-            Parlons-<em className="text-primary">en.</em>
+            {t('contact.title')}<em className="text-primary">{t('contact.titleHighlight')}</em>
           </h1>
           <p className="mt-6 text-dark-foreground/60 max-w-lg text-lg">
-            Questions, circuits d'une journée, réservation de groupe, ou simplement envie de dire bonjour ? Nous serions ravis de vous entendre.
+            {t('contact.subtitle')}
           </p>
         </div>
       </section>
@@ -72,19 +74,19 @@ const ContactPage = () => {
             {/* Form */}
             <div>
               <h2 className="font-display text-3xl font-black mb-8">
-                Envoyez-nous un <em className="text-primary">message.</em>
+                {t('contact.sendMessage')}<em className="text-primary">{t('contact.sendMessageHighlight')}</em>
               </h2>
 
               {submitted ? (
                 <div className="p-8 border border-primary/30 bg-primary/5">
-                  <h3 className="font-display text-2xl font-bold text-primary">Merci !</h3>
-                  <p className="mt-2 text-muted-foreground">Nous vous répondrons dans les 24 heures.</p>
+                  <h3 className="font-display text-2xl font-bold text-primary">{t('contact.thank')}</h3>
+                  <p className="mt-2 text-muted-foreground">{t('contact.thankDesc')}</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium mb-2">Prénom</label>
+                      <label className="block text-sm font-medium mb-2">{t('contact.firstName')}</label>
                       <input
                         type="text"
                         name="firstName"
@@ -96,7 +98,7 @@ const ContactPage = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium mb-2">Nom</label>
+                      <label className="block text-sm font-medium mb-2">{t('contact.lastName')}</label>
                       <input
                         type="text"
                         name="lastName"
@@ -109,7 +111,7 @@ const ContactPage = () => {
                     </div>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">Email</label>
+                    <label className="block text-sm font-medium mb-2">{t('contact.email')}</label>
                     <input
                       type="email"
                       name="email"
@@ -121,7 +123,7 @@ const ContactPage = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">Sujet</label>
+                    <label className="block text-sm font-medium mb-2">{t('contact.subject')}</label>
                     <select
                       name="subject"
                       className="w-full border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
@@ -129,16 +131,16 @@ const ContactPage = () => {
                       onChange={(e) => setFormData({...formData, subject: e.target.value})}
                       required
                     >
-                      <option value="" disabled>Sélectionnez un sujet</option>
-                      <option>Demande générale</option>
-                      <option>Circuits d'une journée</option>
-                      <option>Réservation de groupe</option>
-                      <option>Entreprise</option>
-                      <option>Presse & médias</option>
+                      <option value="" disabled>{t('contact.selectSubject')}</option>
+                      <option>{t('contact.generalInquiry')}</option>
+                      <option>{t('contact.dayTrips')}</option>
+                      <option>{t('contact.groupBooking')}</option>
+                      <option>{t('contact.company')}</option>
+                      <option>{t('contact.pressMedia')}</option>
                     </select>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">Message</label>
+                    <label className="block text-sm font-medium mb-2">{t('contact.message')}</label>
                     <textarea
                       name="message"
                       required
@@ -146,14 +148,14 @@ const ContactPage = () => {
                       value={formData.message}
                       onChange={(e) => setFormData({...formData, message: e.target.value})}
                       className="w-full border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-none"
-                      placeholder="Dites-nous comment nous pouvons vous aider…"
+                      placeholder={t('contact.tellUs')}
                     />
                   </div>
                   <button
                     type="submit"
                     className="bg-primary text-primary-foreground px-10 py-3 font-semibold text-sm hover:bg-primary/90 transition-colors"
                   >
-                    ENVOYER LE MESSAGE
+                    {t('contact.sendBtn')}
                   </button>
                 </form>
               )}
@@ -162,7 +164,7 @@ const ContactPage = () => {
             {/* Info */}
             <div>
               <h2 className="font-display text-3xl font-black mb-8">
-                Trouvez-<em className="text-primary">nous.</em>
+                {t('contact.findUs')}<em className="text-primary">{t('contact.findUsHighlight')}</em>
               </h2>
               <div className="space-y-6">
                 {contactInfo.map((c) => (

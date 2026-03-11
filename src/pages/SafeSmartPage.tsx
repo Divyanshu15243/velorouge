@@ -3,36 +3,47 @@ import Footer from "@/components/Footer";
 import smartHelmet from "@/assets/smart-helmet.jpg";
 import smartGps from "@/assets/gps.png";
 import { Shield, MapPin, Bell, Smartphone, Lock, Eye, Zap, Wifi } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
-const safetyFeatures = [
-  { icon: Shield, title: "Protection antivol", desc: "Chaque vélo électrique VéloRouge est assuré contre le vol. Suivi GPS 24h/24 et 7j/7 avec alertes instantanées en cas de déplacement non autorisé." },
-  { icon: Lock, title: "Verrouillage intelligent", desc: "Verrouillez et déverrouillez votre vélo électrique depuis votre téléphone. Sans clés ni codes : un simple geste suffit." },
-  { icon: Bell, title: "Détection d'accidents", desc: "Des capteurs intégrés détectent les chutes et les impacts. Vos contacts d'urgence sont automatiquement prévenus si vous ne répondez pas." },
-  { icon: Eye, title: "Visibilité nocturne", desc: "Éclairage LED intégré avec luminosité automatique. Soyez visible à plus de 200 mètres, quelles que soient les conditions." },
-];
+const SafeSmartPage = () => {
+  const { t } = useTranslation();
 
-const smartFeatures = [
-  { icon: MapPin, title: "Suivi GPS en direct", desc: "Sachez où se trouve votre vélo électrique à tout moment. Position en temps réel visible dans l'application VéloRouge." },
-  { icon: Smartphone, title: "Contrôle via l'application", desc: "Gérez votre vélo électrique, suivez vos trajets, vérifiez l'état de l'entretien et réservez des itinéraires, le tout depuis une seule application." },
-  { icon: Zap, title: "Surveillance de la batterie", desc: "Pour les abonnés, surveillez le niveau de la batterie et trouvez la borne de recharge la plus proche." },
-  { icon: Wifi, title: "Mises à jour OTA", desc: "Votre vélo électrique devient plus intelligent au fil du temps. Les mises à jour du micrologiciel sont déployées sans fil, améliorant automatiquement ses performances." },
-];
+  const safetyFeatures = [
+    { icon: Shield, title: t('safeSmart.antiTheft'), desc: t('safeSmart.antiTheftDesc') },
+    { icon: Lock, title: t('safeSmart.smartLock'), desc: t('safeSmart.smartLockDesc') },
+    { icon: Bell, title: t('safeSmart.accidentDetection'), desc: t('safeSmart.accidentDetectionDesc') },
+    { icon: Eye, title: t('safeSmart.nightVisibility'), desc: t('safeSmart.nightVisibilityDesc') },
+  ];
 
-const SafeSmartPage = () => (
+  const smartFeatures = [
+    { icon: MapPin, title: t('safeSmart.liveTracking'), desc: t('safeSmart.liveTrackingDesc') },
+    { icon: Smartphone, title: t('safeSmart.appControl'), desc: t('safeSmart.appControlDesc') },
+    { icon: Zap, title: t('safeSmart.batteryMonitoring'), desc: t('safeSmart.batteryMonitoringDesc') },
+    { icon: Wifi, title: t('safeSmart.otaUpdates'), desc: t('safeSmart.otaUpdatesDesc') },
+  ];
+
+  const stats = [
+    { value: "0", label: t('safeSmart.accidents') },
+    { value: "99,8 %", label: t('safeSmart.reliability') },
+    { value: "< 2 min", label: t('safeSmart.responseTime') },
+    { value: "24/7", label: t('safeSmart.monitoring') },
+  ];
+
+  return (
   <main>
     <Navbar />
 
     {/* Hero */}
     <section className="pt-32 pb-16 bg-dark text-dark-foreground">
       <div className="container">
-        <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">Sécurité et intelligence</p>
+        <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">{t('safeSmart.tag')}</p>
         <h1 className="font-display text-5xl md:text-7xl font-black leading-[0.95] max-w-3xl">
-          Roulez en toute sécurité.
+          {t('safeSmart.title')}
           <br />
-          Roulez <em className="text-primary">intelligemment.</em>
+          {t('safeSmart.titleHighlight')}
         </h1>
         <p className="mt-6 text-dark-foreground/60 max-w-lg text-lg">
-          Chaque vélo électrique VéloRouge est équipé de technologies de pointe en matière de sécurité et d'intelligence.
+          {t('safeSmart.subtitle')}
         </p>
       </div>
     </section>
@@ -43,9 +54,9 @@ const SafeSmartPage = () => (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">
-              La sécurité est
+              {t('safeSmart.safetyFirst')}
               <br />
-              une <em className="text-primary">priorité.</em>
+              <em className="text-primary">{t('safeSmart.safetyFirstHighlight')}</em>
             </h2>
             <div className="mt-10 space-y-8">
               {safetyFeatures.map((f) => (
@@ -77,9 +88,9 @@ const SafeSmartPage = () => (
           </div>
           <div className="md:order-2">
             <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">
-              Plus intelligent
+              {t('safeSmart.smarter')}
               <br />
-              à chaque <em className="text-primary">trajet.</em>
+              <em className="text-primary">{t('safeSmart.smarterHighlight')}</em>
             </h2>
             <div className="mt-10 space-y-8">
               {smartFeatures.map((f) => (
@@ -103,15 +114,10 @@ const SafeSmartPage = () => (
     <section className="py-24 bg-background">
       <div className="container text-center">
         <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">
-          Les chiffres parlent <em className="text-primary">d'eux-mêmes.</em>
+          {t('safeSmart.stats')} <em className="text-primary">{t('safeSmart.statsHighlight')}</em>
         </h2>
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[
-            { value: "0", label: "Accidents en 2025" },
-            { value: "99,8 %", label: "Fiabilité" },
-            { value: "< 2 min", label: "Temps de réponse moyen" },
-            { value: "24/7", label: "Surveillance en direct 24 h/24 et 7 j/7" },
-          ].map((s) => (
+          {stats.map((s) => (
             <div key={s.label}>
               <div className="font-display text-4xl font-black text-primary">{s.value}</div>
               <div className="text-sm text-muted-foreground mt-2">{s.label}</div>
@@ -124,5 +130,6 @@ const SafeSmartPage = () => (
     <Footer />
   </main>
 );
+};
 
 export default SafeSmartPage;
