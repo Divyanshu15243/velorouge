@@ -10,27 +10,27 @@ const ReliableSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">
-              Reliable.
+              {t('reliableSection.title1')}
               <br />
-              Local.
+              {t('reliableSection.title2')}
               <br />
-              <em className="text-primary">For you.</em>
+              <em className="text-primary">{t('reliableSection.titleHighlight')}</em>
             </h2>
             <p className="mt-6 text-dark-foreground/70 max-w-md">
-              A VéloRouge subscription means a bike always ready, always maintained, always at your disposal. No queues, no stations — just freedom on two wheels.
+              {t('reliableSection.subtitle')}
             </p>
             <ul className="mt-6 space-y-3 text-base text-dark-foreground/70">
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
-                A dedicated electric bike, just for you
+                {t('reliableSection.feature1')}
               </li>
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
-                Weekly maintenance by our local team
+                {t('reliableSection.feature2')}
               </li>
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
-                Switch models whenever you want, no fees
+                {t('reliableSection.feature3')}
               </li>
             </ul>
           </div>

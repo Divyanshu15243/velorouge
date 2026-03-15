@@ -344,6 +344,23 @@ export const translations = {
         ride4Description: "No other city in Europe lets you pedal leisurely between two countries before lunch. We do it every Saturday. Strasbourg's unique position at the Franco-German border is its most powerful tourist asset — and almost no operator really exploits it. This route crosses the Rhine on the Mimram Footbridge (a magnificent pedestrian bridge), passes through the Two Banks Garden, and lands in the German city of Kehl for coffee and striking cultural contrast.",
         electricBike: "ELECTRIC BIKE",
         bookButton: "BOOK"
+      },
+      gallery: {
+        tag: "#VELOROUGE",
+        title: "A day in Strasbourg,",
+        titleHighlight: "looks like this."
+      },
+      reliableSection: {
+        title1: "Reliable.",
+        title2: "Local.",
+        titleHighlight: "For you.",
+        subtitle: "A VéloRouge subscription means a bike always ready, always maintained, always at your disposal. No queues, no stations — just freedom on two wheels.",
+        feature1: "A dedicated electric bike, just for you",
+        feature2: "Weekly maintenance by our local team",
+        feature3: "Switch models whenever you want, no fees"
+      },
+      marquee: {
+        text: "Tours in Strasbourg • 6 unique routes to discover • 100 % curated rides in Strasbourg • "
       }
     }
   },
@@ -692,6 +709,23 @@ export const translations = {
         ride4Description: "Aucune autre ville d'Europe ne vous permet de pédaler tranquillement entre deux pays avant le déjeuner. Nous le faisons chaque samedi. La position unique de Strasbourg à la frontière franco-allemande est son atout touristique le plus puissant — et presque aucun opérateur ne l'exploite vraiment. Cet itinéraire traverse le Rhin sur la passerelle Mimram (un magnifique pont piétonnier), passe par le Jardin des Deux Rives, et atterrit dans la ville allemande de Kehl pour un café et un contraste culturel saisissant.",
         electricBike: "VÉLO ÉLECTRIQUE",
         bookButton: "RÉSERVER"
+      },
+      gallery: {
+        tag: "#VÉLOROUGE",
+        title: "Une journée à Strasbourg,",
+        titleHighlight: "ça ressemble à ça."
+      },
+      reliableSection: {
+        title1: "Fiable.",
+        title2: "Local.",
+        titleHighlight: "Pour vous.",
+        subtitle: "Un abonnement VéloRouge, c'est un vélo toujours prêt, toujours entretenu, toujours à votre disposition. Pas de files, pas de stations — juste la liberté sur deux roues.",
+        feature1: "Un vélo électrique dédié, rien que pour vous",
+        feature2: "Entretien hebdomadaire par notre équipe locale",
+        feature3: "Changez de modèle quand vous voulez, sans frais"
+      },
+      marquee: {
+        text: "Balades à Strasbourg • 6 itinéraires uniques à découvrir • 100 % de parcours soigneusement sélectionnés à Strasbourg • "
       }
     }
   }

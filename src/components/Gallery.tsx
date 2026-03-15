@@ -9,11 +9,11 @@ const Gallery = () => {
   return (
     <section className="py-24 bg-background">
       <div className="container">
-        <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">#VELOROUGE</p>
+        <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">{t('gallery.tag')}</p>
         <h2 className="font-display text-4xl md:text-5xl font-black leading-tight max-w-md">
-          A day in Strasbourg,
+          {t('gallery.title')}
           <br />
-          looks like <em className="text-primary">this.</em>
+          {t('gallery.titleHighlight').split(' ')[0]} <em className="text-primary">{t('gallery.titleHighlight').split(' ').slice(1).join(' ')}</em>
         </h2>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4">
