@@ -65,16 +65,6 @@ const Navbar = () => {
           >
             EN
           </button>
-          <button
-            onClick={() => changeLanguage('de')}
-            className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
-              currentLanguage === 'de'
-                ? 'bg-primary text-primary-foreground'
-                : 'text-dark-foreground/70 hover:text-dark-foreground hover:bg-dark-surface'
-            }`}
-          >
-            DE
-          </button>
 
           <button onClick={() => setOpen(!open)} className="md:hidden text-dark-foreground ml-2">
             {open ? <X size={24} /> : <Menu size={24} />}
@@ -118,16 +108,6 @@ const Navbar = () => {
               }`}
             >
               EN
-            </button>
-            <button
-              onClick={() => changeLanguage('de')}
-              className={`flex-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                currentLanguage === 'de'
-                  ? 'bg-primary text-primary-foreground'
-                  : 'text-dark-foreground/70 bg-dark-surface'
-              }`}
-            >
-              DE
             </button>
           </div>
         </div>
