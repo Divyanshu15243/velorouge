@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import sundowner from "@/assets/petite-france.jpg";
 import cathedrale from "@/assets/cathedral.jpg";
-import neustadt from "@/assets/Neustadt.jpg";
+import neustadt from "@/assets/Neustadt.jpeg";
 import marcheNoel from "@/assets/marché-de-noël1.jpg";
 import barrageVauban from "@/assets/barrage-vauban.jpg";
 import rhineBorder from "@/assets/rhine1.jpeg";
