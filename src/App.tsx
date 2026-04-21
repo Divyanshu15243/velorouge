@@ -5,7 +5,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "@/i18n/config";
 import ScrollToTop from "@/components/ScrollToTop";
+import Maintenance from "./pages/Maintenance";
 import Index from "./pages/Index";
+
+const MAINTENANCE_MODE = true;
 import AboutPage from "./pages/AboutPage";
 import RidesPage from "./pages/RidesPage";
 import SafeSmartPage from "./pages/SafeSmartPage";
@@ -24,7 +27,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
-        <Routes>
+        {MAINTENANCE_MODE ? <Maintenance /> : <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/visitors" element={<RidesPage />} />
@@ -37,7 +40,7 @@ const App = () => (
           {/* <Route path="/blog/:slug" element={<BlogDetailPage />} /> */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
-        </Routes>
+        </Routes>}
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
