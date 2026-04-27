@@ -8,7 +8,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import Maintenance from "./pages/Maintenance";
 import Index from "./pages/Index";
 
-const MAINTENANCE_MODE = true;
+const MAINTENANCE_MODE = false;
 import AboutPage from "./pages/AboutPage";
 import RidesPage from "./pages/RidesPage";
 import SafeSmartPage from "./pages/SafeSmartPage";
