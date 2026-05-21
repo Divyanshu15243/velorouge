@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
+import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
 import { useTranslation } from 'react-i18next';
@@ -52,6 +53,11 @@ const ContactPage = () => {
 
   return (
     <main>
+      <SEO 
+        title="Contact - VéloRouge Strasbourg | Nous Contacter"
+        description="Contactez VéloRouge pour vos questions sur nos visites guidées en vélo électrique à Strasbourg. Réservations, informations et demandes spéciales."
+        canonical="/contact"
+      />
       <Navbar />
 
       {/* Hero */}

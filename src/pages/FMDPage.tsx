@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
 import cycleImg from "@/assets/cycle.png";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -20,6 +21,11 @@ const FMDPage = () => {
 
   return (
   <main>
+    <SEO 
+      title="Forfait Mobilités Durables - VéloRouge | Location Vélo Éligible FMD"
+      description="Profitez du Forfait Mobilités Durables avec VéloRouge. Jusqu'à 900€ de remboursement pour vos locations de vélos électriques. Solutions pour particuliers et entreprises."
+      canonical="/residents"
+    />
     <Navbar />
 
     {/* Hero Section */}

@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import SEO from "@/components/SEO";
 import Hero from "@/components/Hero";
 import GigHero from "@/components/GigHero";
 import About from "@/components/About";
@@ -20,6 +21,11 @@ import Footer from "@/components/Footer";
 
 const Index = () => (
   <main>
+    <SEO 
+      title="VéloRouge - Expériences Premium en Vélo Électrique à Strasbourg"
+      description="Découvrez Strasbourg en vélo électrique et Segway premium. Visites guidées, itinéraires sélectionnés et solutions de mobilité durable au cœur de l'Alsace."
+      canonical="/"
+    />
     <Navbar />
     <Hero />
     

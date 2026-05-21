@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
 import smartHelmet from "@/assets/smart-helmet.jpg";
 import smartGps from "@/assets/gps.png";
@@ -31,6 +32,11 @@ const SafeSmartPage = () => {
 
   return (
   <main>
+    <SEO 
+      title="Sécurité & Technologie - VéloRouge | Vélos Électriques Connectés"
+      description="Découvrez nos vélos électriques intelligents avec GPS, antivol, détection d'accident et suivi en temps réel. Sécurité maximale pour vos déplacements à Strasbourg."
+      canonical="/safe-smart"
+    />
     <Navbar />
 
     {/* Hero */}

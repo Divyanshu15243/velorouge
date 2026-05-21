@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
 import rideSundowner from "@/assets/starboug-sunset.jpg";
 import rideMarket from "@/assets/bar-hop-petite-france.jpg";
@@ -59,6 +60,11 @@ const RidesPage = () => {
 
   return (
     <main>
+      <SEO 
+        title="Nos Expériences - VéloRouge | Visites Guidées en Vélo Électrique à Strasbourg"
+        description="Découvrez nos 4 expériences uniques en vélo électrique à Strasbourg. Coucher de soleil, bars de Petite France, Strasbourg insolite et échappée franco-allemande. 49€ par personne."
+        canonical="/visitors"
+      />
       <Navbar />
 
       {/* Hero */}

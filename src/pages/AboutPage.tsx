@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import Navbar from "@/components/Navbar";
+import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
 import aboutHero from "@/assets/about-hero.jpg";
 import teamPhoto from "@/assets/7.png";
@@ -34,6 +35,11 @@ const AboutPage = () => {
 
   return (
   <main>
+    <SEO 
+      title="À Propos - VéloRouge Strasbourg | Notre Histoire et Mission"
+      description="Découvrez l'histoire de VéloRouge, notre passion pour Strasbourg et notre engagement envers le tourisme durable. Visites guidées premium en vélo électrique."
+      canonical="/about"
+    />
     <Navbar />
 
     {/* Hero */}
