@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { Calendar, ArrowLeft, User, Clock, Tag } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const API_URL = "http://localhost:5000/api";
 
@@ -10,6 +11,13 @@ const BlogDetailPage = () => {
   const { slug } = useParams();
   const [post, setPost] = useState<any>(null);
   const [notFound, setNotFound] = useState(false);
+  const { currentLanguage } = useLanguage();
+
+  const getField = (field: string) => {
+    if (!post) return '';
+    const lang = currentLanguage === 'de' ? 'De' : currentLanguage === 'en' ? 'En' : 'Fr';
+    return post[`${field}${lang}`] || post[`${field}En`] || post[`${field}Fr`] || post[field] || '';
+  };
 
   useEffect(() => {
     if (!slug) return;
@@ -20,17 +28,28 @@ const BlogDetailPage = () => {
   }, [slug]);
 
   const formatDate = (d: string) =>
-    new Date(d).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+    new Date(d).toLocaleDateString(
+      currentLanguage === 'de' ? 'de-DE' : currentLanguage === 'en' ? 'en-US' : 'fr-FR',
+      { month: "long", day: "numeric", year: "numeric" }
+    );
+
+  const backLabel = currentLanguage === 'de' ? 'Zurück zum Journal' : currentLanguage === 'en' ? 'Back to Journal' : 'Retour au Journal';
+  const allLabel = currentLanguage === 'de' ? 'Alle Artikel' : currentLanguage === 'en' ? 'All Articles' : 'Tous les articles';
+  const readLabel = currentLanguage === 'de' ? 'Min. Lesezeit' : currentLanguage === 'en' ? 'min read' : 'min de lecture';
 
   if (notFound) {
     return (
       <main>
         <Navbar />
         <div className="container pt-40 pb-24 text-center">
-          <h1 className="font-display text-4xl font-black mb-4">Article Not Found</h1>
-          <p className="text-muted-foreground mb-8">The article you're looking for doesn't exist.</p>
+          <h1 className="font-display text-4xl font-black mb-4">
+            {currentLanguage === 'de' ? 'Artikel nicht gefunden' : currentLanguage === 'en' ? 'Article Not Found' : 'Article introuvable'}
+          </h1>
+          <p className="text-muted-foreground mb-8">
+            {currentLanguage === 'de' ? 'Der gesuchte Artikel existiert nicht.' : currentLanguage === 'en' ? "The article you're looking for doesn't exist." : "L'article que vous cherchez n'existe pas."}
+          </p>
           <Link to="/blog" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 text-sm font-semibold hover:bg-primary/90 transition-colors">
-            <ArrowLeft size={16} /> Back to Journal
+            <ArrowLeft size={16} /> {backLabel}
           </Link>
         </div>
         <Footer />
@@ -56,12 +75,10 @@ const BlogDetailPage = () => {
   return (
     <main>
       <Navbar />
-
       <article className="pt-32 pb-24">
         <div className="container max-w-3xl">
-
           <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-10">
-            <ArrowLeft size={15} /> Back to Journal
+            <ArrowLeft size={15} /> {backLabel}
           </Link>
 
           {post.category?.name && (
@@ -69,31 +86,28 @@ const BlogDetailPage = () => {
           )}
 
           <h1 className="font-display text-4xl md:text-6xl font-black leading-tight mt-3 mb-6">
-            {post.title}
+            {getField('title')}
           </h1>
 
-          {post.excerpt && (
-            <p className="text-xl text-muted-foreground leading-relaxed mb-8">{post.excerpt}</p>
+          {getField('excerpt') && (
+            <p className="text-xl text-muted-foreground leading-relaxed mb-8">{getField('excerpt')}</p>
           )}
 
           <div className="flex flex-wrap items-center gap-5 text-sm text-muted-foreground border-y border-border py-4 mb-10">
             <span className="flex items-center gap-1.5"><User size={14} /> {post.author?.name}</span>
             <span className="flex items-center gap-1.5"><Calendar size={14} /> {formatDate(post.publishedAt)}</span>
-            {post.readingTime && <span className="flex items-center gap-1.5"><Clock size={14} /> {post.readingTime} min read</span>}
+            {post.readingTime && <span className="flex items-center gap-1.5"><Clock size={14} /> {post.readingTime} {readLabel}</span>}
           </div>
 
           {post.featuredImage && (
             <div className="aspect-[16/9] overflow-hidden mb-12">
-              <img src={post.featuredImage} alt={post.title} className="w-full h-full object-cover" />
+              <img src={post.featuredImage} alt={getField('title')} className="w-full h-full object-cover" />
             </div>
           )}
 
           <div
-            className="prose prose-lg max-w-none text-foreground
-              prose-headings:font-display prose-headings:font-black
-              prose-a:text-primary prose-a:no-underline hover:prose-a:underline
-              prose-img:rounded-none prose-blockquote:border-primary"
-            dangerouslySetInnerHTML={{ __html: post.content }}
+            className="prose prose-lg max-w-none text-foreground prose-headings:font-display prose-headings:font-black prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-img:rounded-none prose-blockquote:border-primary"
+            dangerouslySetInnerHTML={{ __html: getField('content') }}
           />
 
           {post.tags?.length > 0 && (
@@ -109,12 +123,11 @@ const BlogDetailPage = () => {
 
           <div className="mt-12 pt-8 border-t border-border">
             <Link to="/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline">
-              <ArrowLeft size={15} /> All Articles
+              <ArrowLeft size={15} /> {allLabel}
             </Link>
           </div>
         </div>
       </article>
-
       <Footer />
     </main>
   );

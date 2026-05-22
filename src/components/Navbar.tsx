@@ -17,7 +17,7 @@ const Navbar = () => {
     { label: t('nav.visitors'), to: "/visitors" },
     { label: t('nav.residents'), to: "/residents" },
     { label: t('nav.safeSmart'), to: "/safe-smart" },
-    // { label: "Blog", to: "/blog" },
+    { label: "Blog", to: "/blog" },
     { label: t('nav.contact'), to: "/contact" },
   ];
 
@@ -66,6 +66,7 @@ const Navbar = () => {
             EN
           </button>
 
+
           <button onClick={() => setOpen(!open)} className="md:hidden text-dark-foreground ml-2">
             {open ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -109,6 +110,7 @@ const Navbar = () => {
             >
               EN
             </button>
+
           </div>
         </div>
       )}
