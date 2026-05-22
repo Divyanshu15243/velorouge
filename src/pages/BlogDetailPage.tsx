@@ -5,7 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/hooks/useLanguage";
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://www.velorouge.fr/api";
+const API_KEY = "462d173c-191d-45ec-b399-4e1d71f13efd";
 
 const BlogDetailPage = () => {
   const { slug } = useParams();
@@ -21,7 +22,9 @@ const BlogDetailPage = () => {
 
   useEffect(() => {
     if (!slug) return;
-    fetch(`${API_URL}/blogs/public/${slug}`)
+    fetch(`${API_URL}/blogs/public/${slug}`, {
+      headers: { 'x-api-key': API_KEY }
+    })
       .then(r => r.json())
       .then(data => { if (data.blog) setPost(data.blog); else setNotFound(true); })
       .catch(() => setNotFound(true));

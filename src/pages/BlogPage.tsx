@@ -6,8 +6,8 @@ import Footer from "@/components/Footer";
 import heroBg from "@/assets/hero-bg.jpg";
 import { useLanguage } from "@/hooks/useLanguage";
 
+const API_URL = "https://www.velorouge.fr/api";
 const API_KEY = "462d173c-191d-45ec-b399-4e1d71f13efd";
-const API_URL = "http://localhost:5000/api";
 const POSTS_PER_PAGE = 6;
 
 const BlogPage = () => {
@@ -26,7 +26,9 @@ const BlogPage = () => {
     setLoading(true);
     const params = new URLSearchParams({ apiKey: API_KEY, limit: "100" });
     if (search) params.set("search", search);
-    fetch(`${API_URL}/blogs/public?${params}`)
+    fetch(`${API_URL}/blogs/public?${params}`, {
+      headers: { 'x-api-key': API_KEY }
+    })
       .then(r => r.json())
       .then(data => { setPosts(data.blogs || []); setPage(1); })
       .finally(() => setLoading(false));
