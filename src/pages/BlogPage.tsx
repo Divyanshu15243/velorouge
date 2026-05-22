@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import heroBg from "@/assets/hero-bg.jpg";
 import { useLanguage } from "@/hooks/useLanguage";
 
-const API_KEY = "be4dd36b-d3ca-42ee-b278-f4d7292c1d0c";
+const API_KEY = "462d173c-191d-45ec-b399-4e1d71f13efd";
 const API_URL = "http://localhost:5000/api";
 const POSTS_PER_PAGE = 6;
 
