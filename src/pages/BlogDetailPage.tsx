@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/hooks/useLanguage";
 
-const API_URL = "https://www.velorouge.fr/api";
+const API_URL = "https://bolg-backend.vercel.app/api";
 const API_KEY = "462d173c-191d-45ec-b399-4e1d71f13efd";
 
 const BlogDetailPage = () => {

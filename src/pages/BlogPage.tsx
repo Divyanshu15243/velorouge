@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import heroBg from "@/assets/hero-bg.jpg";
 import { useLanguage } from "@/hooks/useLanguage";
 
-const API_URL = "https://www.velorouge.fr/api";
+const API_URL = "https://bolg-backend.vercel.app/api";
 const API_KEY = "462d173c-191d-45ec-b399-4e1d71f13efd";
 const POSTS_PER_PAGE = 6;
 
