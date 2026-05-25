@@ -8,51 +8,20 @@ import { useLanguage } from "@/hooks/useLanguage";
 const API_URL = "https://bolg-backend.vercel.app/api";
 const API_KEY = "462d173c-191d-45ec-b399-4e1d71f13efd";
 
-// Split text into chunks under 500 chars, translate each, rejoin
-const translateText = async (text: string, targetLang: string): Promise<string> => {
-  if (!text || targetLang === 'fr') return text;
-  const CHUNK = 450;
-  const chunks: string[] = [];
-  for (let i = 0; i < text.length; i += CHUNK) chunks.push(text.slice(i, i + CHUNK));
-  try {
-    const results = await Promise.all(chunks.map(async (chunk) => {
-      const res = await fetch(
-        `https://api.mymemory.translated.net/get?q=${encodeURIComponent(chunk)}&langpair=fr|en`
-      );
-      const data = await res.json();
-      return data.responseData?.translatedText || chunk;
-    }));
-    return results.join('');
-  } catch {
-    return text;
-  }
-};
-
-// Translate only text nodes inside HTML, preserving tags
-const translateHTML = async (html: string, targetLang: string): Promise<string> => {
-  if (!html || targetLang === 'fr') return html;
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(html, 'text/html');
-  const walker = document.createTreeWalker(doc.body, NodeFilter.SHOW_TEXT);
-  const textNodes: Text[] = [];
-  let node;
-  while ((node = walker.nextNode())) {
-    if (node.textContent?.trim()) textNodes.push(node as Text);
-  }
-  await Promise.all(textNodes.map(async (n) => {
-    n.textContent = await translateText(n.textContent || '', targetLang);
-  }));
-  return doc.body.innerHTML;
-};
 
 const BlogDetailPage = () => {
   const { slug } = useParams();
   const [post, setPost] = useState<any>(null);
-  const [translatedPost, setTranslatedPost] = useState<any>(null);
   const [notFound, setNotFound] = useState(false);
   const { currentLanguage } = useLanguage();
 
-  const getField = (field: string) => translatedPost?.[field] || post?.[field] || '';
+  const getField = (field: string) => {
+    if (currentLanguage === 'fr') {
+      const frField = field + 'Fr';
+      if (post?.[frField]) return post[frField];
+    }
+    return post?.[field] || '';
+  };
 
   useEffect(() => {
     if (!slug) return;
@@ -63,20 +32,6 @@ const BlogDetailPage = () => {
       .then(data => { if (data.blog) setPost(data.blog); else setNotFound(true); })
       .catch(() => setNotFound(true));
   }, [slug]);
-
-  useEffect(() => {
-    if (!post) return;
-    if (currentLanguage === 'fr') { setTranslatedPost(post); return; }
-    const translate = async () => {
-      const [title, excerpt, content] = await Promise.all([
-        translateText(post.title, currentLanguage),
-        translateText(post.excerpt, currentLanguage),
-        translateHTML(post.content, currentLanguage),
-      ]);
-      setTranslatedPost({ ...post, title, excerpt, content });
-    };
-    translate();
-  }, [post, currentLanguage]);
 
   const formatDate = (d: string) =>
     new Date(d).toLocaleDateString(
