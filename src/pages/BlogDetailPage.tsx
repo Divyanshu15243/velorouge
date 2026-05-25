@@ -157,7 +157,14 @@ const BlogDetailPage = () => {
           )}
 
           <div
-            className="prose prose-lg max-w-none text-foreground prose-headings:font-display prose-headings:font-black prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-img:rounded-none prose-blockquote:border-primary"
+            className="prose prose-base max-w-none text-foreground
+              prose-headings:font-display prose-headings:font-black prose-headings:mb-3 prose-headings:mt-6
+              prose-p:my-2 prose-p:leading-relaxed
+              prose-li:my-0.5
+              prose-ul:my-2 prose-ol:my-2
+              prose-a:text-primary prose-a:no-underline hover:prose-a:underline
+              prose-img:rounded-none prose-img:my-4
+              prose-blockquote:border-primary prose-blockquote:my-3"
             dangerouslySetInnerHTML={{ __html: getField('content') }}
           />
 
