@@ -10,13 +10,19 @@ const API_URL = "https://bolg-backend.vercel.app/api";
 const API_KEY = "462d173c-191d-45ec-b399-4e1d71f13efd";
 
 const translateText = async (text: string, targetLang: string): Promise<string> => {
-  if (!text || targetLang === 'en') return text;
+  if (!text || targetLang === 'fr') return text;
+  const CHUNK = 450;
+  const chunks: string[] = [];
+  for (let i = 0; i < text.length; i += CHUNK) chunks.push(text.slice(i, i + CHUNK));
   try {
-    const res = await fetch(
-      `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=en|${targetLang}`
-    );
-    const data = await res.json();
-    return data.responseData?.translatedText || text;
+    const results = await Promise.all(chunks.map(async (chunk) => {
+      const res = await fetch(
+        `https://api.mymemory.translated.net/get?q=${encodeURIComponent(chunk)}&langpair=fr|en`
+      );
+      const data = await res.json();
+      return data.responseData?.translatedText || chunk;
+    }));
+    return results.join('');
   } catch {
     return text;
   }
@@ -52,7 +58,7 @@ const BlogPage = () => {
 
   useEffect(() => {
     if (posts.length === 0) return;
-    if (currentLanguage === 'en') { setTranslatedPosts(posts); return; }
+    if (currentLanguage === 'fr') { setTranslatedPosts(posts); return; }
     const translate = async () => {
       const translated = await Promise.all(posts.map(async (post) => ({
         ...post,

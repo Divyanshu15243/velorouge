@@ -10,14 +10,14 @@ const API_KEY = "462d173c-191d-45ec-b399-4e1d71f13efd";
 
 // Split text into chunks under 500 chars, translate each, rejoin
 const translateText = async (text: string, targetLang: string): Promise<string> => {
-  if (!text || targetLang === 'en') return text;
+  if (!text || targetLang === 'fr') return text;
   const CHUNK = 450;
   const chunks: string[] = [];
   for (let i = 0; i < text.length; i += CHUNK) chunks.push(text.slice(i, i + CHUNK));
   try {
     const results = await Promise.all(chunks.map(async (chunk) => {
       const res = await fetch(
-        `https://api.mymemory.translated.net/get?q=${encodeURIComponent(chunk)}&langpair=en|${targetLang}`
+        `https://api.mymemory.translated.net/get?q=${encodeURIComponent(chunk)}&langpair=fr|en`
       );
       const data = await res.json();
       return data.responseData?.translatedText || chunk;
@@ -30,7 +30,7 @@ const translateText = async (text: string, targetLang: string): Promise<string> 
 
 // Translate only text nodes inside HTML, preserving tags
 const translateHTML = async (html: string, targetLang: string): Promise<string> => {
-  if (!html || targetLang === 'en') return html;
+  if (!html || targetLang === 'fr') return html;
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, 'text/html');
   const walker = document.createTreeWalker(doc.body, NodeFilter.SHOW_TEXT);
@@ -66,7 +66,7 @@ const BlogDetailPage = () => {
 
   useEffect(() => {
     if (!post) return;
-    if (currentLanguage === 'en') { setTranslatedPost(post); return; }
+    if (currentLanguage === 'fr') { setTranslatedPost(post); return; }
     const translate = async () => {
       const [title, excerpt, content] = await Promise.all([
         translateText(post.title, currentLanguage),
