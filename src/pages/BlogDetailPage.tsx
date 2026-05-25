@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import { useLanguage } from "@/hooks/useLanguage";
 
 const API_URL = "https://bolg-backend.vercel.app/api";
-const API_KEY = "462d173c-191d-45ec-b399-4e1d71f13efd";
+const API_KEY = "5453531f-1866-4c39-a0d1-caf5a82bc310";
 
 
 const BlogDetailPage = () => {
