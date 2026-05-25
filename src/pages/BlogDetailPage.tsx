@@ -15,8 +15,10 @@ const BlogDetailPage = () => {
   const [notFound, setNotFound] = useState(false);
   const { currentLanguage } = useLanguage();
 
+  const isFr = currentLanguage?.startsWith('fr');
+
   const getField = (field: string) => {
-    if (currentLanguage === 'fr') {
+    if (isFr) {
       const frField = field + 'Fr';
       if (post?.[frField]) return post[frField];
     }
@@ -35,7 +37,7 @@ const BlogDetailPage = () => {
 
   const formatDate = (d: string) =>
     new Date(d).toLocaleDateString(
-      currentLanguage === 'de' ? 'de-DE' : currentLanguage === 'en' ? 'en-US' : 'fr-FR',
+      currentLanguage?.startsWith('fr') ? 'fr-FR' : 'en-US',
       { month: "long", day: "numeric", year: "numeric" }
     );
 
