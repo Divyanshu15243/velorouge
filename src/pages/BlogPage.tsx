@@ -5,6 +5,10 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroBg from "@/assets/hero-bg.jpg";
 import { useLanguage } from "@/hooks/useLanguage";
+import imgEbike from "@/assets/Strasbourg on an E-Bike.png";
+import imgKids from "@/assets/Strasbourg with Kids.png";
+import imgWine from "@/assets/The Alsace Wine Route by E-Bike.png";
+import imgGermany from "@/assets/Ride Into Germany.png";
 
 const categoryStyles: Record<string, string> = {
   "City Guide":    "bg-blue-900/60 text-blue-300 border border-blue-700/50",
@@ -28,7 +32,7 @@ export const blogPosts = [
   {
     slug: "strasbourg-ebike-where-to-ride",
     category: "City Guide",
-    image: "/src/assets/Strasbourg on an E-Bike.png",
+    image: imgEbike,
     author: "Prashant K.",
     date: { en: "April 5, 2025", fr: "5 avril 2025" },
     title: {
@@ -89,7 +93,7 @@ export const blogPosts = [
   {
     slug: "strasbourg-with-kids-ebike",
     category: "Family",
-    image: "/src/assets/Strasbourg with Kids.png",
+    image: imgKids,
     author: "Prashant K.",
     date: { en: "April 12, 2025", fr: "12 avril 2025" },
     title: {
@@ -153,7 +157,7 @@ export const blogPosts = [
   {
     slug: "alsace-wine-route-ebike",
     category: "Route",
-    image: "/src/assets/The Alsace Wine Route by E-Bike.png",
+    image: imgWine,
     author: "Prashant K.",
     date: { en: "April 20, 2025", fr: "20 avril 2025" },
     title: {
@@ -216,7 +220,7 @@ export const blogPosts = [
   {
     slug: "cross-border-ebike-strasbourg-germany",
     category: "Cross-Border",
-    image: "/src/assets/Ride Into Germany.png",
+    image: imgGermany,
     author: "Prashant K.",
     date: { en: "April 28, 2025", fr: "28 avril 2025" },
     title: {
