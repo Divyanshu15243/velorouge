@@ -74,19 +74,20 @@ const BlogDetailPage = () => {
       </section>
 
       {/* ── Article Body ── */}
-      <article className="py-20">
+      <article className="py-24">
         <div className="container max-w-2xl">
           <div
-            className="prose prose-base max-w-none text-foreground
-              prose-headings:font-display prose-headings:font-black prose-headings:leading-tight prose-headings:mb-3 prose-headings:mt-8
-              prose-h2:text-2xl prose-h2:border-l-2 prose-h2:border-primary prose-h2:pl-4
-              prose-p:my-3 prose-p:leading-relaxed
-              prose-li:my-1
-              prose-ul:my-3 prose-ol:my-3
-              prose-strong:text-foreground
+            className="blog-content prose prose-base max-w-none text-foreground
+              prose-headings:font-display prose-headings:font-black prose-headings:leading-tight
+              prose-h2:text-2xl prose-h2:border-l-2 prose-h2:border-primary prose-h2:pl-4 prose-h2:mt-16 prose-h2:mb-6
+              prose-h3:text-lg prose-h3:mt-10 prose-h3:mb-4
+              prose-p:mb-6 prose-p:mt-0 prose-p:leading-[1.85] prose-p:text-foreground/80
+              prose-li:my-2 prose-li:leading-relaxed
+              prose-ul:my-6 prose-ol:my-6
+              prose-strong:text-foreground prose-strong:font-semibold
               prose-a:text-primary prose-a:font-semibold prose-a:underline prose-a:underline-offset-2 hover:prose-a:text-primary/80
-              prose-img:rounded-none prose-img:my-6
-              prose-blockquote:border-l-2 prose-blockquote:border-primary prose-blockquote:pl-4 prose-blockquote:not-italic"
+              prose-img:rounded-none prose-img:my-8
+              prose-blockquote:border-l-2 prose-blockquote:border-primary prose-blockquote:pl-4 prose-blockquote:not-italic prose-blockquote:my-8"
             dangerouslySetInnerHTML={{ __html: post.content[lang] }}
           />
         </div>
