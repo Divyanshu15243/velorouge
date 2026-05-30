@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Calendar, User, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -281,21 +280,12 @@ export const blogPosts = [
 ];
 
 const BlogPage = () => {
-  const [search, setSearch] = useState("");
   const { currentLanguage } = useLanguage();
   const isFr = currentLanguage?.startsWith("fr");
   const lang = isFr ? "fr" : "en";
 
-  const filtered = blogPosts.filter((p) => {
-    const q = search.toLowerCase();
-    return (
-      p.title[lang].toLowerCase().includes(q) ||
-      p.excerpt[lang].toLowerCase().includes(q)
-    );
-  });
-
-  const featured = filtered[0];
-  const rest = filtered.slice(1);
+  const featured = blogPosts[0];
+  const rest = blogPosts.slice(1);
 
   return (
     <main className="bg-background">
@@ -316,112 +306,92 @@ const BlogPage = () => {
             </h1>
           </div>
           <div className="md:max-w-sm">
-            <p className="text-dark-foreground/50 text-base mb-5">
+            <p className="text-dark-foreground/50 text-base">
               {isFr
                 ? "Guides vélo, histoires de la ville et conseils pour explorer Strasbourg à deux roues."
                 : "Cycling guides, city stories, and tips for exploring Strasbourg on two wheels."}
             </p>
-            <input
-              type="text"
-              placeholder={isFr ? "Rechercher des articles..." : "Search articles..."}
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="w-full bg-dark-surface border border-white/10 px-4 py-3 text-sm text-dark-foreground placeholder:text-dark-foreground/30 focus:outline-none focus:border-primary transition-colors"
-            />
           </div>
         </div>
       </section>
 
-      {filtered.length === 0 ? (
-        <div className="container text-center py-32">
-          <h3 className="font-display text-2xl font-bold mb-2">
-            {isFr ? "Aucun article trouvé" : "No articles found"}
-          </h3>
-          <p className="text-muted-foreground">
-            {isFr ? "Essayez un autre terme de recherche." : "Try a different search term."}
-          </p>
-        </div>
-      ) : (
-        <>
-          {/* ── Featured Post ── */}
-          {featured && (
-            <section className="border-b border-border">
-              <div className="container py-16">
-                <p className="text-xs font-semibold text-primary tracking-[0.2em] uppercase mb-8">
-                  {isFr ? "À la une" : "Featured"}
-                </p>
-                <Link to={`/blog/${featured.slug}`} className="group grid md:grid-cols-2 gap-0 items-stretch">
-                  <div className="aspect-[4/3] md:aspect-auto overflow-hidden bg-muted relative">
-                    <img
-                      src={featured.image}
-                      alt={featured.title[lang]}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <CategoryTag category={featured.category} />
-                    </div>
-                  </div>
-                  <div className="bg-dark p-10 md:p-14 flex flex-col justify-between">
-                    <div>
-                      <h2 className="font-display text-3xl md:text-4xl font-black text-dark-foreground leading-tight mt-1 mb-4 group-hover:text-primary transition-colors">
-                        {featured.title[lang]}
-                      </h2>
-                      <p className="text-dark-foreground/50 leading-relaxed">
-                        {featured.excerpt[lang]}
-                      </p>
-                    </div>
-                    <div className="mt-8 flex items-center justify-between">
-                      <div className="text-xs text-dark-foreground/40 flex flex-col gap-1">
-                        <span className="flex items-center gap-1.5"><User size={11} /> {featured.author}</span>
-                        <span className="flex items-center gap-1.5"><Calendar size={11} /> {featured.date[lang]}</span>
-                      </div>
-                      <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all">
-                        {isFr ? "Lire" : "Read"} <ArrowRight size={15} />
-                      </span>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            </section>
-          )}
-
-          {/* ── Rest of Posts ── */}
-          {rest.length > 0 && (
-            <section className="py-20">
-              <div className="container">
-                <p className="text-xs font-semibold text-primary tracking-[0.2em] uppercase mb-10">
-                  {isFr ? "Tous les articles" : "All Articles"}
-                </p>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14">
-                  {rest.map((post) => (
-                    <Link key={post.slug} to={`/blog/${post.slug}`} className="group block">
-                      <div className="aspect-[3/2] overflow-hidden bg-muted mb-5 relative">
-                        <img
-                          src={post.image}
-                          alt={post.title[lang]}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                        />
-                        <div className="absolute top-3 left-3">
-                          <CategoryTag category={post.category} />
-                        </div>
-                      </div>
-                      <h3 className="font-display text-xl font-black mt-2 mb-2 group-hover:text-primary transition-colors line-clamp-2 leading-tight">
-                        {post.title[lang]}
-                      </h3>
-                      <p className="text-muted-foreground text-sm line-clamp-2 mb-5 leading-relaxed">
-                        {post.excerpt[lang]}
-                      </p>
-                      <div className="flex items-center justify-between text-xs text-muted-foreground border-t border-border pt-4">
-                        <span className="flex items-center gap-1.5"><User size={11} /> {post.author}</span>
-                        <span className="flex items-center gap-1.5"><Calendar size={11} /> {post.date[lang]}</span>
-                      </div>
-                    </Link>
-                  ))}
+      {/* ── Featured Post ── */}
+      {featured && (
+        <section className="border-b border-border">
+          <div className="container py-16">
+            <p className="text-xs font-semibold text-primary tracking-[0.2em] uppercase mb-8">
+              {isFr ? "À la une" : "Featured"}
+            </p>
+            <Link to={`/blog/${featured.slug}`} className="group grid md:grid-cols-2 gap-0 items-stretch">
+              <div className="aspect-[4/3] md:aspect-auto overflow-hidden bg-muted relative">
+                <img
+                  src={featured.image}
+                  alt={featured.title[lang]}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute top-4 left-4">
+                  <CategoryTag category={featured.category} />
                 </div>
               </div>
-            </section>
-          )}
-        </>
+              <div className="bg-dark p-10 md:p-14 flex flex-col justify-between">
+                <div>
+                  <h2 className="font-display text-3xl md:text-4xl font-black text-dark-foreground leading-tight mt-1 mb-4 group-hover:text-primary transition-colors">
+                    {featured.title[lang]}
+                  </h2>
+                  <p className="text-dark-foreground/50 leading-relaxed">
+                    {featured.excerpt[lang]}
+                  </p>
+                </div>
+                <div className="mt-8 flex items-center justify-between">
+                  <div className="text-xs text-dark-foreground/40 flex flex-col gap-1">
+                    <span className="flex items-center gap-1.5"><User size={11} /> {featured.author}</span>
+                    <span className="flex items-center gap-1.5"><Calendar size={11} /> {featured.date[lang]}</span>
+                  </div>
+                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all">
+                    {isFr ? "Lire" : "Read"} <ArrowRight size={15} />
+                  </span>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </section>
+      )}
+
+      {/* ── Rest of Posts ── */}
+      {rest.length > 0 && (
+        <section className="py-20">
+          <div className="container">
+            <p className="text-xs font-semibold text-primary tracking-[0.2em] uppercase mb-10">
+              {isFr ? "Tous les articles" : "All Articles"}
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14">
+              {rest.map((post) => (
+                <Link key={post.slug} to={`/blog/${post.slug}`} className="group block">
+                  <div className="aspect-[3/2] overflow-hidden bg-muted mb-5 relative">
+                    <img
+                      src={post.image}
+                      alt={post.title[lang]}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute top-3 left-3">
+                      <CategoryTag category={post.category} />
+                    </div>
+                  </div>
+                  <h3 className="font-display text-xl font-black mt-2 mb-2 group-hover:text-primary transition-colors line-clamp-2 leading-tight">
+                    {post.title[lang]}
+                  </h3>
+                  <p className="text-muted-foreground text-sm line-clamp-2 mb-5 leading-relaxed">
+                    {post.excerpt[lang]}
+                  </p>
+                  <div className="flex items-center justify-between text-xs text-muted-foreground border-t border-border pt-4">
+                    <span className="flex items-center gap-1.5"><User size={11} /> {post.author}</span>
+                    <span className="flex items-center gap-1.5"><Calendar size={11} /> {post.date[lang]}</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
       )}
 
       {/* ── CTA ── */}
