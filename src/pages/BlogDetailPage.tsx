@@ -1,62 +1,36 @@
-import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { Calendar, ArrowLeft, User, Clock, Tag } from "lucide-react";
+import { Calendar, ArrowLeft, User } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/hooks/useLanguage";
-
-const API_URL = "https://bolg-backend.vercel.app/api";
-const API_KEY = "5453531f-1866-4c39-a0d1-caf5a82bc310";
-
+import { blogPosts, CategoryTag } from "./BlogPage";
 
 const BlogDetailPage = () => {
   const { slug } = useParams();
-  const [post, setPost] = useState<any>(null);
-  const [notFound, setNotFound] = useState(false);
   const { currentLanguage } = useLanguage();
+  const isFr = currentLanguage?.startsWith("fr");
 
-  const isFr = currentLanguage?.startsWith('fr');
+  const post = blogPosts.find((p) => p.slug === slug);
 
-  const getField = (field: string) => {
-    if (isFr) {
-      const frField = field + 'Fr';
-      if (post?.[frField]) return post[frField];
-    }
-    return post?.[field] || '';
-  };
+  const backLabel = isFr ? "Retour au Journal" : "Back to Journal";
 
-  useEffect(() => {
-    if (!slug) return;
-    fetch(`${API_URL}/blogs/public/${slug}`, {
-      headers: { 'x-api-key': API_KEY }
-    })
-      .then(r => r.json())
-      .then(data => { if (data.blog) setPost(data.blog); else setNotFound(true); })
-      .catch(() => setNotFound(true));
-  }, [slug]);
-
-  const formatDate = (d: string) =>
-    new Date(d).toLocaleDateString(
-      currentLanguage?.startsWith('fr') ? 'fr-FR' : 'en-US',
-      { month: "long", day: "numeric", year: "numeric" }
-    );
-
-  const backLabel = currentLanguage === 'de' ? 'Zurück zum Journal' : currentLanguage === 'en' ? 'Back to Journal' : 'Retour au Journal';
-  const allLabel = currentLanguage === 'de' ? 'Alle Artikel' : currentLanguage === 'en' ? 'All Articles' : 'Tous les articles';
-  const readLabel = currentLanguage === 'de' ? 'Min. Lesezeit' : currentLanguage === 'en' ? 'min read' : 'min de lecture';
-
-  if (notFound) {
+  if (!post) {
     return (
       <main>
         <Navbar />
         <div className="container pt-40 pb-24 text-center">
           <h1 className="font-display text-4xl font-black mb-4">
-            {currentLanguage === 'de' ? 'Artikel nicht gefunden' : currentLanguage === 'en' ? 'Article Not Found' : 'Article introuvable'}
+            {isFr ? "Article introuvable" : "Article Not Found"}
           </h1>
           <p className="text-muted-foreground mb-8">
-            {currentLanguage === 'de' ? 'Der gesuchte Artikel existiert nicht.' : currentLanguage === 'en' ? "The article you're looking for doesn't exist." : "L'article que vous cherchez n'existe pas."}
+            {isFr
+              ? "L'article que vous cherchez n'existe pas."
+              : "The article you're looking for doesn't exist."}
           </p>
-          <Link to="/blog" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 text-sm font-semibold hover:bg-primary/90 transition-colors">
+          <Link
+            to="/blog"
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 text-sm font-semibold hover:bg-primary/90 transition-colors"
+          >
             <ArrowLeft size={16} /> {backLabel}
           </Link>
         </div>
@@ -65,84 +39,97 @@ const BlogDetailPage = () => {
     );
   }
 
-  if (!post) {
-    return (
-      <main>
-        <Navbar />
-        <div className="container pt-40 pb-24 max-w-3xl animate-pulse space-y-4">
-          <div className="h-4 bg-muted rounded w-1/4" />
-          <div className="h-10 bg-muted rounded w-3/4" />
-          <div className="h-4 bg-muted rounded w-1/3" />
-          <div className="aspect-[16/9] bg-muted rounded" />
-        </div>
-        <Footer />
-      </main>
-    );
-  }
+  const lang = isFr ? "fr" : "en";
+
+  const otherPosts = blogPosts.filter((p) => p.slug !== slug).slice(0, 3);
 
   return (
-    <main>
+    <main className="bg-background">
       <Navbar />
-      <article className="pt-32 pb-24">
-        <div className="container max-w-3xl">
-          <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-10">
-            <ArrowLeft size={15} /> {backLabel}
+
+      {/* ── Article Hero ── */}
+      <section className="bg-dark pt-28 pb-0">
+        <div className="container max-w-4xl pt-8 pb-12">
+          <Link
+            to="/blog"
+            className="inline-flex items-center gap-2 text-xs font-semibold text-dark-foreground/40 hover:text-primary tracking-[0.15em] uppercase transition-colors mb-10"
+          >
+            <ArrowLeft size={13} /> {backLabel}
           </Link>
-
-          {post.category?.name && (
-            <span className="text-xs font-semibold text-primary tracking-widest uppercase">{post.category.name}</span>
-          )}
-
-          <h1 className="font-display text-4xl md:text-6xl font-black leading-tight mt-3 mb-6">
-            {getField('title')}
+          <CategoryTag category={post.category} className="mb-4" />
+          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-black text-dark-foreground leading-[0.95] mb-6">
+            {post.title[lang]}
           </h1>
-
-          {getField('excerpt') && (
-            <p className="text-xl text-muted-foreground leading-relaxed mb-8">{getField('excerpt')}</p>
-          )}
-
-          <div className="flex flex-wrap items-center gap-5 text-sm text-muted-foreground border-y border-border py-4 mb-10">
-            <span className="flex items-center gap-1.5"><User size={14} /> {post.author?.name}</span>
-            <span className="flex items-center gap-1.5"><Calendar size={14} /> {formatDate(post.publishedAt)}</span>
-            {post.readingTime && <span className="flex items-center gap-1.5"><Clock size={14} /> {post.readingTime} {readLabel}</span>}
-          </div>
-
-          {post.featuredImage && (
-            <div className="aspect-[16/9] overflow-hidden mb-12">
-              <img src={post.featuredImage} alt={getField('title')} className="w-full h-full object-cover" />
-            </div>
-          )}
-
-          <div
-            className="prose prose-base max-w-none text-foreground
-              prose-headings:font-display prose-headings:font-black prose-headings:mb-3 prose-headings:mt-6
-              prose-p:my-2 prose-p:leading-relaxed
-              prose-li:my-0.5
-              prose-ul:my-2 prose-ol:my-2
-              prose-a:text-primary prose-a:no-underline hover:prose-a:underline
-              prose-img:rounded-none prose-img:my-4
-              prose-blockquote:border-primary prose-blockquote:my-3"
-            dangerouslySetInnerHTML={{ __html: getField('content') }}
-          />
-
-          {post.tags?.length > 0 && (
-            <div className="flex flex-wrap items-center gap-2 mt-12 pt-8 border-t border-border">
-              <Tag size={14} className="text-muted-foreground" />
-              {post.tags.map((tag: any) => (
-                <span key={tag.id} className="text-xs border border-border px-3 py-1 text-muted-foreground">
-                  {tag.name}
-                </span>
-              ))}
-            </div>
-          )}
-
-          <div className="mt-12 pt-8 border-t border-border">
-            <Link to="/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline">
-              <ArrowLeft size={15} /> {allLabel}
-            </Link>
+          <p className="text-dark-foreground/50 text-lg leading-relaxed max-w-2xl mb-8">
+            {post.excerpt[lang]}
+          </p>
+          <div className="flex flex-wrap items-center gap-6 text-xs text-dark-foreground/40 border-t border-white/10 pt-6">
+            <span className="flex items-center gap-1.5"><User size={12} /> {post.author}</span>
+            <span className="flex items-center gap-1.5"><Calendar size={12} /> {post.date[lang]}</span>
           </div>
         </div>
+        <div className="aspect-[21/9] overflow-hidden">
+          <img src={post.image} alt={post.title[lang]} className="w-full h-full object-cover opacity-80" />
+        </div>
+      </section>
+
+      {/* ── Article Body ── */}
+      <article className="py-20">
+        <div className="container max-w-2xl">
+          <div
+            className="prose prose-base max-w-none text-foreground
+              prose-headings:font-display prose-headings:font-black prose-headings:leading-tight prose-headings:mb-3 prose-headings:mt-8
+              prose-h2:text-2xl prose-h2:border-l-2 prose-h2:border-primary prose-h2:pl-4
+              prose-p:my-3 prose-p:leading-relaxed
+              prose-li:my-1
+              prose-ul:my-3 prose-ol:my-3
+              prose-strong:text-foreground
+              prose-a:text-primary prose-a:font-semibold prose-a:underline prose-a:underline-offset-2 hover:prose-a:text-primary/80
+              prose-img:rounded-none prose-img:my-6
+              prose-blockquote:border-l-2 prose-blockquote:border-primary prose-blockquote:pl-4 prose-blockquote:not-italic"
+            dangerouslySetInnerHTML={{ __html: post.content[lang] }}
+          />
+        </div>
       </article>
+
+      {/* ── More Articles ── */}
+      {otherPosts.length > 0 && (
+        <section className="border-t border-border py-20">
+          <div className="container">
+            <p className="text-xs font-semibold text-primary tracking-[0.2em] uppercase mb-10">
+              {isFr ? "Autres articles" : "More Articles"}
+            </p>
+            <div className="grid md:grid-cols-3 gap-x-8 gap-y-12">
+              {otherPosts.map((p) => (
+                <Link key={p.slug} to={`/blog/${p.slug}`} className="group block">
+                  <div className="aspect-[3/2] overflow-hidden bg-muted mb-4 relative">
+                    <img
+                      src={p.image}
+                      alt={p.title[lang]}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute top-3 left-3">
+                      <CategoryTag category={p.category} />
+                    </div>
+                  </div>
+                  <h3 className="font-display text-lg font-black mt-1 leading-tight group-hover:text-primary transition-colors line-clamp-2">
+                    {p.title[lang]}
+                  </h3>
+                </Link>
+              ))}
+            </div>
+            <div className="mt-12 pt-8 border-t border-border">
+              <Link
+                to="/blog"
+                className="inline-flex items-center gap-2 text-xs font-semibold text-primary tracking-[0.15em] uppercase hover:gap-3 transition-all"
+              >
+                <ArrowLeft size={13} /> {isFr ? "Tous les articles" : "All Articles"}
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
       <Footer />
     </main>
   );
