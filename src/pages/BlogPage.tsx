@@ -48,7 +48,7 @@ export const blogPosts = [
 <p>If you want to actually feel this city rather than watch it scroll past a bus window, an e-bike puts you exactly where you need to be.</p>
 
 <h2>Strasbourg Was Built for Two Wheels</h2>
-<p>This city did not stumble into being bike-friendly. It planned for it. Strasbourg consistently ranks among the top cycling cities in France, with infrastructure that makes riding comfortable whether you are a daily commuter or a visitor exploring for the first time.</p>
+<p>This city did not stumble into being bike-friendly. It planned for it. Strasbourg consistently ranks among the top cycling cities in France, with infrastructure that makes riding comfortable whether you are a daily commuter or a visitor exploring for the first time. Learn more about <a href="https://en.wikivoyage.org/wiki/Strasbourg" target="_blank" rel="noopener noreferrer">Strasbourg on Wikivoyage</a>.</p>
 <p>The flat terrain helps. Unlike Paris or Lyon, Strasbourg asks nothing difficult of your legs. And when you ride an e-bike, even the occasional slight incline near the European Quarter becomes a non-event. You arrive at your destination without the sweat, without the effort, and with time to actually look at where you are going.</p>
 
 <h2>The Routes That Show You the Real City</h2>
@@ -70,7 +70,7 @@ export const blogPosts = [
 <p>Si vous voulez vraiment ressentir cette ville plutôt que de la voir défiler derrière une vitre de bus, un vélo électrique vous place exactement là où vous devez être.</p>
 
 <h2>Strasbourg a été Conçue pour Deux Roues</h2>
-<p>Cette ville n'est pas devenue cyclable par hasard. Elle l'a planifié. Strasbourg figure régulièrement parmi les meilleures villes cyclables de France, avec des infrastructures qui rendent le vélo agréable, que vous soyez un habitué ou un visiteur qui découvre pour la première fois.</p>
+<p>Cette ville n'est pas devenue cyclable par hasard. Elle l'a planifié. Strasbourg figure régulièrement parmi les meilleures villes cyclables de France, avec des infrastructures qui rendent le vélo agréable, que vous soyez un habitué ou un visiteur qui découvre pour la première fois. En savoir plus sur <a href="https://en.wikivoyage.org/wiki/Strasbourg" target="_blank" rel="noopener noreferrer">Strasbourg sur Wikivoyage</a>.</p>
 <p>Le terrain plat aide beaucoup. Contrairement à Paris ou Lyon, Strasbourg ne demande aucun effort particulier à vos jambes. Et sur un vélo électrique, même la légère montée vers le Quartier Européen ne pose aucun problème. Vous arrivez à destination sans transpiration, sans effort, et avec le temps de regarder vraiment où vous allez.</p>
 
 <h2>Les Parcours Qui Vous Montrent la Vraie Ville</h2>
@@ -109,7 +109,7 @@ export const blogPosts = [
 <p>An e-bike ride through Strasbourg solves more of those problems than most family activities will.</p>
 
 <h2>Flat, Safe, and Built for It</h2>
-<p>Strasbourg's cycling infrastructure was not designed as an afterthought. The city has over 600 kilometres of bike lanes, many of them physically separated from car traffic. For families with younger children, this matters. You ride in your own space, at your own pace, without negotiating with buses and taxis.</p>
+<p>Strasbourg's cycling infrastructure was not designed as an afterthought. The city has over 600 kilometres of bike lanes, many of them physically separated from car traffic. For families with younger children, this matters. You ride in your own space, at your own pace, without negotiating with buses and taxis. Read more about <a href="https://en.wikipedia.org/wiki/Strasbourg" target="_blank" rel="noopener noreferrer">Strasbourg on Wikipedia</a>.</p>
 <p>The terrain stays flat across almost the entire city and its surroundings. There are no hills that will slow a child to a crawl or turn a fun afternoon into a difficult one. An e-bike handles whatever small inclines appear, which means parents arrive at each stop with energy left to actually enjoy it.</p>
 
 <h2>The Routes That Work Well with Children</h2>
@@ -132,7 +132,7 @@ export const blogPosts = [
 <p>Une balade en vélo électrique à Strasbourg résout plus de ces problèmes que la plupart des activités familiales.</p>
 
 <h2>Plat, Sûr et Fait Pour Ça</h2>
-<p>L'infrastructure cyclable de Strasbourg n'a pas été conçue comme une pensée de dernière minute. La ville compte plus de 600 kilomètres de pistes cyclables, dont beaucoup sont physiquement séparées de la circulation automobile.</p>
+<p>L'infrastructure cyclable de Strasbourg n'a pas été conçue comme une pensée de dernière minute. La ville compte plus de 600 kilomètres de pistes cyclables, dont beaucoup sont physiquement séparées de la circulation automobile. En savoir plus sur <a href="https://en.wikipedia.org/wiki/Strasbourg" target="_blank" rel="noopener noreferrer">Strasbourg sur Wikipédia</a>.</p>
 <p>Pour les familles avec de jeunes enfants, cela fait toute la différence. Vous roulez dans votre propre espace, à votre propre rythme, sans négocier avec les bus et les taxis.</p>
 <p>Le terrain reste plat sur presque toute la ville et ses alentours. Il n'y a pas de côtes qui ralentiront un enfant. Le vélo électrique gère les légères pentes qui se présentent, ce qui signifie que les parents arrivent à chaque étape avec encore de l'énergie pour en profiter.</p>
 
@@ -173,7 +173,7 @@ export const blogPosts = [
 <p>Nobody rides the full route in a day. But sections of it, covered slowly on an e-bike, give you something no car window can.</p>
 
 <h2>Why an E-Bike on the Wine Route Makes Sense</h2>
-<p>The Alsace wine route follows the foothills of the Vosges mountains. The vineyards climb the slopes on your left, the plain of Alsace and the Rhine spread out to your right, and the road between them rolls gently through village after village.</p>
+<p>The Alsace wine route follows the foothills of the Vosges mountains. The vineyards climb the slopes on your left, the plain of Alsace and the Rhine spread out to your right, and the road between them rolls gently through village after village. Learn more about <a href="https://en.wikipedia.org/wiki/Alsace_wine" target="_blank" rel="noopener noreferrer">Alsace wine on Wikipedia</a>.</p>
 <p>Gently, but not entirely flat. There are rises between villages. There are detours up into the vines that reward the effort with views worth stopping for. On a regular bicycle, those rises accumulate. On an e-bike, you choose which hills to take on your own legs and which ones to let the motor handle. You also arrive at a wine tasting without needing fifteen minutes to recover first.</p>
 
 <h2>The Sections Worth Riding from Strasbourg</h2>
@@ -196,7 +196,7 @@ export const blogPosts = [
 <p>Personne ne fait le parcours complet en une journée. Mais des sections de cette route, parcourues lentement sur un vélo électrique, offrent quelque chose qu'aucune vitre de voiture ne peut donner.</p>
 
 <h2>Pourquoi un Vélo Électrique sur la Route des Vins a du Sens</h2>
-<p>La route des vins d'Alsace suit les contreforts des Vosges. Les vignes grimpent les pentes à votre gauche, la plaine d'Alsace et le Rhin s'étendent à votre droite, et la route entre les deux serpente doucement de village en village.</p>
+<p>La route des vins d'Alsace suit les contreforts des Vosges. Les vignes grimpent les pentes à votre gauche, la plaine d'Alsace et le Rhin s'étendent à votre droite, et la route entre les deux serpente doucement de village en village. En savoir plus sur <a href="https://en.wikipedia.org/wiki/Alsace_wine" target="_blank" rel="noopener noreferrer">les vins d'Alsace sur Wikipédia</a>.</p>
 <p>Doucement, mais pas entièrement plat. Il y a des montées entre les villages. Sur un vélo classique, ces montées s'accumulent. Sur un vélo électrique, vous choisissez quelles côtes prendre à la force de vos jambes et lesquelles confier au moteur.</p>
 
 <h2>Les Sections à Parcourir depuis Strasbourg</h2>
@@ -236,7 +236,7 @@ export const blogPosts = [
 <p>That oversight costs something. The cross-border ride between Alsace and Baden is one of the more interesting cycling experiences in this part of Europe, and an e-bike makes the full circuit comfortable for almost anyone.</p>
 
 <h2>The Border That Disappeared</h2>
-<p>The French-German border along the Rhine spent most of the 20th century as a hard, heavily guarded line. Today it exists on maps but barely on the ground. The <strong>Passerelle des Deux Rives</strong> opened in 2004 as a symbol of that shift. Cyclists and pedestrians cross freely. No passport check. No queue. You roll from France into Germany in under five minutes.</p>
+<p>The French-German border along the Rhine spent most of the 20th century as a hard, heavily guarded line. Today it exists on maps but barely on the ground. The <strong>Passerelle des Deux Rives</strong> opened in 2004 as a symbol of that shift. Cyclists and pedestrians cross freely. No passport check. No queue. You roll from France into Germany in under five minutes. Find out more about <a href="https://en.wikipedia.org/wiki/Electric_bicycle" target="_blank" rel="noopener noreferrer">electric bicycles on Wikipedia</a>.</p>
 <p>That crossing alone carries a specific weight if you know anything about the history of this region. Riding it on a clear morning, with Strasbourg's cathedral visible to the west and the Black Forest hills rising to the east, puts the geography of Alsace into sharp focus.</p>
 
 <h2>What Waits on the German Side</h2>
@@ -258,7 +258,7 @@ export const blogPosts = [
 <p>C'est une occasion manquée pour beaucoup de visiteurs. Le parcours transfrontalier entre l'Alsace et le Pays de Bade compte parmi les expériences cyclables les plus intéressantes de cette partie de l'Europe.</p>
 
 <h2>La Frontière qui a Disparu</h2>
-<p>La frontière franco-allemande le long du Rhin a passé la majeure partie du XXe siècle comme une ligne dure et fortement gardée. Aujourd'hui elle existe sur les cartes mais à peine sur le terrain. La <strong>Passerelle des Deux Rives</strong> a ouvert en 2004 comme symbole de ce changement.</p>
+<p>La frontière franco-allemande le long du Rhin a passé la majeure partie du XXe siècle comme une ligne dure et fortement gardée. Aujourd'hui elle existe sur les cartes mais à peine sur le terrain. La <strong>Passerelle des Deux Rives</strong> a ouvert en 2004 comme symbole de ce changement. Découvrez-en plus sur <a href="https://en.wikipedia.org/wiki/Electric_bicycle" target="_blank" rel="noopener noreferrer">le vélo électrique sur Wikipédia</a>.</p>
 <p>Cyclistes et piétons traversent librement. Pas de contrôle de passeport. Pas de file d'attente. Vous roulez de France en Allemagne en moins de cinq minutes.</p>
 
 <h2>Ce qui Vous Attend du Côté Allemand</h2>

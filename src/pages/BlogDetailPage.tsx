@@ -85,7 +85,7 @@ const BlogDetailPage = () => {
               prose-li:my-2 prose-li:leading-relaxed
               prose-ul:my-6 prose-ol:my-6
               prose-strong:text-foreground prose-strong:font-semibold
-              prose-a:text-primary prose-a:font-semibold prose-a:underline prose-a:underline-offset-2 hover:prose-a:text-primary/80
+              prose-a:text-primary prose-a:font-semibold prose-a:underline prose-a:decoration-primary prose-a:underline-offset-4 hover:prose-a:text-primary/80 hover:prose-a:decoration-primary/60
               prose-img:rounded-none prose-img:my-8
               prose-blockquote:border-l-2 prose-blockquote:border-primary prose-blockquote:pl-4 prose-blockquote:not-italic prose-blockquote:my-8"
             dangerouslySetInnerHTML={{ __html: post.content[lang] }}

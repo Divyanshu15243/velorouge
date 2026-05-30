@@ -106,6 +106,19 @@
 }
 
 /* Blog detail content spacing */
+.blog-content a {
+  color: hsl(var(--primary));
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: hsl(var(--primary));
+  text-underline-offset: 4px;
+  transition: opacity 0.2s;
+}
+
+.blog-content a:hover {
+  opacity: 0.75;
+}
+
 .blog-content p {
   margin-bottom: 1.75rem;
   line-height: 1.9;
