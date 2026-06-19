@@ -10,12 +10,11 @@ export const translations = {
         contact: "Contact"
       },
       hero: {
-        tag: "4 EXPERIENCES • E-BIKE & SEGWAY • STRASBOURG",
+        tag: "AUDIO GUIDED TOURS ON E-BIKE & SEGWAY",
         title: "Strasbourg seen differently.",
         titleHighlight: "At your pace, guided by sound.",
-        subtitle: "Discover the capital of Alsace on an electric bike or Segway — no guide, no group, no constraints.",
-        playStore: "Get it on Play Store",
-        appStore: "Download on App Store"
+        subtitle: "Discover the capital of Alsace on an electric bike or Segway.",
+        bookYourRide: "Book Your Ride Now"
       },
       about: {
         title: "Much more than a",
@@ -55,7 +54,7 @@ export const translations = {
       },
       pricing: {
         title: "One city.",
-        titleLine2: "Three ways to",
+        titleLine2: "Five ways to",
         titleHighlight: "live it.",
         visitors: "Visitors & Tourists",
         residents: "Residents & Students",
@@ -78,7 +77,43 @@ export const translations = {
         deliveryFeature4: "The work tool that belongs to you",
         bookNow: "Book now",
         subscribe: "Subscribe",
-        startJourney: "Start my journey"
+        startJourney: "Start my journey",
+        mostPopular: "★ Most Popular",
+        bestValue: "★ Best Value",
+        plan1Name: "Discovery Day Rental",
+        plan1Period: "/day",
+        plan1Target: "Day tourists, walk-in customers",
+        plan1Feature1: "E-bike rental",
+        plan1Feature2: "Helmet & lock",
+        plan1Feature3: "4 Komoot route cards",
+        plan1Feature4: "Basic insurance",
+        plan2Name: "Discovery Experience",
+        plan2Period: "/day",
+        plan2Target: "Experience-seekers, couples, photographers",
+        plan2Feature1: "Everything in Day Rental",
+        plan2Feature2: "Audio guide via app",
+        plan2Feature3: "Komoot Premium 30-day voucher",
+        plan2Feature4: "Branded gift",
+        plan3Name: "Half-Day Cruise",
+        plan3Period: "/4 h",
+        plan3Target: "Cruise ship passengers, short-stay visitors",
+        plan3Feature1: "E-bike, helmet & lock",
+        plan3Feature2: "Cultural Circuit route card",
+        plan3Feature3: "Return at port tent",
+        plan4Name: "Weekend Package",
+        plan4Period: "/2 days",
+        plan4Target: "Weekend visitors, couples on city breaks",
+        plan4Feature1: "2-day Discovery Experience tier",
+        plan4Feature2: "E-bike, helmet & lock",
+        plan4Feature3: "Audio guide & Komoot Premium",
+        plan5Name: "3-Day Pass",
+        plan5Period: "/3 days",
+        plan5Target: "Long-weekend visitors, multi-day Alsace explorers, EuroVelo 15 tourists",
+        plan5Feature1: "3-day rental with full experience inclusions",
+        plan5Feature2: "Optional second-route guide",
+        plan5Feature3: "E-bike, helmet & lock",
+        plan5Feature4: "Audio guide & Komoot Premium",
+        bookNowBtn: "Book Now"
       },
       gigHero: {
         tag: "FOR DELIVERY RIDERS",
@@ -104,8 +139,8 @@ export const translations = {
         feature3Desc: "Every bike insured against theft and damage. Ride with peace of mind.",
         feature4Title: "Custom Routes",
         feature4Desc: "Routes designed by passionate Strasbourg locals. Discover the city's secrets.",
-        feature5Title: "Free Maintenance",
-        feature5Desc: "Revisions and repairs at no cost. Always ready to ride.",
+        feature5Title: "Maintenance*",
+        feature5Desc: "",
         feature6Title: "Guaranteed Savings",
         feature6Desc: "Up to €23,700 over 5 years. A smart investment for your mobility."
       },
@@ -273,7 +308,15 @@ export const translations = {
         address: "Address",
         phone: "Phone",
         hours: "Hours",
-        hoursValue: "Mon–Sat: 8am – 8pm"
+        hoursValue: "Tue–Fri: 09:30–12:30 / 13:30–18:30 · Sat: 10:00–17:00 · Sun & Mon: Closed",
+        closed: "Closed",
+        dayTue: "Tuesday",
+        dayWed: "Wednesday",
+        dayThu: "Thursday",
+        dayFri: "Friday",
+        daySat: "Saturday",
+        daySun: "Sunday",
+        dayMon: "Monday"
       },
       aboutPage: {
         tag: "About",
@@ -308,9 +351,9 @@ export const translations = {
         value4Desc: "Every ride replaces a car trip and supports sustainable travel. We make Strasbourg greener, one pedal at a time.",
         trustTitle1: "Why travelers choose",
         trustTitleHighlight: "VéloRouge",
-        trustStat1: "Voted among the best ways to discover Strasbourg",
-        trustStat2: "countries represented",
-        trustStat3: "beginner accessible",
+        trustStat1: "Curated tours and trips",
+        trustStat2: "E-bikes and Segways",
+        trustStat3: "Beginner Accessible",
         marqueeText: "Safe and perfect for beginners  •  Premium e-bikes and Segways  •  Flexible booking and app access  •  Multilingual support  •  Safe and perfect for beginners  •  Premium e-bikes and Segways  •  Flexible booking and app access  •  Multilingual support  •  ",
         faqTitle1: "Frequently",
         faqTitle2: "asked questions.",
@@ -370,7 +413,11 @@ export const translations = {
       gallery: {
         tag: "#VELOROUGE",
         title: "A day in Strasbourg,",
-        titleHighlight: "looks like this."
+        titleHighlight: "looks like this.",
+        blogTitle: "Latest from",
+        blogTitleHighlight: "the Blog",
+        blogReadMore: "Read article",
+        blogViewAll: "View all articles"
       },
       reliableSection: {
         title1: "Reliable.",
@@ -391,7 +438,8 @@ export const translations = {
         step2Title: "Pick up your bike",
         step2Desc: "Starting point indicated. Audio guide downloaded on your phone.",
         step3Title: "Explore at your pace",
-        step3Desc: "The audio guide tells the story. You decide where you stop."
+        step3Desc: "The audio guide tells the story. You decide where you stop.",
+        reserve: "Reserve"
       },
       showcase: {
         title: "Strasbourg City Showcase",
@@ -413,7 +461,10 @@ export const translations = {
       founderStory: {
         title: "Founder Story",
         quote: "My name is Prashant. I discovered Strasbourg on an electric bike two years ago — and I never wanted to see it any other way again. VéloRouge was born from this belief: the best way to discover a city is at your own pace, guided by curiosity. Not by a guide.",
-        signature: "— PK, Founder"
+        para2: "That first ride changed everything. I remember crossing the Ponts Couverts, the morning light hitting the water, and thinking — nobody told me to stop here. I stopped because I felt it. That feeling is what VéloRouge is built around.",
+        para3: "We spent months designing audio routes that don't just tell you what you're looking at — they make you feel why it matters. Every stop, every story, every turn was chosen by someone who loves this city deeply.",
+        para4: "Whether you have four hours or three days, VéloRouge gives you Strasbourg the way it deserves to be seen: slowly, freely, and with your own eyes.",
+        signature: "— Prashant, Founder of VéloRouge"
       },
       cityStats: {
         stat1: "Visitors per year",
@@ -462,7 +513,8 @@ export const translations = {
         step2Title: "Pick up your bike",
         step2Desc: "Starting point indicated. Audio guide downloaded on your phone.",
         step3Title: "Explore at your pace",
-        step3Desc: "The audio guide tells the story. You decide where you stop."
+        step3Desc: "The audio guide tells the story. You decide where you stop.",
+        reserve: "Reserve"
       }
     }
   },
@@ -477,12 +529,11 @@ export const translations = {
         contact: "Contact"
       },
       hero: {
-        tag: "4 EXPÉRIENCES • VÉLO ÉLECTRIQUE & SEGWAY • STRASBOURG",
+        tag: "VISITES GUIDÉES AUDIO EN VÉLO ÉLECTRIQUE & SEGWAY",
         title: "Strasbourg vue autrement. À votre rythme,",
         titleHighlight: "guidé par le son.",
-        subtitle: "Découvrez la capitale de l'Alsace sur un vélo électrique ou en Segway — sans guide, sans groupe, sans contrainte.",
-        playStore: "Télécharger sur Play Store",
-        appStore: "Télécharger sur App Store"
+        subtitle: "Découvrez la capitale de l'Alsace sur un vélo électrique ou en Segway.",
+        bookYourRide: "Réservez votre balade maintenant"
       },
       about: {
         title: "Bien plus qu'une",
@@ -522,7 +573,7 @@ export const translations = {
       },
       pricing: {
         title: "Une ville.",
-        titleLine2: "Trois façons de la",
+        titleLine2: "Cinq façons de la",
         titleHighlight: "vivre.",
         visitors: "Visiteurs & Touristes",
         residents: "Résidents & Étudiants",
@@ -545,7 +596,43 @@ export const translations = {
         deliveryFeature4: "L'outil de travail qui vous appartient",
         bookNow: "Réserver maintenant",
         subscribe: "Je m'abonne",
-        startJourney: "Démarrer mon parcours"
+        startJourney: "Démarrer mon parcours",
+        mostPopular: "★ Le plus populaire",
+        bestValue: "★ Meilleur rapport qualité-prix",
+        plan1Name: "Location Journée Découverte",
+        plan1Period: "/jour",
+        plan1Target: "Touristes à la journée, clients spontanés",
+        plan1Feature1: "Location vélo électrique",
+        plan1Feature2: "Casque & antivol",
+        plan1Feature3: "4 cartes d'itinéraires Komoot",
+        plan1Feature4: "Assurance de base",
+        plan2Name: "Expérience Découverte",
+        plan2Period: "/jour",
+        plan2Target: "Amateurs d'expériences, couples, photographes",
+        plan2Feature1: "Tout inclus dans la Location Journée",
+        plan2Feature2: "Guide audio via l'application",
+        plan2Feature3: "Bon Komoot Premium 30 jours",
+        plan2Feature4: "Cadeau personnalisé",
+        plan3Name: "Croisière Demi-Journée",
+        plan3Period: "/4 h",
+        plan3Target: "Passagers de croisière, visiteurs de courte durée",
+        plan3Feature1: "Vélo électrique, casque & antivol",
+        plan3Feature2: "Carte itinéraire Circuit Culturel",
+        plan3Feature3: "Retour au stand du port",
+        plan4Name: "Forfait Week-end",
+        plan4Period: "/2 jours",
+        plan4Target: "Visiteurs du week-end, couples en escapade",
+        plan4Feature1: "Niveau Expérience Découverte 2 jours",
+        plan4Feature2: "Vélo électrique, casque & antivol",
+        plan4Feature3: "Guide audio & Komoot Premium",
+        plan5Name: "Pass 3 Jours",
+        plan5Period: "/3 jours",
+        plan5Target: "Visiteurs de long week-end, explorateurs multi-jours en Alsace, touristes EuroVelo 15",
+        plan5Feature1: "Location 3 jours avec toutes les inclusions expérience",
+        plan5Feature2: "Guide deuxième parcours en option",
+        plan5Feature3: "Vélo électrique, casque & antivol",
+        plan5Feature4: "Guide audio & Komoot Premium",
+        bookNowBtn: "Réserver"
       },
       gigHero: {
         tag: "POUR LES LIVREURS",
@@ -571,8 +658,8 @@ export const translations = {
         feature3Desc: "Chaque vélo assuré contre vol et dommages. Roulez l'esprit tranquille.",
         feature4Title: "Parcours sur mesure",
         feature4Desc: "Itinéraires conçus par des Strasbourgeois passionnés. Découvrez les secrets de la ville.",
-        feature5Title: "Entretien offert",
-        feature5Desc: "Révisions et réparations sans frais. Toujours prêt à rouler.",
+        feature5Title: "Entretien*",
+        feature5Desc: "",
         feature6Title: "Économies garanties",
         feature6Desc: "Jusqu'à 23 700€ sur 5 ans. Un investissement intelligent pour votre mobilité."
       },
@@ -740,7 +827,15 @@ export const translations = {
         address: "Adresse",
         phone: "Téléphone",
         hours: "Horaires",
-        hoursValue: "Lun–Sam : 8h00 – 20h00"
+        hoursValue: "Mar–Ven : 09h30–12h30 / 13h30–18h30 · Sam : 10h00–17h00 · Dim & Lun : Fermé",
+        closed: "Fermé",
+        dayTue: "Mardi",
+        dayWed: "Mercredi",
+        dayThu: "Jeudi",
+        dayFri: "Vendredi",
+        daySat: "Samedi",
+        daySun: "Dimanche",
+        dayMon: "Lundi"
       },
       aboutPage: {
         tag: "À propos",
@@ -775,8 +870,8 @@ export const translations = {
         value4Desc: "Chaque balade remplace un trajet en voiture et soutient le voyage durable. Nous rendons Strasbourg plus verte, un coup de pédale à la fois.",
         trustTitle1: "Pourquoi les voyageurs choisissent",
         trustTitleHighlight: "VéloRouge",
-        trustStat1: "Élu parmi les meilleures façons de découvrir Strasbourg",
-        trustStat2: "pays représentés",
+        trustStat1: "Visites et circuits soigneusement sélectionnés",
+        trustStat2: "vélos électriques et Segways",
         trustStat3: "accessible aux débutants",
         marqueeText: "Sécurisé et parfait pour les débutants  •  E-bikes et Segways premium  •  Réservation flexible et accès via l'application  •  Support multilingue  •  Sécurisé et parfait pour les débutants  •  E-bikes et Segways premium  •  Réservation flexible et accès via l'application  •  Support multilingue  •  ",
         faqTitle1: "Questions",
@@ -837,7 +932,11 @@ export const translations = {
       gallery: {
         tag: "#VÉLOROUGE",
         title: "Une journée à Strasbourg,",
-        titleHighlight: "ça ressemble à ça."
+        titleHighlight: "ça ressemble à ça.",
+        blogTitle: "Derniers articles",
+        blogTitleHighlight: "du Blog",
+        blogReadMore: "Lire l'article",
+        blogViewAll: "Voir tous les articles"
       },
       reliableSection: {
         title1: "Fiable.",
@@ -858,7 +957,8 @@ export const translations = {
         step2Title: "Récupérez votre vélo",
         step2Desc: "Point de départ indiqué. Guide audio téléchargé sur votre téléphone.",
         step3Title: "Explorez à votre rythme",
-        step3Desc: "Le guide audio raconte. Vous décidez où vous arrêtez."
+        step3Desc: "Le guide audio raconte. Vous décidez où vous arrêtez.",
+        reserve: "Réserver"
       },
       showcase: {
         title: "Vitrine de la ville de Strasbourg",
@@ -880,7 +980,10 @@ export const translations = {
       founderStory: {
         title: "Histoire du fondateur",
         quote: "Je m'appelle Prashant. J'ai découvert Strasbourg sur un vélo électrique il y a deux ans — et je n'ai plus jamais voulu la voir autrement. VéloRouge est né de cette conviction : la plus belle façon de découvrir une ville, c'est à votre propre rythme, guidé par la curiosité. Pas par un guide.",
-        signature: "— PK, fondateur"
+        para2: "Cette première balade a tout changé. Je me souviens d'avoir traversé les Ponts Couverts, la lumière du matin se reflétant sur l'eau, en me disant — personne ne m'avait dit de m'arrêter ici. Je me suis arrêté parce que je l'avais ressenti. C'est ce sentiment que VéloRouge cherche à recréer.",
+        para3: "Nous avons passé des mois à concevoir des circuits audio qui ne se contentent pas de vous expliquer ce que vous regardez — ils vous font ressentir pourquoi c'est important. Chaque arrêt, chaque histoire, chaque virage a été choisi par quelqu'un qui aime cette ville profondément.",
+        para4: "Que vous ayez quatre heures ou trois jours, VéloRouge vous offre Strasbourg telle qu'elle mérite d'être vue : lentement, librement, et avec vos propres yeux.",
+        signature: "— Prashant, fondateur de VéloRouge"
       },
       cityStats: {
         stat1: "Visiteurs par an",
@@ -929,7 +1032,8 @@ export const translations = {
         step2Title: "Récupérez votre vélo",
         step2Desc: "Point de départ indiqué. Guide audio téléchargé sur votre téléphone.",
         step3Title: "Explorez à votre rythme",
-        step3Desc: "Le guide audio raconte. Vous décidez où vous arrêtez."
+        step3Desc: "Le guide audio raconte. Vous décidez où vous arrêtez.",
+        reserve: "Réserver"
       }
     }
   },
@@ -944,12 +1048,11 @@ export const translations = {
         contact: "Kontakt"
       },
       hero: {
-        tag: "4 ERLEBNISSE • E-BIKE & SEGWAY • STRASSBURG",
+        tag: "AUDIO GUIDED TOURS ON E-BIKE & SEGWAY",
         title: "Straßburg einmal anders erleben.",
         titleHighlight: "In Ihrem Tempo, geleitet von Klängen.",
-        subtitle: "Entdecken Sie die elsässische Hauptstadt mit dem E-Bike oder Segway – ohne Guide, ohne Gruppe, ohne Einschränkungen.",
-        playStore: "Bei Play Store herunterladen",
-        appStore: "Im App Store herunterladen"
+        subtitle: "Entdecken Sie die elsässische Hauptstadt mit dem E-Bike oder Segway.",
+        bookYourRide: "Jetzt Ihre Tour buchen"
       },
       about: {
         title: "Weit mehr als nur ein",
@@ -973,7 +1076,7 @@ export const translations = {
       },
       pricing: {
         title: "Eine Stadt.",
-        titleLine2: "Drei Möglichkeiten,",
+        titleLine2: "Fünf Möglichkeiten,",
         titleHighlight: "sie zu erleben.",
         visitors: "Besucher & Touristen",
         residents: "Einwohner & Studenten",
@@ -1022,8 +1125,8 @@ export const translations = {
         feature3Desc: "Jedes Fahrrad ist gegen Diebstahl und Beschädigung versichert. Fahren Sie unbesorgt.",
         feature4Title: "Individuelle Routen",
         feature4Desc: "Routen, die von passionierten Straßburgern entworfen wurden. Entdecken Sie die Geheimnisse der Stadt.",
-        feature5Title: "Kostenlose Wartung",
-        feature5Desc: "Inspektionen und Reparaturen kostenlos. Immer fahrbereit.",
+        feature5Title: "Wartung*",
+        feature5Desc: "",
         feature6Title: "Garantierte Ersparnisse",
         feature6Desc: "Bis zu 23.700 € über 5 Jahre. Eine clevere Investition in Ihre Mobilität."
       },
@@ -1157,8 +1260,8 @@ export const translations = {
         value4Desc: "Jede Fahrt ersetzt eine Autofahrt und unterstützt nachhaltiges Reisen. Wir machen Straßburg grüner – Schritt für Schritt.",
         trustTitle1: "Warum Reisende",
         trustTitleHighlight: "VéloRouge wählen",
-        trustStat1: "Gewählt zu den besten Möglichkeiten, Straßburg zu entdecken",
-        trustStat2: "vertretene Länder",
+        trustStat1: "Kuratierte Touren und Ausflüge",
+        trustStat2: "E-Bikes und Segways",
         trustStat3: "für Anfänger geeignet",
         marqueeText: "Mehrsprachiger Support • Sicher und ideal für Anfänger • Premium-E-Bikes und Segways • Flexible Buchung und App-Zugang • Mehrsprachiger Support • Sicher und ideal für Anfänger • Premium-E-Bikes und Segways • Flexible Buchung und App-Zugang • ",
         faqTitle1: "Häufig gestellte",

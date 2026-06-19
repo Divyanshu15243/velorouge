@@ -3,6 +3,7 @@ import { Calendar, ArrowLeft, User } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/hooks/useLanguage";
+import SEO from "@/components/SEO";
 import { blogPosts, CategoryTag } from "./BlogPage";
 
 const BlogDetailPage = () => {

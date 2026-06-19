@@ -28,30 +28,12 @@ const Hero = () => {
       <p className="mt-6 text-dark-foreground/70 max-w-2xl text-lg md:text-xl mx-auto">
         {t('hero.subtitle')}
       </p>
-      <div className="mt-8 flex flex-wrap gap-4 justify-center">
+      <div className="mt-8 flex justify-center">
         <a
-          href="https://play.google.com/store"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block"
+          href="#booking"
+          className="inline-flex items-center gap-2 bg-primary text-white font-semibold px-8 py-4 rounded-full text-lg hover:bg-primary/90 transition-colors"
         >
-          <img 
-            src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
-            alt="Get it on Google Play" 
-            className="h-14"
-          />
-        </a>
-        <a
-          href="https://apps.apple.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block"
-        >
-          <img 
-            src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" 
-            alt="Download on the App Store" 
-            className="h-14"
-          />
+          {t('hero.bookYourRide')}
         </a>
       </div>
     </div>

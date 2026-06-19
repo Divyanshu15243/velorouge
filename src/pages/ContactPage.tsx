@@ -17,10 +17,19 @@ const ContactPage = () => {
   });
 
   const contactInfo = [
-    { icon: MapPin, label: t('contact.address'), value: "16 Avenue De La Paix, 67000 Strasbourg, France" },
-    { icon: Mail, label: t('contact.email'), value: "info@velorouge.fr" },
+    { icon: MapPin, label: t('contact.address'), value: "4 Rue du Faubourg-de-Saverne, 67000 Strasbourg" },
+    { icon: Mail, label: t('contact.email'), value: "Bonjour@velorouge.fr" },
     { icon: Phone, label: t('contact.phone'), value: "+33 622 810716" },
-    { icon: Clock, label: t('contact.hours'), value: t('contact.hoursValue') },
+  ];
+
+  const hours = [
+    { day: t('contact.dayTue'), time: "09:30–12:30 / 13:30–18:30" },
+    { day: t('contact.dayWed'), time: "09:30–12:30 / 13:30–18:30" },
+    { day: t('contact.dayThu'), time: "09:30–12:30 / 13:30–18:30" },
+    { day: t('contact.dayFri'), time: "09:30–12:30 / 13:30–18:30" },
+    { day: t('contact.daySat'), time: "10:00–17:00" },
+    { day: t('contact.daySun'), time: t('contact.closed') },
+    { day: t('contact.dayMon'), time: t('contact.closed') },
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -184,12 +193,30 @@ const ContactPage = () => {
                     </div>
                   </div>
                 ))}
+
+                {/* Opening hours table */}
+                <div className="flex gap-4">
+                  <div className="w-10 h-10 bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-5 h-5 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-semibold text-sm mb-3">{t('contact.hours')}</div>
+                    <div className="space-y-1.5">
+                      {hours.map(({ day, time }) => (
+                        <div key={day} className="flex justify-between text-sm">
+                          <span className="text-foreground font-medium w-28">{day}</span>
+                          <span className={time === t('contact.closed') ? "text-muted-foreground italic" : "text-muted-foreground"}>{time}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* Google Map */}
               <div className="mt-10 aspect-video border border-border overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2639.4567890123456!2d7.7521!3d48.5734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c84d9c9b9b9b%3A0x9b9b9b9b9b9b9b9b!2s16%20Avenue%20De%20La%20Paix%2C%2067000%20Strasbourg%2C%20France!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2639.3!2d7.7388!3d48.5813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c8499b9c9b9b%3A0x1234567890abcdef!2s4%20Rue%20du%20Faubourg-de-Saverne%2C%2067000%20Strasbourg!5e0!3m2!1sen!2sfr!4v1700000000000!5m2!1sen!2sfr"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

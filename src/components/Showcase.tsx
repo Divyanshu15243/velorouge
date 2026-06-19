@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import sundowner from "@/assets/petite-france.jpg";
 import cathedrale from "@/assets/cathedral.jpg";
 import neustadt from "@/assets/Neustadt.jpeg";
@@ -39,15 +38,9 @@ const Showcase = () => {
                 <h3 className="font-display text-xl font-bold mb-2">
                   {t(location.titleKey)}
                 </h3>
-                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   {t(location.descKey)}
                 </p>
-                <Link 
-                  to="/" 
-                  className="block w-full bg-dark text-dark-foreground text-center py-3 text-sm font-semibold hover:bg-dark/90 transition-colors"
-                >
-                  {t('showcase.exploreNow')}
-                </Link>
               </div>
             </div>
           ))}

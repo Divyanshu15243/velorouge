@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import founderImg from "@/assets/hero2.jpg";
+import founderImg from "@/assets/founderpk.jpeg";
 
 const FounderStory = () => {
   const { t } = useTranslation();
@@ -19,11 +19,20 @@ const FounderStory = () => {
               loading="lazy"
             />
           </div>
-          <div>
-            <p className="text-lg md:text-xl leading-relaxed text-foreground">
-              {t('founderStory.quote')}
+          <div className="space-y-5">
+            <p className="text-lg md:text-xl leading-relaxed text-foreground font-medium italic">
+              "{t('founderStory.quote')}"
             </p>
-            <p className="mt-6 text-base font-semibold text-muted-foreground">
+            <p className="text-base md:text-lg leading-relaxed text-foreground">
+              {t('founderStory.para2')}
+            </p>
+            <p className="text-base md:text-lg leading-relaxed text-foreground">
+              {t('founderStory.para3')}
+            </p>
+            <p className="text-base md:text-lg leading-relaxed text-foreground">
+              {t('founderStory.para4')}
+            </p>
+            <p className="pt-2 text-base font-semibold text-primary">
               {t('founderStory.signature')}
             </p>
           </div>

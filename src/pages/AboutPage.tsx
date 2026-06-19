@@ -4,7 +4,7 @@ import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
 import aboutHero from "@/assets/about-hero.jpg";
 import teamPhoto from "@/assets/7.png";
-import travelersPhoto from "@/assets/gallery-1.jpg";
+import travelersPhoto from "@/assets/about22.png";
 import ctaBg from "@/assets/hero-bg.jpg";
 import { Bike, Heart, Users, Globe, ChevronDown } from "lucide-react";
 import { useState } from "react";
@@ -162,7 +162,7 @@ const AboutPage = () => {
             <p className="text-muted-foreground">{t('aboutPage.trustStat1')}</p>
           </div>
           <div className="text-center">
-            <div className="text-primary text-3xl font-bold mb-2">30+</div>
+            <div className="text-primary text-3xl font-bold mb-2">96+</div>
             <p className="text-muted-foreground">{t('aboutPage.trustStat2')}</p>
           </div>
           <div className="text-center">

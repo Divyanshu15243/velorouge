@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
 import smartHelmet from "@/assets/smart-helmet.jpg";
-import smartGps from "@/assets/gps.png";
+import smartGps from "@/assets/tech&saftey.png";
 import { Shield, MapPin, Bell, Smartphone, Lock, Eye, Zap, Wifi } from "lucide-react";
 import { useTranslation } from 'react-i18next';
 

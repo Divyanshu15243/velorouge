@@ -5,7 +5,7 @@ const About = () => {
   const { t } = useTranslation();
   
   const stats = [
-    { icon: Bike, value: "80+", label: t('about.stat1') },
+    { icon: Bike, value: "96+", label: t('about.stat1') },
     { icon: MapPin, value: "12", label: t('about.stat2') },
     { icon: Clock, value: "4 500+", label: t('about.stat3') },
   ];

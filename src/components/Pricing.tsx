@@ -3,91 +3,161 @@ import { Check } from "lucide-react";
 
 const Pricing = () => {
   const { t } = useTranslation();
-  
+
   const plans = [
-    { 
-      name: t('pricing.visitors'), 
-      price: "49€", 
-      period: t('pricing.perRide'), 
+    {
+      id: "discovery-day",
+      name: t('pricing.plan1Name'),
+      price: "€25",
+      period: t('pricing.plan1Period'),
+      target: t('pricing.plan1Target'),
       features: [
-        t('pricing.visitorsFeature1'),
-        t('pricing.visitorsFeature2'),
-        t('pricing.visitorsFeature3'),
-        t('pricing.visitorsFeature4')
+        t('pricing.plan1Feature1'),
+        t('pricing.plan1Feature2'),
+        t('pricing.plan1Feature3'),
+        t('pricing.plan1Feature4'),
       ],
-      cta: t('pricing.bookNow')
     },
-    { 
-      name: t('pricing.residents'), 
-      price: "15€", 
-      period: t('pricing.perWeek'), 
-      features: [
-        t('pricing.residentsFeature1'),
-        t('pricing.residentsFeature2'),
-        t('pricing.residentsFeature3'),
-        t('pricing.residentsFeature4')
-      ],
+    {
+      id: "discovery-exp",
+      name: t('pricing.plan2Name'),
+      price: "€35",
+      period: t('pricing.plan2Period'),
+      target: t('pricing.plan2Target'),
       popular: true,
-      cta: t('pricing.subscribe')
-    },
-    { 
-      name: t('pricing.delivery'), 
-      price: "99€", 
-      period: t('pricing.perMonth'), 
-      subtitle: t('pricing.ownerIn12'),
       features: [
-        t('pricing.deliveryFeature1'),
-        t('pricing.deliveryFeature2'),
-        t('pricing.deliveryFeature3'),
-        t('pricing.deliveryFeature4')
+        t('pricing.plan2Feature1'),
+        t('pricing.plan2Feature2'),
+        t('pricing.plan2Feature3'),
+        t('pricing.plan2Feature4'),
       ],
-      cta: t('pricing.startJourney')
+    },
+    {
+      id: "halfday",
+      name: t('pricing.plan3Name'),
+      price: "€18",
+      period: t('pricing.plan3Period'),
+      target: t('pricing.plan3Target'),
+      features: [
+        t('pricing.plan3Feature1'),
+        t('pricing.plan3Feature2'),
+        t('pricing.plan3Feature3'),
+      ],
+    },
+    {
+      id: "weekend",
+      name: t('pricing.plan4Name'),
+      price: "€42",
+      period: t('pricing.plan4Period'),
+      target: t('pricing.plan4Target'),
+      bestValue: true,
+      features: [
+        t('pricing.plan4Feature1'),
+        t('pricing.plan4Feature2'),
+        t('pricing.plan4Feature3'),
+      ],
     },
   ];
 
-  return (
-  <section id="pricing" className="py-24 bg-dark text-dark-foreground">
-    <div className="container">
-      <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">
-        {t('pricing.title')}
-        <br />
-        {t('pricing.titleLine2')} <em className="text-primary">{t('pricing.titleHighlight')}</em>
-      </h2>
+  const featuredPlan = {
+    id: "3day",
+    name: t('pricing.plan5Name'),
+    price: "€60",
+    period: t('pricing.plan5Period'),
+    target: t('pricing.plan5Target'),
+    features: [
+      t('pricing.plan5Feature1'),
+      t('pricing.plan5Feature2'),
+      t('pricing.plan5Feature3'),
+      t('pricing.plan5Feature4'),
+    ],
+  };
 
-      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {plans.map((p) => (
-          <div
-            key={p.name}
-            className={`p-6 border ${p.popular ? "border-primary bg-dark-surface" : "border-dark-surface"} flex flex-col`}
-          >
-            <div className="text-sm text-dark-foreground/60 mb-2">{p.name}</div>
-            <div className="font-display text-3xl font-bold">
-              {p.price}
-              <span className="text-sm font-body text-dark-foreground/50">{p.period}</span>
-            </div>
-            <ul className="mt-6 space-y-3 flex-1">
-              {p.features.map((f) => (
-                <li key={f} className="flex items-center gap-2 text-base text-dark-foreground/70">
-                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
-                  {f}
-                </li>
-              ))}
-            </ul>
-            <a
-              href="#"
-              className={`mt-6 block text-center py-3 text-sm font-semibold transition-colors ${
-                p.popular
-                  ? "bg-primary text-primary-foreground hover:bg-primary/90"
-                  : "border border-dark-foreground/20 text-dark-foreground hover:border-dark-foreground/40"
+  return (
+    <section id="pricing" className="py-24 bg-dark text-dark-foreground">
+      <div className="container">
+        <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">
+          {t('pricing.title')}
+          <br />
+          {t('pricing.titleLine2')} <em className="text-primary">{t('pricing.titleHighlight')}</em>
+        </h2>
+
+        {/* 4-card grid */}
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {plans.map((p) => (
+            <div
+              key={p.id}
+              className={`p-6 border flex flex-col ${
+                p.popular || p.bestValue
+                  ? "border-primary bg-dark-surface"
+                  : "border-dark-surface"
               }`}
             >
-              {p.cta}
-            </a>
+              {p.popular && (
+                <span className="self-start mb-3 text-xs font-semibold uppercase tracking-widest text-white bg-green-500 px-2 py-0.5 rounded">
+                  {t('pricing.mostPopular')}
+                </span>
+              )}
+              {p.bestValue && (
+                <span className="self-start mb-3 text-xs font-semibold uppercase tracking-widest text-primary border border-primary px-2 py-0.5">
+                  {t('pricing.bestValue')}
+                </span>
+              )}
+              <div className="text-sm text-dark-foreground/60 mb-1">{p.name}</div>
+              <div className="font-display text-3xl font-bold">
+                {p.price}
+                <span className="text-sm font-body text-dark-foreground/50 ml-1">{p.period}</span>
+              </div>
+              <div className="mt-1 text-xs text-dark-foreground/40 italic">{p.target}</div>
+              <ul className="mt-5 space-y-2 flex-1">
+                {p.features.map((f) => (
+                  <li key={f} className="flex items-center gap-2 text-sm text-dark-foreground/70">
+                    <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                    {f}
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="#contact"
+                className={`mt-6 block text-center py-3 text-sm font-semibold transition-colors ${
+                  p.popular || p.bestValue
+                    ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                    : "border border-dark-foreground/20 text-dark-foreground hover:border-dark-foreground/40"
+                }`}
+              >
+                {t('pricing.bookNowBtn')}
+              </a>
+            </div>
+          ))}
+        </div>
+
+        {/* 5th card — full-width strip */}
+        <div className="mt-6 w-full border border-primary bg-dark-surface p-6 flex flex-col sm:flex-row sm:items-center gap-6">
+          <div className="flex-shrink-0">
+            <div className="text-sm text-dark-foreground/60">{featuredPlan.name}</div>
+            <div className="font-display text-4xl font-bold mt-1">
+              {featuredPlan.price}
+              <span className="text-sm font-body text-dark-foreground/50 ml-1">{featuredPlan.period}</span>
+            </div>
+            <div className="mt-1 text-xs text-dark-foreground/40 italic">{featuredPlan.target}</div>
           </div>
-        ))}
+          <ul className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-2">
+            {featuredPlan.features.map((f) => (
+              <li key={f} className="flex items-center gap-2 text-sm text-dark-foreground/70">
+                <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                {f}
+              </li>
+            ))}
+          </ul>
+          <a
+            href="#contact"
+            className="flex-shrink-0 px-8 py-3 text-sm font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-center"
+          >
+            {t('pricing.bookNowBtn')}
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
   );
 };
 

@@ -10,12 +10,11 @@
         contact: "Contact"
       },
       hero: {
-        tag: "4 EXPÉRIENCES • VÉLO ÉLECTRIQUE & SEGWAY • STRASBOURG",
+        tag: "VISITES GUIDÉES AUDIO EN VÉLO ÉLECTRIQUE & SEGWAY",
         title: "Strasbourg vue autrement. À votre rythme,",
         titleHighlight: "guidé par le son.",
-        subtitle: "Découvrez la capitale de l'Alsace sur un vélo électrique ou en Segway — sans guide, sans groupe, sans contrainte.",
-        playStore: "Télécharger sur Play Store",
-        appStore: "Télécharger sur App Store"
+        subtitle: "Découvrez la capitale de l'Alsace sur un vélo électrique ou en Segway.",
+        bookYourRide: "Réservez votre balade maintenant"
       },
       about: {
         title: "Bien plus qu'une",

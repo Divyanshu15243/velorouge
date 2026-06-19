@@ -95,18 +95,6 @@ const Rides = () => {
               
               <p className="text-xs text-muted-foreground italic mb-2 leading-snug">{r.unique}</p>
               
-              <div className="flex items-center justify-between">
-                <div>
-                  <span className="text-xs text-muted-foreground">{t('rides.from')} </span>
-                  <span className="font-display text-xl font-bold">{r.price}</span>
-                  <span className="text-xs text-muted-foreground">{t('rides.perPerson')}</span>
-                </div>
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-xs font-semibold text-primary">
-                    {t('rides.viewDetails')}
-                  </span>
-                </div>
-              </div>
             </div>
           </Link>
         ))}

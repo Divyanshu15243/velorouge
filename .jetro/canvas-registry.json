@@ -1,0 +1,20 @@
+[
+  {
+    "id": "research_board_mpuu9qtt",
+    "name": "Research Board",
+    "projectSlug": null,
+    "createdAt": "2026-06-01T06:39:56.945Z"
+  },
+  {
+    "id": "project_mpuucwiw",
+    "name": "project",
+    "projectSlug": null,
+    "createdAt": "2026-06-01T06:42:24.296Z"
+  },
+  {
+    "id": "canvas_1_mpuuep5i",
+    "name": "Canvas 1",
+    "projectSlug": "kill",
+    "createdAt": "2026-06-01T06:43:48.054Z"
+  }
+]

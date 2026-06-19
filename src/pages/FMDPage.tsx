@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
-import cycleImg from "@/assets/cycle.png";
+import cycleImg from "@/assets/resident.png";
 import heroBg from "@/assets/hero-bg.jpg";
 import gallery1 from "@/assets/approach.png";
 import { Check, Download, Building2, Users, FileText, Headphones, ChevronDown, TrendingUp } from "lucide-react";
