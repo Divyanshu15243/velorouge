@@ -140,7 +140,7 @@ export const translations = {
         feature4Title: "Custom Routes",
         feature4Desc: "Routes designed by passionate Strasbourg locals. Discover the city's secrets.",
         feature5Title: "Maintenance*",
-        feature5Desc: "",
+        feature5Desc: "Revisions and repairs. Always ready to ride.",
         feature6Title: "Guaranteed Savings",
         feature6Desc: "Up to €23,700 over 5 years. A smart investment for your mobility."
       },
@@ -659,7 +659,7 @@ export const translations = {
         feature4Title: "Parcours sur mesure",
         feature4Desc: "Itinéraires conçus par des Strasbourgeois passionnés. Découvrez les secrets de la ville.",
         feature5Title: "Entretien*",
-        feature5Desc: "",
+        feature5Desc: "Révisions et réparations. Toujours prêt à rouler.",
         feature6Title: "Économies garanties",
         feature6Desc: "Jusqu'à 23 700€ sur 5 ans. Un investissement intelligent pour votre mobilité."
       },
