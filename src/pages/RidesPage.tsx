@@ -16,51 +16,51 @@ const RidesPage = () => {
       img: rideSundowner,
       title: t('rides.ride1Title'),
       subtitle: t('ridesPage.ride1Subtitle'),
-      price: "49€",
       tag: t('ridesPage.electricBike'),
       duration: t('ridesPage.ride1Duration'),
       time: t('ridesPage.ride1Time'),
-      groupSize: t('ridesPage.ride1GroupSize'),
       description: t('ridesPage.ride1Description'),
+      price: t('ridesPage.price1'),
+      priceLabel: t('ridesPage.price1Label'),
     },
     {
       img: rideMarket,
       title: t('rides.ride2Title'),
       subtitle: t('ridesPage.ride2Subtitle'),
-      price: "49€",
       tag: t('ridesPage.electricBike'),
       duration: t('ridesPage.ride2Duration'),
       time: t('ridesPage.ride2Time'),
-      groupSize: t('ridesPage.ride2GroupSize'),
       description: t('ridesPage.ride2Description'),
+      price: t('ridesPage.price2'),
+      priceLabel: t('ridesPage.price2Label'),
     },
     {
       img: rideRiver,
       title: t('rides.ride3Title'),
       subtitle: t('ridesPage.ride3Subtitle'),
-      price: "49€",
       tag: t('ridesPage.electricBike'),
       duration: t('ridesPage.ride3Duration'),
       time: t('ridesPage.ride3Time'),
-      groupSize: t('ridesPage.ride3GroupSize'),
       description: t('ridesPage.ride3Description'),
+      price: t('ridesPage.price3'),
+      priceLabel: t('ridesPage.price3Label'),
     },
     {
       img: rideLocal,
       title: t('rides.ride4Title'),
       subtitle: t('ridesPage.ride4Subtitle'),
-      price: "49€",
       tag: t('ridesPage.electricBike'),
       duration: t('ridesPage.ride4Duration'),
       time: t('ridesPage.ride4Time'),
-      groupSize: t('ridesPage.ride4GroupSize'),
       description: t('ridesPage.ride4Description'),
+      price: t('ridesPage.price4'),
+      priceLabel: t('ridesPage.price4Label'),
     },
   ];
 
   return (
     <main>
-      <SEO 
+      <SEO
         title="Nos Expériences - VéloRouge | Visites Guidées en Vélo Électrique à Strasbourg"
         description="Découvrez nos 4 expériences uniques en vélo électrique à Strasbourg. Coucher de soleil, bars de Petite France, Strasbourg insolite et échappée franco-allemande. 49€ par personne."
         canonical="/visitors"
@@ -71,7 +71,7 @@ const RidesPage = () => {
       <section className="pt-32 pb-16 bg-dark text-dark-foreground">
         <div className="container">
           <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">{t('ridesPage.tag')}</p>
-          <h1 className="font-display text-5xl md:text-7xl font-black leading-[0.95] max-w-3xl">
+          <h1 className="font-display text-5xl md:text-6xl font-black leading-[0.95] max-w-3xl">
             {t('ridesPage.heroTitle1')}
             <br />
             <em className="text-primary">{t('ridesPage.heroTitleHighlight')}</em>
@@ -103,13 +103,17 @@ const RidesPage = () => {
                 <div className="mt-6 flex flex-wrap gap-6 text-sm text-muted-foreground">
                   <div className="flex items-center gap-1.5">
                     <Clock className="w-4 h-4 text-primary" />
-                    {r.duration} · {r.time}
+                    {r.duration}{r.time ? ` · ${r.time}` : ""}
                   </div>
                 </div>
 
                 <div className="mt-8 flex items-center gap-6">
+                  <div>
+                    <span className="font-display text-3xl font-black text-primary">{r.price}</span>
+                    <p className="text-xs text-muted-foreground mt-0.5 uppercase tracking-wide">{r.priceLabel}</p>
+                  </div>
                   <a href="#" className="bg-primary text-primary-foreground px-8 py-3 font-semibold text-sm hover:bg-primary/90 transition-colors">
-                    {t('ridesPage.bookButton')} — {r.price} / {r.groupSize}
+                    {t('ridesPage.bookButton')}
                   </a>
                 </div>
               </div>

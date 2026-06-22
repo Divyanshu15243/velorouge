@@ -10,40 +10,44 @@ const Rides = () => {
   const { t } = useTranslation();
   
   const rides = [
-    { 
-      img: rideSundowner, 
-      title: t('rides.ride1Title'), 
-      price: "49€", 
+    {
+      img: rideSundowner,
+      title: t('rides.ride1Title'),
+      price: t('ridesPage.price1'),
+      priceLabel: t('ridesPage.price1Label'),
       tag: t('rides.favorite'),
       duration: "2h30",
       difficulty: t('rides.easy'),
       hook: t('rides.ride1Hook'),
       unique: t('rides.ride1Unique')
     },
-    { 
-      img: rideMarket, 
-      title: t('rides.ride2Title'), 
-      price: "49€", 
+    {
+      img: rideMarket,
+      title: t('rides.ride2Title'),
+      price: t('ridesPage.price2'),
+      priceLabel: t('ridesPage.price2Label'),
       tag: t('rides.popular'),
       duration: "3h",
       difficulty: t('rides.easy'),
       hook: t('rides.ride2Hook'),
       unique: t('rides.ride2Unique')
     },
-    { 
-      img: rideRiver, 
-      title: t('rides.ride3Title'), 
-      price: "49€", 
+    {
+      img: rideRiver,
+      title: t('rides.ride3Title'),
+      price: t('ridesPage.price3'),
+      priceLabel: t('ridesPage.price3Label'),
       tag: null,
       duration: "2h",
       difficulty: t('rides.moderate'),
       hook: t('rides.ride3Hook'),
       unique: t('rides.ride3Unique')
     },
-    { 
-      img: rideLocal, 
-      title: t('rides.ride4Title'), 
-      price: "49€", 
+    {
+      img: rideLocal,
+      title: t('rides.ride4Title'),
+      price: t('ridesPage.price4'),
+      priceLabel: t('ridesPage.price4Label'),
       tag: null,
       duration: "3h30",
       difficulty: t('rides.easy'),
@@ -77,6 +81,7 @@ const Rides = () => {
                   {r.tag}
                 </span>
               )}
+
             </div>
             
             <div className="mt-4">
@@ -93,8 +98,11 @@ const Rides = () => {
               
               <p className="text-sm text-muted-foreground mb-0.5 leading-relaxed">{r.hook}</p>
               
-              <p className="text-xs text-muted-foreground italic mb-2 leading-snug">{r.unique}</p>
-              
+              <p className="text-xs text-muted-foreground italic mb-4 leading-snug">{r.unique}</p>
+
+              <span className="inline-block bg-primary text-primary-foreground text-xs font-semibold px-5 py-2.5 hover:bg-primary/90 transition-colors">
+                {t('ridesPage.bookButton')}
+              </span>
             </div>
           </Link>
         ))}
