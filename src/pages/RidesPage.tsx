@@ -5,7 +5,6 @@ import rideSundowner from "@/assets/starboug-sunset.jpg";
 import rideMarket from "@/assets/bar-hop-petite-france.jpg";
 import rideRiver from "@/assets/strasbourg-insolite.jpg";
 import rideLocal from "@/assets/ride-local.jpg";
-import { Clock } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const RidesPage = () => {
@@ -100,22 +99,6 @@ const RidesPage = () => {
                 <p className="mt-2 text-lg text-muted-foreground italic">{r.subtitle}</p>
                 <p className="mt-4 text-base text-muted-foreground max-w-md leading-relaxed">{r.description}</p>
 
-                <div className="mt-6 flex flex-wrap gap-6 text-sm text-muted-foreground">
-                  <div className="flex items-center gap-1.5">
-                    <Clock className="w-4 h-4 text-primary" />
-                    {r.duration}{r.time ? ` · ${r.time}` : ""}
-                  </div>
-                </div>
-
-                <div className="mt-8 flex items-center gap-6">
-                  <div>
-                    <span className="font-display text-3xl font-black text-primary">{r.price}</span>
-                    <p className="text-xs text-muted-foreground mt-0.5 uppercase tracking-wide">{r.priceLabel}</p>
-                  </div>
-                  <a href="#" className="bg-primary text-primary-foreground px-8 py-3 font-semibold text-sm hover:bg-primary/90 transition-colors">
-                    {t('ridesPage.bookButton')}
-                  </a>
-                </div>
               </div>
             </div>
           ))}

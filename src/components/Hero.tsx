@@ -30,7 +30,7 @@ const Hero = () => {
       </p>
       <div className="mt-8 flex justify-center">
         <a
-          href="#booking"
+          href="#pricing"
           className="inline-flex items-center gap-2 bg-primary text-white font-semibold px-8 py-4 rounded-full text-lg hover:bg-primary/90 transition-colors"
         >
           {t('hero.bookYourRide')}

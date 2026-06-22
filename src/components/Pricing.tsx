@@ -140,11 +140,7 @@ const Pricing = () => {
               </ul>
               {p.bokunId ? (
                 <button
-                  className={`bokunButton mt-6 w-full py-3 text-sm font-semibold transition-colors border-none cursor-pointer ${
-                    p.popular || p.bestValue
-                      ? "bg-primary text-primary-foreground hover:bg-primary/90"
-                      : "border border-dark-foreground/20 text-dark-foreground hover:border-dark-foreground/40"
-                  }`}
+                  className="bokunButton mt-6 w-full py-3 text-sm font-semibold text-white transition-colors border-none cursor-pointer bg-red-600 hover:bg-red-700"
                   id={p.bokunId}
                   data-src={p.bokunSrc}
                 >
@@ -153,11 +149,7 @@ const Pricing = () => {
               ) : (
                 <a
                   href="#contact"
-                  className={`mt-6 block text-center py-3 text-sm font-semibold transition-colors ${
-                    p.popular || p.bestValue
-                      ? "bg-primary text-primary-foreground hover:bg-primary/90"
-                      : "border border-dark-foreground/20 text-dark-foreground hover:border-dark-foreground/40"
-                  }`}
+                  className="mt-6 block text-center py-3 text-sm font-semibold text-white transition-colors bg-red-600 hover:bg-red-700"
                 >
                   {t('pricing.bookNowBtn')}
                 </a>
@@ -203,11 +195,7 @@ const Pricing = () => {
               </ul>
               {p.bokunId ? (
                 <button
-                  className={`bokunButton mt-6 w-full py-3 text-sm font-semibold transition-colors border-none cursor-pointer ${
-                    p.popular || p.bestValue
-                      ? "bg-primary text-primary-foreground hover:bg-primary/90"
-                      : "border border-dark-foreground/20 text-dark-foreground hover:border-dark-foreground/40"
-                  }`}
+                  className="bokunButton mt-6 w-full py-3 text-sm font-semibold text-white transition-colors border-none cursor-pointer bg-red-600 hover:bg-red-700"
                   id={p.bokunId}
                   data-src={p.bokunSrc}
                 >
@@ -216,11 +204,7 @@ const Pricing = () => {
               ) : (
                 <a
                   href="#contact"
-                  className={`mt-6 block text-center py-3 text-sm font-semibold transition-colors ${
-                    p.popular || p.bestValue
-                      ? "bg-primary text-primary-foreground hover:bg-primary/90"
-                      : "border border-dark-foreground/20 text-dark-foreground hover:border-dark-foreground/40"
-                  }`}
+                  className="mt-6 block text-center py-3 text-sm font-semibold text-white transition-colors bg-red-600 hover:bg-red-700"
                 >
                   {t('pricing.bookNowBtn')}
                 </a>
@@ -248,7 +232,7 @@ const Pricing = () => {
             ))}
           </ul>
           <button
-            className="bokunButton flex-shrink-0 px-8 py-3 text-sm font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors border-none cursor-pointer"
+            className="bokunButton flex-shrink-0 px-8 py-3 text-sm font-semibold bg-red-600 text-white hover:bg-red-700 transition-colors border-none cursor-pointer"
             id={featuredPlan.bokunId}
             data-src={featuredPlan.bokunSrc}
           >
