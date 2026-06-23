@@ -18,6 +18,9 @@ import FMDPage from "./pages/FMDPage";
 import BlogPage from "./pages/BlogPage";
 import BlogDetailPage from "./pages/BlogDetailPage";
 import NotFound from "./pages/NotFound";
+import PrivacyPage from "./pages/PrivacyPage";
+import PrecontractualPage from "./pages/PrecontractualPage";
+import CGSPage from "./pages/CGSPage";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +43,9 @@ const App = () => (
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogDetailPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
+          <Route path="/precontractual" element={<PrecontractualPage />} />
+          <Route path="/cgs" element={<CGSPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>}

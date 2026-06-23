@@ -168,7 +168,10 @@ export const translations = {
         rights: "All rights reserved.",
         newsletterTitle: "Subscribe to our newsletter",
         emailPlaceholder: "Your email address",
-        subscribe: "Subscribe"
+        subscribe: "Subscribe",
+        privacyPolicy: "Privacy Policy",
+        precontractual: "Pre-contractual Information",
+        cgs: "General Terms & Conditions"
       },
       fmd: {
         eligible: "Eligible FMD",
@@ -695,7 +698,10 @@ export const translations = {
         rights: "Tous droits réservés.",
         newsletterTitle: "Abonnez-vous à notre newsletter",
         emailPlaceholder: "Votre adresse email",
-        subscribe: "S'abonner"
+        subscribe: "S'abonner",
+        privacyPolicy: "Politique de confidentialité",
+        precontractual: "Fiche précontractuelle",
+        cgs: "Conditions Générales de Services"
       },
       fmd: {
         eligible: "Éligible FMD",
@@ -1171,7 +1177,10 @@ export const translations = {
         rights: "Alle Rechte vorbehalten.",
         newsletterTitle: "Abonnieren Sie unseren Newsletter",
         emailPlaceholder: "Ihre E-Mail-Adresse",
-        subscribe: "Abonnieren"
+        subscribe: "Abonnieren",
+        privacyPolicy: "Datenschutzrichtlinie",
+        precontractual: "Vorvertragliche Informationen",
+        cgs: "Allgemeine Geschäftsbedingungen"
       },
       gallery: {
         tag: "#VELOROUGE",

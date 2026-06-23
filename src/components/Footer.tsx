@@ -65,8 +65,11 @@ const Footer = () => {
         </div>
       </div>
       <div className="mt-12 pt-8 border-t border-dark-surface text-sm flex flex-col sm:flex-row justify-between items-center gap-2">
-        <div>
-          © 2026 VéloRouge. {t('footer.rights')}
+        <div className="flex flex-wrap items-center gap-4">
+          <span>© 2026 VéloRouge. {t('footer.rights')}</span>
+          <Link to="/privacy" className="hover:text-dark-foreground transition-colors">{t('footer.privacyPolicy')}</Link>
+          <Link to="/precontractual" className="hover:text-dark-foreground transition-colors">{t('footer.precontractual')}</Link>
+          <Link to="/cgs" className="hover:text-dark-foreground transition-colors">{t('footer.cgs')}</Link>
         </div>
         <div>
           Designed By <a href="https://blonqoo.ae" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">Blonqoo.ae</a>
