@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import founderImg from "@/assets/founderpk.jpeg";
+import founderImg from "@/assets/founder2.png";
 
 const FounderStory = () => {
   const { t } = useTranslation();

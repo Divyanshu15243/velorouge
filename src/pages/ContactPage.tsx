@@ -2,7 +2,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
-import { MapPin, Mail, Phone, Clock } from "lucide-react";
+import { MapPin, Mail, Phone, Clock, MessageCircle } from "lucide-react";
 import { useTranslation } from 'react-i18next';
 
 const ContactPage = () => {
@@ -17,9 +17,10 @@ const ContactPage = () => {
   });
 
   const contactInfo = [
-    { icon: MapPin, label: t('contact.address'), value: "4 Rue du Faubourg-de-Saverne, 67000 Strasbourg" },
-    { icon: Mail, label: t('contact.email'), value: "Bonjour@velorouge.fr" },
-    { icon: Phone, label: t('contact.phone'), value: "+33 622 810716" },
+    { icon: MapPin, label: t('contact.address'), value: "4 Rue du Faubourg-de-Saverne, 67000 Strasbourg", href: null },
+    { icon: Mail, label: t('contact.email'), value: "Bonjour@velorouge.fr", href: "mailto:Bonjour@velorouge.fr" },
+    { icon: Phone, label: t('contact.phone'), value: "+33 622 810716", href: "tel:+33622810716" },
+    { icon: MessageCircle, label: "WhatsApp", value: "+33 622 810716", href: "https://wa.me/33622810716" },
   ];
 
   const hours = [
@@ -28,7 +29,7 @@ const ContactPage = () => {
     { day: t('contact.dayThu'), time: "09:30–12:30 / 13:30–18:30" },
     { day: t('contact.dayFri'), time: "09:30–12:30 / 13:30–18:30" },
     { day: t('contact.daySat'), time: "10:00–17:00" },
-    { day: t('contact.daySun'), time: t('contact.closed') },
+    { day: t('contact.daySun'), time: "10:00–17:00" },
     { day: t('contact.dayMon'), time: t('contact.closed') },
   ];
 
@@ -189,7 +190,13 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <div className="font-semibold text-sm">{c.label}</div>
-                      <div className="text-base text-muted-foreground">{c.value}</div>
+                      {c.href ? (
+                        <a href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="text-base text-muted-foreground hover:text-primary transition-colors">
+                          {c.value}
+                        </a>
+                      ) : (
+                        <div className="text-base text-muted-foreground">{c.value}</div>
+                      )}
                     </div>
                   </div>
                 ))}

@@ -27,7 +27,6 @@ const Pricing = () => {
       features: [
         t('pricing.plan1Feature1'),
         t('pricing.plan1Feature2'),
-        t('pricing.plan1Feature3'),
         t('pricing.plan1Feature4'),
       ],
     },
@@ -58,7 +57,6 @@ const Pricing = () => {
       features: [
         t('pricing.plan3Feature1'),
         t('pricing.plan3Feature2'),
-        t('pricing.plan3Feature3'),
       ],
     },
     {
@@ -73,7 +71,6 @@ const Pricing = () => {
       features: [
         t('pricing.plan4Feature1'),
         t('pricing.plan4Feature2'),
-        t('pricing.plan4Feature3'),
       ],
     },
   ];
@@ -90,7 +87,6 @@ const Pricing = () => {
       t('pricing.plan5Feature1'),
       t('pricing.plan5Feature2'),
       t('pricing.plan5Feature3'),
-      t('pricing.plan5Feature4'),
     ],
   };
 
@@ -158,8 +154,8 @@ const Pricing = () => {
           ))}
         </div> */}
 
-        {/* 3-card grid — Discovery Experience removed */}
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* 4-card grid — 3 plans + featured plan */}
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {plans.filter((p) => p.id !== 'discovery-exp').map((p) => (
             <div
               key={p.id}
@@ -211,33 +207,31 @@ const Pricing = () => {
               )}
             </div>
           ))}
-        </div>
 
-        {/* 5th card — full-width strip */}
-        <div className="mt-6 w-full border border-primary bg-dark-surface p-6 flex flex-col sm:flex-row sm:items-center gap-6">
-          <div className="flex-shrink-0">
-            <div className="text-sm text-dark-foreground/60">{featuredPlan.name}</div>
-            <div className="font-display text-4xl font-bold mt-1">
+          {/* Featured plan as 4th card */}
+          <div className="p-6 border border-primary bg-dark-surface flex flex-col">
+            <div className="text-sm text-dark-foreground/60 mb-1">{featuredPlan.name}</div>
+            <div className="font-display text-3xl font-bold">
               {featuredPlan.price}
               <span className="text-sm font-body text-dark-foreground/50 ml-1">{featuredPlan.period}</span>
             </div>
             <div className="mt-1 text-xs text-dark-foreground/40 italic">{featuredPlan.target}</div>
+            <ul className="mt-5 space-y-2 flex-1">
+              {featuredPlan.features.map((f) => (
+                <li key={f} className="flex items-center gap-2 text-sm text-dark-foreground/70">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  {f}
+                </li>
+              ))}
+            </ul>
+            <button
+              className="bokunButton mt-6 w-full py-3 text-sm font-semibold bg-red-600 text-white hover:bg-red-700 transition-colors border-none cursor-pointer"
+              id={featuredPlan.bokunId}
+              data-src={featuredPlan.bokunSrc}
+            >
+              {t('pricing.bookNowBtn')}
+            </button>
           </div>
-          <ul className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-2">
-            {featuredPlan.features.map((f) => (
-              <li key={f} className="flex items-center gap-2 text-sm text-dark-foreground/70">
-                <Check className="w-4 h-4 text-primary flex-shrink-0" />
-                {f}
-              </li>
-            ))}
-          </ul>
-          <button
-            className="bokunButton flex-shrink-0 px-8 py-3 text-sm font-semibold bg-red-600 text-white hover:bg-red-700 transition-colors border-none cursor-pointer"
-            id={featuredPlan.bokunId}
-            data-src={featuredPlan.bokunSrc}
-          >
-            {t('pricing.bookNowBtn')}
-          </button>
         </div>
       </div>
     </section>

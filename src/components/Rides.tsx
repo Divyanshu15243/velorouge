@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Clock } from "lucide-react";
-import rideSundowner from "@/assets/starboug-sunset.jpg";
-import rideMarket from "@/assets/bar-hop-petite-france.jpg";
-import rideRiver from "@/assets/strasbourg-insolite.jpg";
-import rideLocal from "@/assets/ride-local.jpg";
+import rideSundowner from "@/assets/Circuit Culturel.png";
+import rideMarket from "@/assets/Boucle des Canaux.png";
+import rideRiver from "@/assets/Forêt de Robertsau & Rhin.png";
+import rideLocal from "@/assets/Découverte Campagnarde.png";
 
 const Rides = () => {
   const { t } = useTranslation();

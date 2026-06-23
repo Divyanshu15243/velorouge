@@ -1,10 +1,10 @@
 import Navbar from "@/components/Navbar";
 import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
-import rideSundowner from "@/assets/starboug-sunset.jpg";
-import rideMarket from "@/assets/bar-hop-petite-france.jpg";
-import rideRiver from "@/assets/strasbourg-insolite.jpg";
-import rideLocal from "@/assets/ride-local.jpg";
+import rideSundowner from "@/assets/Circuit Culturel.png";
+import rideMarket from "@/assets/Boucle des Canaux.png";
+import rideRiver from "@/assets/Forêt de Robertsau & Rhin.png";
+import rideLocal from "@/assets/Découverte Campagnarde.png";
 import { useTranslation } from "react-i18next";
 
 const RidesPage = () => {
@@ -13,6 +13,7 @@ const RidesPage = () => {
   const rides = [
     {
       img: rideSundowner,
+      objPos: "object-bottom",
       title: t('rides.ride1Title'),
       subtitle: t('ridesPage.ride1Subtitle'),
       tag: t('ridesPage.electricBike'),
@@ -24,6 +25,7 @@ const RidesPage = () => {
     },
     {
       img: rideMarket,
+      objPos: "object-[center_65%]",
       title: t('rides.ride2Title'),
       subtitle: t('ridesPage.ride2Subtitle'),
       tag: t('ridesPage.electricBike'),
@@ -35,6 +37,7 @@ const RidesPage = () => {
     },
     {
       img: rideRiver,
+      objPos: "object-bottom",
       title: t('rides.ride3Title'),
       subtitle: t('ridesPage.ride3Subtitle'),
       tag: t('ridesPage.electricBike'),
@@ -46,6 +49,7 @@ const RidesPage = () => {
     },
     {
       img: rideLocal,
+      objPos: "object-bottom",
       title: t('rides.ride4Title'),
       subtitle: t('ridesPage.ride4Subtitle'),
       tag: t('ridesPage.electricBike'),
@@ -87,7 +91,7 @@ const RidesPage = () => {
           {rides.map((r, i) => (
             <div key={r.title} className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${i % 2 === 1 ? "md:direction-rtl" : ""}`}>
               <div className={`aspect-[4/3] overflow-hidden ${i % 2 === 1 ? "md:order-2" : ""}`}>
-                <img src={r.img} alt={r.title} className="w-full h-full object-cover object-bottom hover:scale-105 transition-transform duration-500" loading="lazy" />
+                <img src={r.img} alt={r.title} className={`w-full h-full object-cover ${r.objPos} hover:scale-105 transition-transform duration-500`} loading="lazy" />
               </div>
               <div className={i % 2 === 1 ? "md:order-1" : ""}>
                 {r.tag && (
