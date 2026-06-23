@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import ctaBg from "@/assets/homebg.jpg";
 
 const CTA = () => {
@@ -18,18 +19,18 @@ const CTA = () => {
         {t('cta.subtitle')}
       </p>
       <div className="mt-10 flex flex-wrap justify-center gap-4">
-        <a
-          href="#"
+        <Link
+          to="/#pricing"
           className="bg-primary text-primary-foreground px-10 py-4 font-semibold text-sm hover:bg-primary/90 transition-colors"
         >
           {t('cta.letsGo')}
-        </a>
-        <a
-          href="#"
+        </Link>
+        <Link
+          to="/about"
           className="border border-dark-foreground/30 text-dark-foreground px-10 py-4 font-semibold text-sm hover:border-dark-foreground/60 transition-colors"
         >
           {t('cta.learnMore')}
-        </a>
+        </Link>
       </div>
     </div>
   </section>

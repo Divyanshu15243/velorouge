@@ -1,5 +1,6 @@
 import deliverBike from "@/assets/deliver-bike.jpg";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const DeliverSection = () => {
   const { t } = useTranslation();
@@ -29,12 +30,12 @@ const DeliverSection = () => {
                 <div className="text-sm text-dark-foreground/50">satisfaction rate</div>
               </div>
             </div>
-            <a
-              href="#"
+            <Link
+              to="/contact"
               className="inline-block mt-8 bg-primary text-primary-foreground px-8 py-3 font-semibold text-sm hover:bg-primary/90 transition-colors"
             >
               Start riding today
-            </a>
+            </Link>
           </div>
           <div className="aspect-square overflow-hidden rounded-full">
             <img src={deliverBike} alt="Cyclist in city" className="w-full h-full object-cover" loading="lazy" />

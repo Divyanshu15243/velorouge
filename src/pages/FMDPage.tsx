@@ -7,6 +7,7 @@ import gallery1 from "@/assets/approach.png";
 import { Check, Download, Building2, Users, FileText, Headphones, ChevronDown, TrendingUp } from "lucide-react";
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 const FMDPage = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -47,9 +48,9 @@ const FMDPage = () => {
               {t('fmd.description')}
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="#" className="bg-primary text-primary-foreground px-8 py-4 font-semibold hover:bg-primary/90 transition-colors">
+              <Link to="/#pricing" className="bg-primary text-primary-foreground px-8 py-4 font-semibold hover:bg-primary/90 transition-colors">
                 {t('fmd.startRental')}
-              </a>
+              </Link>
               <a href="#companies" className="border-2 border-primary text-primary px-8 py-4 font-semibold hover:bg-primary/10 transition-colors">
                 {t('fmd.forCompanies')}
               </a>
@@ -169,9 +170,9 @@ const FMDPage = () => {
           </div>
         </div>
         <div className="text-center mt-12">
-          <a href="#" className="inline-block bg-primary text-primary-foreground px-10 py-4 font-semibold hover:bg-primary/90 transition-colors">
+          <Link to="/contact" className="inline-block bg-primary text-primary-foreground px-10 py-4 font-semibold hover:bg-primary/90 transition-colors">
             {t('fmd.startAnnual')}
-          </a>
+          </Link>
         </div>
       </div>
     </section>
@@ -261,9 +262,9 @@ const FMDPage = () => {
           </div>
         </div>
         <div className="text-center">
-          <a href="#" className="inline-block bg-primary text-primary-foreground px-10 py-4 font-semibold hover:bg-primary/90 transition-colors">
+          <Link to="/contact" className="inline-block bg-primary text-primary-foreground px-10 py-4 font-semibold hover:bg-primary/90 transition-colors">
             {t('fmd.contactTeam')}
-          </a>
+          </Link>
         </div>
       </div>
     </section>
@@ -329,12 +330,12 @@ const FMDPage = () => {
           {t('fmd.finalDesc')}
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <a href="#" className="bg-white text-primary px-10 py-4 font-semibold hover:bg-gray-100 transition-colors">
+          <Link to="/#pricing" className="bg-white text-primary px-10 py-4 font-semibold hover:bg-gray-100 transition-colors">
             {t('fmd.seePricing')}
-          </a>
-          <a href="#" className="border-2 border-white text-white px-10 py-4 font-semibold hover:bg-white/10 transition-colors">
+          </Link>
+          <Link to="/contact" className="border-2 border-white text-white px-10 py-4 font-semibold hover:bg-white/10 transition-colors">
             {t('fmd.contactUs')}
-          </a>
+          </Link>
         </div>
       </div>
     </section>
