@@ -1,12 +1,11 @@
 import { useTranslation } from "react-i18next";
-import { Bike, Users, Camera } from "lucide-react";
+import { Bike, Camera } from "lucide-react";
 
 const About = () => {
   const { t } = useTranslation();
 
   const stats = [
     { icon: Bike, value: "96+", label: t('about.stat1') },
-    { icon: Users, value: "50M+", label: t('about.stat2') },
     { icon: Camera, value: "850M+", label: t('about.stat3') },
   ];
 

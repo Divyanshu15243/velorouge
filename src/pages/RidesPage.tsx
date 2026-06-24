@@ -5,7 +5,7 @@ import rideSundowner from "@/assets/Circuit Culturel.png";
 
 import rideRiver from "@/assets/Forêt de Robertsau & Rhin.png";
 import rideLocal from "@/assets/Découverte Campagnarde.png";
-import abt2 from "@/assets/abt2.jpeg";
+import abt1 from "@/assets/abt1.jpeg";
 import { useTranslation } from "react-i18next";
 
 const RidesPage = () => {
@@ -25,7 +25,7 @@ const RidesPage = () => {
       priceLabel: t('ridesPage.price1Label'),
     },
     {
-      img: abt2,
+      img: abt1,
       objPos: "object-center",
       title: t('rides.ride2Title'),
       subtitle: t('ridesPage.ride2Subtitle'),
