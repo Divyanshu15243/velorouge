@@ -1,13 +1,13 @@
 import { useTranslation } from "react-i18next";
-import { Bike, MapPin, Clock } from "lucide-react";
+import { Bike, Users, Camera } from "lucide-react";
 
 const About = () => {
   const { t } = useTranslation();
-  
+
   const stats = [
     { icon: Bike, value: "96+", label: t('about.stat1') },
-    { icon: MapPin, value: "12", label: t('about.stat2') },
-    { icon: Clock, value: "4 500+", label: t('about.stat3') },
+    { icon: Users, value: "50M+", label: t('about.stat2') },
+    { icon: Camera, value: "850M+", label: t('about.stat3') },
   ];
 
   return (

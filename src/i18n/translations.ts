@@ -21,8 +21,8 @@ export const translations = {
         titleHighlight: "simple rental.",
         subtitle: "VeloRouge is the Strasbourg experience reinvented. Each route tells a story. Each pedal stroke brings you closer to the soul of the city.",
         stat1: "bikes available",
-        stat2: "secret routes",
-        stat3: "conquered explorers"
+        stat2: "Outdoor explorers in the komoot community",
+        stat3: "Photos, tips, and highlights shared by the community"
       },
       rides: {
         title: "Four ways",
@@ -551,8 +551,8 @@ export const translations = {
         titleHighlight: "simple location.",
         subtitle: "VéloRouge, c'est l'expérience Strasbourg réinventée. Chaque parcours raconte une histoire. Chaque coup de pédale vous rapproche de l'âme de la ville.",
         stat1: "vélos disponibles",
-        stat2: "itinéraires secrets",
-        stat3: "explorateurs conquis"
+        stat2: "Explorateurs dans la communauté komoot",
+        stat3: "Photos, conseils et points forts partagés par la communauté"
       },
       rides: {
         title: "Quatre façons",
@@ -1082,8 +1082,8 @@ export const translations = {
         titleHighlight: "Fahrradverleih.",
         subtitle: "VeloRouge – Straßburg neu erlebt. Jede Route erzählt eine Geschichte. Jeder Tritt in die Pedale bringt dich der Seele der Stadt näher.",
         stat1: "Fahrräder verfügbar",
-        stat2: "geheime Routen",
-        stat3: "bezwungene Touren"
+        stat2: "Outdoor-Entdecker in der komoot-Community",
+        stat3: "Fotos, Tipps und Highlights, geteilt von der Community"
       },
       rides: {
         title: "Vier Möglichkeiten,",
