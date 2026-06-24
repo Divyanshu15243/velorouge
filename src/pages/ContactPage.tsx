@@ -21,6 +21,7 @@ const ContactPage = () => {
     { icon: Mail, label: t('contact.email'), value: "Bonjour@velorouge.fr", href: "mailto:Bonjour@velorouge.fr" },
     { icon: Phone, label: t('contact.phone'), value: "+33 622 810716", href: "tel:+33622810716" },
     { icon: MessageCircle, label: "WhatsApp", value: "+33 622 810716", href: "https://wa.me/33622810716" },
+    { icon: MessageCircle, label: "WhatsApp", value: "+33 6 30 77 09 94", href: "https://wa.me/33630770994" },
   ];
 
   const hours = [

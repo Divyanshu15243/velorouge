@@ -22,7 +22,7 @@ export const translations = {
         subtitle: "VeloRouge is the Strasbourg experience reinvented. Each route tells a story. Each pedal stroke brings you closer to the soul of the city.",
         stat1: "bikes available",
         stat2: "Outdoor explorers in the komoot community",
-        stat3: "Photos, tips, and highlights shared by the community"
+        stat3: "Routes, tips & highlights — in partnership with komoot"
       },
       rides: {
         title: "Four ways",
@@ -452,23 +452,6 @@ export const translations = {
         step3Desc: "The audio guide tells the story. You decide where you stop.",
         reserve: "Reserve"
       },
-      showcase: {
-        title: "Strasbourg City Showcase",
-        titlePart1: "Strasbourg City",
-        titleHighlight: "Showcase",
-        location1Title: "Little France — Golden Hour",
-        location1Subtitle: "Hero image + Sundowner & Bar Hop experience cards",
-        location2Title: "Cathedral — Blue Hour",
-        location2Subtitle: "City grid + Hidden Strasbourg experience card",
-        location3Title: "Neustadt — UNESCO Boulevard",
-        location3Subtitle: "Neustadt Architectural experience card",
-        location4Title: "Christmas Market — Night",
-        location4Subtitle: "Christmas Magic card + seasonal homepage banner Nov–Dec",
-        location5Title: "Vauban Dam / Covered Bridges",
-        location5Subtitle: "Panoramic city grid — most iconic Strasbourg skyline view",
-        location6Title: "Rhine — Europe Bridge",
-        location6Subtitle: "Rhine Border Run card — hero product for German market"
-      },
       founderStory: {
         title: "Founder Story",
         quote: "My name is Prashant. I discovered Strasbourg on an electric bike two years ago — and I never wanted to see it any other way again. VéloRouge was born from this belief: the best way to discover a city is at your own pace, guided by curiosity. Not by a guide.",
@@ -516,16 +499,6 @@ export const translations = {
         location6Subtitle: "Rhine Border Run card — hero product for German market",
         location6Desc: "Cross the border between France and Germany by bike",
         exploreNow: "EXPLORE NOW"
-      },
-      howItWorks: {
-        title: "How It Works",
-        step1Title: "Book online",
-        step1Desc: "In 60 seconds. Instant confirmation by email.",
-        step2Title: "Pick up your bike",
-        step2Desc: "Starting point indicated. Audio guide downloaded on your phone.",
-        step3Title: "Explore at your pace",
-        step3Desc: "The audio guide tells the story. You decide where you stop.",
-        reserve: "Reserve"
       }
     }
   },
@@ -983,23 +956,6 @@ export const translations = {
         step3Desc: "Le guide audio raconte. Vous décidez où vous arrêtez.",
         reserve: "Réserver"
       },
-      showcase: {
-        title: "Vitrine de la ville de Strasbourg",
-        titlePart1: "Vitrine de la ville de",
-        titleHighlight: "Strasbourg",
-        location1Title: "Petite France — Heure dorée",
-        location1Subtitle: "Image héro + cartes d'expérience Sundowner & Bar Hop",
-        location2Title: "Cathédrale — Heure bleue",
-        location2Subtitle: "Grille urbaine + carte d'expérience Strasbourg caché",
-        location3Title: "Neustadt — Boulevard UNESCO",
-        location3Subtitle: "Carte d'expérience architecturale Neustadt",
-        location4Title: "Marché de Noël — Nuit",
-        location4Subtitle: "Carte Magie de Noël + bannière saisonnière nov–déc",
-        location5Title: "Barrage Vauban / Ponts Couverts",
-        location5Subtitle: "Grille panoramique — vue la plus emblématique de Strasbourg",
-        location6Title: "Rhin — Pont de l'Europe",
-        location6Subtitle: "Carte Rhine Border Run — produit phare pour le marché allemand"
-      },
       founderStory: {
         title: "Histoire du fondateur",
         quote: "Je m'appelle Prashant. J'ai découvert Strasbourg sur un vélo électrique il y a deux ans — et je n'ai plus jamais voulu la voir autrement. VéloRouge est né de cette conviction : la plus belle façon de découvrir une ville, c'est à votre propre rythme, guidé par la curiosité. Pas par un guide.",
@@ -1047,16 +1003,6 @@ export const translations = {
         location6Subtitle: "Carte Rhine Border Run — produit phare pour le marché allemand",
         location6Desc: "Traversez la frontière entre la France et l'Allemagne à vélo",
         exploreNow: "EXPLORER MAINTENANT"
-      },
-      howItWorks: {
-        title: "Comment ça marche",
-        step1Title: "Réservez en ligne",
-        step1Desc: "En 60 secondes. Confirmation immédiate par email.",
-        step2Title: "Récupérez votre vélo",
-        step2Desc: "Point de départ indiqué. Guide audio téléchargé sur votre téléphone.",
-        step3Title: "Explorez à votre rythme",
-        step3Desc: "Le guide audio raconte. Vous décidez où vous arrêtez.",
-        reserve: "Réserver"
       }
     }
   },

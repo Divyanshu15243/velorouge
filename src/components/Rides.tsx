@@ -11,7 +11,7 @@ const Rides = () => {
   
   const rides = [
     {
-      img: rideSundowner,
+      img: rideRiver,
       title: t('rides.ride1Title'),
       price: t('ridesPage.price1'),
       priceLabel: t('ridesPage.price1Label'),
@@ -33,7 +33,7 @@ const Rides = () => {
       unique: t('rides.ride2Unique')
     },
     {
-      img: rideRiver,
+      img: rideSundowner,
       title: t('rides.ride3Title'),
       price: t('ridesPage.price3'),
       priceLabel: t('ridesPage.price3Label'),
