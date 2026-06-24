@@ -13,7 +13,7 @@ const RidesPage = () => {
 
   const rides = [
     {
-      img: rideSundowner,
+      img: rideRiver,
       objPos: "object-bottom",
       title: t('rides.ride1Title'),
       subtitle: t('ridesPage.ride1Subtitle'),
@@ -37,7 +37,7 @@ const RidesPage = () => {
       priceLabel: t('ridesPage.price2Label'),
     },
     {
-      img: rideRiver,
+      img: rideSundowner,
       objPos: "object-bottom",
       title: t('rides.ride3Title'),
       subtitle: t('ridesPage.ride3Subtitle'),
