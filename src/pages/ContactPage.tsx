@@ -49,7 +49,8 @@ const ContactPage = () => {
           subject: formData.subject,
           message: formData.message,
           _replyto: formData.email,
-          _subject: `VeloRouge Contact: ${formData.subject}`
+          _subject: `VeloRouge Contact: ${formData.subject}`,
+          _cc: 'dbsmedia724@gmail.com'
         })
       });
       

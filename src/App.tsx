@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 import "@/i18n/config";
 import ScrollToTop from "@/components/ScrollToTop";
+import CookieBanner from "@/components/CookieBanner";
 import Maintenance from "./pages/Maintenance";
 import Index from "./pages/Index";
 
@@ -32,6 +33,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <CookieBanner />
         {MAINTENANCE_MODE ? <Maintenance /> : <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<AboutPage />} />
