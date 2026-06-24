@@ -7,6 +7,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import "@/i18n/config";
 import ScrollToTop from "@/components/ScrollToTop";
 import CookieBanner from "@/components/CookieBanner";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import Maintenance from "./pages/Maintenance";
 import Index from "./pages/Index";
 
@@ -34,6 +35,7 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
         <CookieBanner />
+        <WhatsAppButton />
         {MAINTENANCE_MODE ? <Maintenance /> : <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<AboutPage />} />

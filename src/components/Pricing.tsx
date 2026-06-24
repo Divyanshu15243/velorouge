@@ -17,17 +17,16 @@ const Pricing = () => {
 
   const plans = [
     {
-      id: "discovery-day",
-      name: t('pricing.plan1Name'),
-      price: "€25",
-      period: t('pricing.plan1Period'),
-      target: t('pricing.plan1Target'),
-      bokunId: "bokun_6143a63c_4f4b_450f_94a7_90eeec8b1287",
-      bokunSrc: `https://widgets.bokun.io/online-sales/${BOKUN_CHANNEL}/experience/1238051?partialView=1`,
+      id: "halfday",
+      name: t('pricing.plan3Name'),
+      price: "€18",
+      period: t('pricing.plan3Period'),
+      target: t('pricing.plan3Target'),
+      bokunId: "bokun_53550c4e_1e17_4fd0_9ed8_a447403c2f21",
+      bokunSrc: `https://widgets.bokun.io/online-sales/${BOKUN_CHANNEL}/experience/1238059?partialView=1`,
       features: [
-        t('pricing.plan1Feature1'),
-        t('pricing.plan1Feature2'),
-        t('pricing.plan1Feature4'),
+        t('pricing.plan3Feature1'),
+        t('pricing.plan3Feature2'),
       ],
     },
     {
@@ -47,16 +46,17 @@ const Pricing = () => {
       ],
     },
     {
-      id: "halfday",
-      name: t('pricing.plan3Name'),
-      price: "€18",
-      period: t('pricing.plan3Period'),
-      target: t('pricing.plan3Target'),
-      bokunId: "bokun_53550c4e_1e17_4fd0_9ed8_a447403c2f21",
-      bokunSrc: `https://widgets.bokun.io/online-sales/${BOKUN_CHANNEL}/experience/1238059?partialView=1`,
+      id: "discovery-day",
+      name: t('pricing.plan1Name'),
+      price: "€25",
+      period: t('pricing.plan1Period'),
+      target: t('pricing.plan1Target'),
+      bokunId: "bokun_6143a63c_4f4b_450f_94a7_90eeec8b1287",
+      bokunSrc: `https://widgets.bokun.io/online-sales/${BOKUN_CHANNEL}/experience/1238051?partialView=1`,
       features: [
-        t('pricing.plan3Feature1'),
-        t('pricing.plan3Feature2'),
+        t('pricing.plan1Feature1'),
+        t('pricing.plan1Feature2'),
+        t('pricing.plan1Feature4'),
       ],
     },
     {

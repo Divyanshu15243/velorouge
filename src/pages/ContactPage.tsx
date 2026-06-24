@@ -19,8 +19,7 @@ const ContactPage = () => {
   const contactInfo = [
     { icon: MapPin, label: t('contact.address'), value: "4 Rue du Faubourg-de-Saverne, 67000 Strasbourg", href: null },
     { icon: Mail, label: t('contact.email'), value: "Bonjour@velorouge.fr", href: "mailto:Bonjour@velorouge.fr" },
-    { icon: Phone, label: t('contact.phone'), value: "+33 622 810716", href: "tel:+33622810716" },
-    { icon: MessageCircle, label: "WhatsApp", value: "+33 622 810716", href: "https://wa.me/33622810716" },
+    { icon: Phone, label: t('contact.phone'), value: "+33 622 810716, +33 6 30 77 09 94", href: null },
     { icon: MessageCircle, label: "WhatsApp", value: "+33 6 30 77 09 94", href: "https://wa.me/33630770994" },
   ];
 
