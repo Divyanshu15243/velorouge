@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 
 const ContactPage = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const { t } = useTranslation();
   const [formData, setFormData] = useState({
     firstName: '',
@@ -20,7 +21,7 @@ const ContactPage = () => {
     { icon: MapPin, label: t('contact.address'), value: "4 Rue du Faubourg-de-Saverne, 67000 Strasbourg", href: null },
     { icon: Mail, label: t('contact.email'), value: "Bonjour@velorouge.fr", href: "mailto:Bonjour@velorouge.fr" },
     { icon: Phone, label: t('contact.phone'), value: "+33 622 810716, +33 6 30 77 09 94", href: null },
-    { icon: MessageCircle, label: "WhatsApp", value: "+33 6 30 77 09 94", href: "https://wa.me/33630770994" },
+    { icon: MessageCircle, label: "WhatsApp", value: "+33 622 810716", href: "https://wa.me/33622810716" },
   ];
 
   const hours = [
@@ -35,30 +36,25 @@ const ContactPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+    setLoading(true);
     try {
-      const response = await fetch('https://formspree.io/f/mkoqnnyn', {
+      const formDataObj = new FormData();
+      formDataObj.append('access_key', '1b2e69b7-2037-4a79-9727-75b38b97c06e');
+      formDataObj.append('name', `${formData.firstName} ${formData.lastName}`);
+      formDataObj.append('email', formData.email);
+      formDataObj.append('subject', `VéloRouge Contact: ${formData.subject}`);
+      formDataObj.append('message', formData.message);
+
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          firstName: formData.firstName,
-          lastName: formData.lastName,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-          _replyto: formData.email,
-          _subject: `VeloRouge Contact: ${formData.subject}`,
-          _cc: 'dbsmedia724@gmail.com'
-        })
+        body: formDataObj,
       });
-      
-      if (response.ok) {
-        setSubmitted(true);
-      }
+      const data = await response.json();
+      if (data.success) setSubmitted(true);
     } catch (error) {
       console.error('Form submission error:', error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -170,9 +166,10 @@ const ContactPage = () => {
                   </div>
                   <button
                     type="submit"
-                    className="bg-primary text-primary-foreground px-10 py-3 font-semibold text-sm hover:bg-primary/90 transition-colors"
+                    disabled={loading}
+                    className="bg-primary text-primary-foreground px-10 py-3 font-semibold text-sm hover:bg-primary/90 transition-colors disabled:opacity-60"
                   >
-                    {t('contact.sendBtn')}
+                    {loading ? "..." : t('contact.sendBtn')}
                   </button>
                 </form>
               )}

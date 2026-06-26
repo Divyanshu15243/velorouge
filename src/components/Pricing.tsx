@@ -5,7 +5,12 @@ import { useEffect } from "react";
 const BOKUN_CHANNEL = "79fde21a-45fd-4202-b90d-bfd9333501fd";
 
 const Pricing = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isFrench = i18n.language?.startsWith("fr");
+  const baseFeatures = [
+    isFrench ? "Location de vélo électrique" : "E-bike rental",
+    isFrench ? "Casque et antivol" : "Helmet & lock",
+  ];
 
   useEffect(() => {
     const script = document.createElement("script");
@@ -24,10 +29,7 @@ const Pricing = () => {
       target: t('pricing.plan3Target'),
       bokunId: "bokun_53550c4e_1e17_4fd0_9ed8_a447403c2f21",
       bokunSrc: `https://widgets.bokun.io/online-sales/${BOKUN_CHANNEL}/experience/1238059?partialView=1`,
-      features: [
-        t('pricing.plan3Feature1'),
-        t('pricing.plan3Feature2'),
-      ],
+      features: [...baseFeatures],
     },
     {
       id: "discovery-exp",
@@ -38,12 +40,7 @@ const Pricing = () => {
       popular: true,
       bokunId: null,
       bokunSrc: null,
-      features: [
-        t('pricing.plan2Feature1'),
-        t('pricing.plan2Feature2'),
-        t('pricing.plan2Feature3'),
-        t('pricing.plan2Feature4'),
-      ],
+      features: [...baseFeatures],
     },
     {
       id: "discovery-day",
@@ -53,11 +50,7 @@ const Pricing = () => {
       target: t('pricing.plan1Target'),
       bokunId: "bokun_6143a63c_4f4b_450f_94a7_90eeec8b1287",
       bokunSrc: `https://widgets.bokun.io/online-sales/${BOKUN_CHANNEL}/experience/1238051?partialView=1`,
-      features: [
-        t('pricing.plan1Feature1'),
-        t('pricing.plan1Feature2'),
-        t('pricing.plan1Feature4'),
-      ],
+      features: [...baseFeatures],
     },
     {
       id: "weekend",
@@ -68,10 +61,7 @@ const Pricing = () => {
       bestValue: true,
       bokunId: "bokun_0df41703_2a01_4e5b_9c07_4b6b322dd5ad",
       bokunSrc: `https://widgets.bokun.io/online-sales/${BOKUN_CHANNEL}/experience/1238095?partialView=1`,
-      features: [
-        t('pricing.plan4Feature1'),
-        t('pricing.plan4Feature2'),
-      ],
+      features: [...baseFeatures],
     },
   ];
 
@@ -83,11 +73,7 @@ const Pricing = () => {
     target: t('pricing.plan5Target'),
     bokunId: "bokun_68bea1db_2fc1_43a4_9d42_b100473905e7",
     bokunSrc: `https://widgets.bokun.io/online-sales/${BOKUN_CHANNEL}/experience/1238065?partialView=1`,
-    features: [
-      t('pricing.plan5Feature1'),
-      t('pricing.plan5Feature2'),
-      t('pricing.plan5Feature3'),
-    ],
+    features: [...baseFeatures],
   };
 
   return (

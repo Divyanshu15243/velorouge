@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Shield, Wrench, MapPin, Bike, DollarSign } from "lucide-react";
+import { Wrench, MapPin, Bike } from "lucide-react";
 
 const Features = () => {
   const { t } = useTranslation();
@@ -7,10 +7,8 @@ const Features = () => {
   const features = [
     { icon: MapPin, title: t('features.feature1Title'), desc: t('features.feature1Desc') },
     { icon: Bike, title: t('features.feature2Title'), desc: t('features.feature2Desc') },
-    { icon: Shield, title: t('features.feature3Title'), desc: t('features.feature3Desc') },
     { icon: MapPin, title: t('features.feature4Title'), desc: t('features.feature4Desc') },
     { icon: Wrench, title: t('features.feature5Title'), desc: t('features.feature5Desc') },
-    { icon: DollarSign, title: t('features.feature6Title'), desc: t('features.feature6Desc') },
   ];
 
   return (

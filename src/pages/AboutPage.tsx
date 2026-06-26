@@ -223,7 +223,7 @@ const AboutPage = () => {
           {t('aboutPage.ctaSubtitle')}
         </p>
         <a
-          href="/visitors"
+          href="/contact"
           className="inline-block mt-8 bg-primary text-primary-foreground px-10 py-4 font-semibold text-sm hover:bg-primary/90 transition-colors"
         >
           {t('aboutPage.ctaButton')}

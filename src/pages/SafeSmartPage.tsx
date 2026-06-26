@@ -3,7 +3,7 @@ import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
 import smartHelmet from "@/assets/smart-helmet.jpg";
 import smartGps from "@/assets/tech&saftey.png";
-import { Shield, MapPin, Bell, Smartphone, Lock, Eye, Zap, Wifi } from "lucide-react";
+import { Shield, MapPin, Smartphone, Eye, Zap, Wifi } from "lucide-react";
 import { useTranslation } from 'react-i18next';
 
 const SafeSmartPage = () => {
@@ -11,8 +11,6 @@ const SafeSmartPage = () => {
 
   const safetyFeatures = [
     { icon: Shield, title: t('safeSmart.antiTheft'), desc: t('safeSmart.antiTheftDesc') },
-    { icon: Lock, title: t('safeSmart.smartLock'), desc: t('safeSmart.smartLockDesc') },
-    { icon: Bell, title: t('safeSmart.accidentDetection'), desc: t('safeSmart.accidentDetectionDesc') },
     { icon: Eye, title: t('safeSmart.nightVisibility'), desc: t('safeSmart.nightVisibilityDesc') },
   ];
 
@@ -26,7 +24,7 @@ const SafeSmartPage = () => {
   const stats = [
     { value: "0", label: t('safeSmart.accidents') },
     { value: "99,8 %", label: t('safeSmart.reliability') },
-    { value: "< 2 min", label: t('safeSmart.responseTime') },
+    { value: "< 10 min", label: t('safeSmart.responseTime') },
     { value: "24/7", label: t('safeSmart.monitoring') },
   ];
 

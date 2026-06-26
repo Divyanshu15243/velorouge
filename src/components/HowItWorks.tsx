@@ -26,7 +26,7 @@ const HowItWorks = () => {
     <section className="py-24 bg-background">
       <div className="container">
         <h2 className="font-display text-4xl md:text-5xl font-black leading-tight mb-16 text-center">
-          {t('howItWorks.title').split(' ').slice(0, -1).join(' ')} <em className="text-primary">{t('howItWorks.title').split(' ').slice(-1)}</em>
+          {t('howItWorks.title')}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {steps.map((step, index) => (
@@ -34,12 +34,9 @@ const HowItWorks = () => {
               <div className="inline-flex items-center justify-center w-20 h-20 bg-primary/10 rounded-full mb-6">
                 <step.icon className="w-10 h-10 text-primary" strokeWidth={1.5} />
               </div>
-              <h3 className="font-display text-2xl font-bold mb-4">
+              <h3 className="font-display text-2xl font-bold">
                 {step.title}
               </h3>
-              <p className="text-muted-foreground text-base leading-relaxed min-h-[3rem]">
-                {step.description}
-              </p>
             </div>
           ))}
         </div>

@@ -9,7 +9,6 @@ const WhatsAppIcon = () => (
 
 const contacts = [
   { label: "VéloRouge", number: "+33 622 810716", href: "https://wa.me/33622810716" },
-  { label: "Support", number: "+33 6 30 77 09 94", href: "https://wa.me/33630770994" },
 ];
 
 const WhatsAppButton = () => {

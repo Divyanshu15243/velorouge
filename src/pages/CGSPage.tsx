@@ -5,14 +5,12 @@ import { useTranslation } from "react-i18next";
 
 /* ─── Pricing table ─── */
 const pricingFR = [
-  { product: "Location Segway", price: "29 €", vehicle: "Trottinette Segway L60", format: "Autonome · app · 2h" },
-  { product: "Expérience E-Bike Audio + Stampz", price: "49 €", vehicle: "Vélo électrique premium", format: "Auto-guidé · IZI Travel · 3–4h" },
-  { product: "Visite guidée groupe", price: "59 €/pers · min 4", vehicle: "Vélo électrique premium", format: "Guide humain · 3h · max 8" },
+  { product: "Location Segway", price: "€225/day pass", vehicle: "Trottinette Segway L60", format: "Autonome · app · 2h" },
+  { product: "Expérience E-Bike Audio + Stampz", price: "€225/day pass", vehicle: "Vélo électrique premium", format: "Auto-guidé · IZI Travel · 3–4h" },
 ];
 const pricingEN = [
-  { product: "Segway Rental", price: "€29", vehicle: "Segway Scooter L60", format: "Self-guided · app · 2h" },
-  { product: "E-Bike Audio Experience + Stampz", price: "€49", vehicle: "Premium electric bike", format: "Self-guided · IZI Travel · 3–4h" },
-  { product: "Guided group tour", price: "€59/pers · min 4", vehicle: "Premium electric bike", format: "Human guide · 3h · max 8" },
+  { product: "Segway Rental", price: "€225/day pass", vehicle: "Segway Scooter L60", format: "Self-guided · app · 2h" },
+  { product: "E-Bike Audio Experience + Stampz", price: "€225/day pass", vehicle: "Premium electric bike", format: "Self-guided · IZI Travel · 3–4h" },
 ];
 
 /* ─── Repairs table ─── */
@@ -178,7 +176,7 @@ const fr = {
     },
     {
       heading: "20. Droit applicable – Règlement des litiges",
-      body: "Les présentes CGS et les contrats qui en découlent sont soumis au droit français.\n\nLa langue du contrat est le français. Les traductions en langues étrangères ne sont mises à disposition par le Prestataire qu'à titre informatif.\n\nEn cas de litige relatif à la validité, l'interprétation ou l'exécution du présent contrat, les parties s'efforceront de rechercher une solution amiable. À défaut de règlement amiable dans un délai de 30 jours à compter de la notification écrite du différend, le litige pourra être porté devant les juridictions compétentes.\n\nLe Client est informé de la possibilité de recourir à un médiateur de la consommation. Le Prestataire a adhéré au Centre de la médiation de la consommation des conciliateurs de justice (CM2C)\n\nAdresse postale : 49 Rue de Ponthieu, 75008 Paris\nAdresse email : declarer-un-litige@cm2c.net\nSite internet : https://www.cm2c.net/comment-nous-saisir.php\n\nOu MTV MEDIATION TOURISME VOYAGE — CS 30958, 75383 PARIS cedex 08 — info@mtv.travel",
+      body: "Les présentes CGS et les contrats qui en découlent sont soumis au droit français.\n\nLa langue du contrat est le français. Les traductions en langues étrangères ne sont mises à disposition par le Prestataire qu'à titre informatif.\n\nEn cas de litige relatif à la validité, l'interprétation ou l'exécution du présent contrat, les parties s'efforceront de rechercher une solution amiable. À défaut de règlement amiable dans un délai de 30 jours à compter de la notification écrite du différend, le litige pourra être porté devant les juridictions compétentes.\n\nLe Client est informé de la possibilité de recourir à un médiateur de la consommation. Le Prestataire a adhéré au Centre de la médiation de la consommation des conciliateurs de justice (CM2C)\n\nAdresse postale : 49 Rue de Ponthieu, 75008 Paris\nAdresse email : declarer-un-litige@cm2c.net\nSite internet : https://www.cm2c.net/comment-nous-saisir.php",
     },
     {
       heading: "21. Dispositions diverses",
@@ -294,7 +292,7 @@ const en = {
         "Cancellation between 24h and 48h before: 50% refund.",
         "Cancellation less than 24h before or no-show: no refund — service due in full.",
       ],
-      afterItems: "15.2. Cancellation by the Provider (extreme weather, technical incident): full refund or free postponement.\n\n15.3. For bookings made via OTAs or other partners, please refer to the cancellation policy of those organisations. These GTC only govern the direct relationship with the Provider.",
+      afterItems: "15.2. Cancellation by the Provider (extreme weather, technical incident): full refund or free postponement.",
     },
     {
       heading: "16. Intellectual property – Application – Brand",
@@ -321,7 +319,7 @@ const en = {
     },
     {
       heading: "20. Applicable law – Dispute resolution",
-      body: "These GTC and the resulting contracts are subject to French law.\n\nThe language of the contract is French. Translations into foreign languages are provided by the Provider for information purposes only.\n\nIn the event of a dispute relating to the validity, interpretation or execution of this contract, the parties shall endeavour to reach an amicable settlement. Failing an amicable settlement within 30 days of written notification of the dispute by one of the parties, the dispute may be brought before the competent courts.\n\nThe Client is informed of the possibility to use a consumer mediator. The Provider has joined the Centre de la médiation de la consommation des conciliateurs de justice (CM2C)\n\nPostal address: 49 Rue de Ponthieu, 75008 Paris\nEmail address: declarer-un-litige@cm2c.net\nWebsite: https://www.cm2c.net/comment-nous-saisir.php\n\nOr MTV MEDIATION TOURISME VOYAGE — CS 30958, 75383 PARIS cedex 08 — info@mtv.travel",
+      body: "These GTC and the resulting contracts are subject to French law.\n\nThe language of the contract is French. Translations into foreign languages are provided by the Provider for information purposes only.\n\nIn the event of a dispute relating to the validity, interpretation or execution of this contract, the parties shall endeavour to reach an amicable settlement. Failing an amicable settlement within 30 days of written notification of the dispute by one of the parties, the dispute may be brought before the competent courts.\n\nThe Client is informed of the possibility to use a consumer mediator. The Provider has joined the Centre de la médiation de la consommation des conciliateurs de justice (CM2C)\n\nPostal address: 49 Rue de Ponthieu, 75008 Paris\nEmail address: declarer-un-litige@cm2c.net\nWebsite: https://www.cm2c.net/comment-nous-saisir.php",
     },
     {
       heading: "21. Miscellaneous provisions",

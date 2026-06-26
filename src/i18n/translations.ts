@@ -22,7 +22,7 @@ export const translations = {
         subtitle: "VeloRouge is the Strasbourg experience reinvented. Each route tells a story. Each pedal stroke brings you closer to the soul of the city.",
         stat1: "bikes available",
         stat2: "Outdoor explorers in the komoot community",
-        stat3: "Routes, tips & highlights — in partnership with komoot"
+        stat3: "Photos, tips & highlights — in partnership with komoot"
       },
       rides: {
         title: "Four ways",
@@ -121,7 +121,7 @@ export const translations = {
         title2: "Become an owner.",
         title3: "Change your life.",
         subtitle: "Rent-to-own for only 150€/month. After 12 months, the bike is yours. Zero hidden fees, full maintenance included.",
-        price: "125 Euros/Month* excl. VAT",
+        price: "150 Euros/Month* excl. HT",
         subscription: "12-month subscription",
         availability: "availability (vs 71% elsewhere)",
         cta: "Rent to own"
@@ -153,7 +153,7 @@ export const translations = {
         learnMore: "LEARN MORE"
       },
       footer: {
-        tagline: "Premium electric bike experiences in Strasbourg, France.",
+        tagline: "Premium electric bike and segway experiences in Strasbourg, France.",
         company: "Company",
         about: "About",
         rides: "Rides",
@@ -410,7 +410,7 @@ export const translations = {
         ride4Time: "",
         ride4GroupSize: "person",
         ride4Description: "Go beyond Strasbourg and discover the authentic charm of Alsace. Pedal through picturesque villages, rolling vineyards, traditional Alsatian half-timbered houses and peaceful country roads for a genuine local experience away from the tourist crowds.",
-        electricBike: "ELECTRIC BIKE",
+        electricBike: "ELECTRIC BIKE AND SEGWAYS",
         bookButton: "BOOK",
         price1Label: "Half-Day Cruise",
         price1: "18€",
@@ -434,10 +434,10 @@ export const translations = {
         title1: "Reliable.",
         title2: "Local.",
         titleHighlight: "For you.",
-        subtitle: "A VéloRouge subscription means a bike always ready, always maintained, always at your disposal. No queues, no stations — just freedom on two wheels.",
-        feature1: "A dedicated electric bike, just for you",
-        feature2: "Weekly maintenance by our local team",
-        feature3: "Switch models whenever you want, no fees"
+        subtitle: "A VéloRouge subscription means a bike always ready, always maintained, always at your disposal. No queues, no stations — just freedom on two wheels. A dedicated electric bike, just for you",
+        feature1: "",
+        feature2: "",
+        feature3: ""
       },
       marquee: {
         text: "Tours in Strasbourg • 4 unique routes to discover • 100 % curated rides in Strasbourg • "
@@ -624,7 +624,7 @@ export const translations = {
         title2: "Devenez proprio.",
         title3: "Changez de vie.",
         subtitle: "Location-vente à seulement 150€/mois. Après 12 mois, le vélo est à vous. Zéro frais cachés, entretien complet inclus.",
-        price: "125 Euros/Mois* HT",
+        price: "150 Euros/Mois* HT",
         subscription: "Abonnement de 12 mois",
         availability: "de disponibilité (vs 71% ailleurs)",
         cta: "Louer pour posséder"
@@ -656,7 +656,7 @@ export const translations = {
         learnMore: "EN SAVOIR PLUS"
       },
       footer: {
-        tagline: "Expériences vélo électrique premium à Strasbourg, France.",
+        tagline: "Expériences premium de vélo électrique et de trottinette électrique à Strasbourg, France.",
         company: "Entreprise",
         about: "À propos",
         rides: "Balades",
@@ -913,7 +913,7 @@ export const translations = {
         ride4Time: "",
         ride4GroupSize: "personne",
         ride4Description: "Allez au-delà de Strasbourg et découvrez le charme authentique de l'Alsace. Pédalez à travers des villages pittoresques, des vignobles vallonnés, des maisons alsaciennes traditionnelles à colombages et des routes de campagne paisibles pour une véritable expérience locale loin des foules touristiques.",
-        electricBike: "VÉLO ÉLECTRIQUE",
+        electricBike: "VÉLO ÉLECTRIQUE ET TROTTINETTES ÉLECTRIQUES",
         bookButton: "RÉSERVER",
         pricingTitle: "Nos Tarifs",
         price1Label: "Croisière demi-journée",
@@ -938,10 +938,10 @@ export const translations = {
         title1: "Fiable.",
         title2: "Local.",
         titleHighlight: "Pour vous.",
-        subtitle: "Un abonnement VéloRouge, c'est un vélo toujours prêt, toujours entretenu, toujours à votre disposition. Pas de files, pas de stations — juste la liberté sur deux roues.",
-        feature1: "Un vélo électrique dédié, rien que pour vous",
-        feature2: "Entretien hebdomadaire par notre équipe locale",
-        feature3: "Changez de modèle quand vous voulez, sans frais"
+        subtitle: "Un abonnement VéloRouge, c'est un vélo toujours prêt, toujours entretenu, toujours à votre disposition. Pas de files, pas de stations — juste la liberté sur deux roues Un vélo électrique dédié, rien que pour vous.",
+        feature1: "",
+        feature2: "",
+        feature3: ""
       },
       marquee: {
         text: "Balades à Strasbourg • 4 itinéraires uniques à découvrir • 100 % de parcours soigneusement sélectionnés à Strasbourg • "
@@ -1288,7 +1288,7 @@ export const translations = {
         ride4Time: "10:00–13:30 Uhr",
         ride4GroupSize: "Person",
         ride4Description: "Keine andere Stadt in Europa bietet die Möglichkeit, gemütlich vor dem Mittagessen zwischen zwei Ländern zu radeln. Wir machen das jeden Samstag. Straßburgs einzigartige Lage an der deutsch-französischen Grenze ist sein größtes touristisches Plus – und kaum ein Anbieter nutzt es wirklich. Diese Route führt über den Rhein auf der Mimrambrücke (einer prächtigen Fußgängerbrücke), durch den Zweiufergarten und endet in der deutschen Stadt Kehl, wo Sie Kaffee und faszinierende kulturelle Kontraste erleben können.",
-        electricBike: "ELEKTRO-FAHRRAD",
+        electricBike: "ELEKTROFAHRRAD UND SEGWAYS",
         bookButton: "BUCHEN"
       },
       fmd: {

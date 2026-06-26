@@ -19,20 +19,9 @@ const ReliableSection = () => {
             <p className="mt-6 text-dark-foreground/70 max-w-md">
               {t('reliableSection.subtitle')}
             </p>
-            <ul className="mt-6 space-y-3 text-base text-dark-foreground/70">
-              <li className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
-                {t('reliableSection.feature1')}
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
-                {t('reliableSection.feature2')}
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
-                {t('reliableSection.feature3')}
-              </li>
-            </ul>
+            <p className="mt-6 text-base text-dark-foreground/70">
+              {t('reliableSection.feature1')}
+            </p>
           </div>
           <div className="aspect-[4/5] overflow-hidden">
             <img

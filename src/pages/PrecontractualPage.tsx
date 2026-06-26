@@ -4,15 +4,13 @@ import SEO from "@/components/SEO";
 import { useTranslation } from "react-i18next";
 
 const pricingFR = [
-  { product: "Location Segway", price: "29 €", vehicle: "Trottinette Segway L60", format: "Autonome · app · 2h" },
-  { product: "Expérience E-Bike Audio + Stampz", price: "49 €", vehicle: "Vélo électrique premium", format: "Auto-guidé · IZI Travel · 3–4h" },
-  { product: "Visite guidée groupe", price: "59 €/pers · min 4", vehicle: "Vélo électrique premium", format: "Guide humain · 3h · max 8" },
+  { product: "Location Segway", price: "€225/day pass", vehicle: "Trottinette Segway L60", format: "Autonome · app · 2h" },
+  { product: "Expérience E-Bike Audio + Stampz", price: "€225/day pass", vehicle: "Vélo électrique premium", format: "Auto-guidé · IZI Travel · 3–4h" },
 ];
 
 const pricingEN = [
-  { product: "Segway Rental", price: "€29", vehicle: "Segway Scooter L60", format: "Self-guided · app · 2h" },
-  { product: "E-Bike Audio + Stampz Guided Experience", price: "€49", vehicle: "Premium electric bike", format: "Self-guided · IZI Travel · 3–4h" },
-  { product: "Group guided tour", price: "€59/person · min 4", vehicle: "Premium electric bike", format: "Human guide · 3h · max 8" },
+  { product: "Segway Rental", price: "€225/day pass", vehicle: "Segway Scooter L60", format: "Self-guided · app · 2h" },
+  { product: "E-Bike Audio + Stampz Guided Experience", price: "€225/day pass", vehicle: "Premium electric bike", format: "Self-guided · IZI Travel · 3–4h" },
 ];
 
 const fr = {
@@ -35,7 +33,7 @@ const fr = {
     },
     {
       heading: "2. Description et caractéristiques principales de l'expérience",
-      body: "Type de prestation : Location de vélos à assistance électrique ou de trottinettes Segway\n\nCircuits touristiques guidés :\n[ ] Circuit X : Nom du circuit — Itinéraire, Principaux points d'intérêt visités, Niveau de difficulté (physique / technique), Vitesse moyenne / distance approximative : [●] km, durée\n[ ] Circuit Y : Nom du circuit — Itinéraire, Principaux points d'intérêt visités, Niveau de difficulté (physique / technique), Vitesse moyenne / distance approximative : [●] km, durée\n[ ] Circuit Z : Nom du circuit — Itinéraire, Principaux points d'intérêt visités, Niveau de difficulté (physique / technique), Vitesse moyenne / distance approximative : [●] km, durée\n\nMode de guidage :\n[ ] via application mobile\n[ ] avec guide accompagnateur indépendant\n\nTaille du groupe pour les visites guidées avec un guide indépendant :\n– Nombre minimal de participants requis : 4 personnes\n– Nombre maximal de participants : 8 personnes\n\nLangue dans laquelle les informations et explications sont fournies : FR / EN / DE",
+      body: "Type de prestation : Location de vélos à assistance électrique ou de trottinettes Segway\n\nMode de guidage :\n[ ] via application mobile\n[ ] avec guide accompagnateur indépendant\n\nTaille du groupe pour les visites guidées avec un guide indépendant :\n– Nombre minimal de participants requis : 4 personnes\n– Nombre maximal de participants : 8 personnes\n\nLangue dans laquelle les informations et explications sont fournies : FR / EN / DE",
       subsections: [
         {
           heading: "Équipements fournis par TourDeWheel",
@@ -138,7 +136,7 @@ const en = {
     },
     {
       heading: "2. Description and main characteristics of the experience",
-      body: "Type of service: Rental of electric bikes or Segway scooters\n\nGuided tours:\n[ ] Tour X: Tour name — Route, Main points of interest visited, Difficulty level (physical / technical), Average speed / approximate distance: [●] km, duration\n[ ] Tour Y: Tour name — Route, Main points of interest visited, Difficulty level (physical / technical), Average speed / approximate distance: [●] km, duration\n[ ] Tour Z: Tour name — Route, Main points of interest visited, Difficulty level (physical / technical), Average speed / approximate distance: [●] km, duration\n\nGuidance method:\n[ ] via mobile application\n[ ] with an independent accompanying guide\n\nGroup size for guided tours with an independent guide:\n– Minimum number of participants required: 4 people\n– Maximum number of participants: 8 people\n\nLanguage in which information and explanations are provided: FR / EN / DE",
+      body: "Type of service: Rental of electric bikes or Segway scooters\n\nGuidance method:\n[ ] via mobile application\n[ ] with an independent accompanying guide\n\nGroup size for guided tours with an independent guide:\n– Minimum number of participants required: 4 people\n– Maximum number of participants: 8 people\n\nLanguage in which information and explanations are provided: FR / EN / DE",
       subsections: [
         {
           heading: "Equipment provided by TourDeWheel",
@@ -221,7 +219,7 @@ const en = {
   ],
 };
 
-type Row = [string, string];
+type Row = string[];
 type Subsection = { heading: string; items?: string[]; body?: string };
 type Section = {
   heading: string;
@@ -291,7 +289,7 @@ const renderSection = (section: Section, idx: number, content: Content) => (
 
     {section.items && (
       <ul className="list-disc list-inside space-y-2 mb-4 text-muted-foreground">
-        {section.items.map((item, i) => <li key={i}>{item}</li>)}
+        {section.items.map((item, i) => <li key={i}>{item.replace(/\[●\]/g, "25km/hrs")}</li>)}
       </ul>
     )}
     {section.afterItems && section.afterItems.split("\n\n").map((p, i) => (
@@ -306,7 +304,7 @@ const renderSection = (section: Section, idx: number, content: Content) => (
         ))}
         {sub.items && (
           <ul className="list-disc list-inside space-y-1.5 text-muted-foreground">
-            {sub.items.map((item, i) => <li key={i}>{item}</li>)}
+            {sub.items.map((item, i) => <li key={i}>{item.replace(/\[●\]/g, "25km/hrs")}</li>)}
           </ul>
         )}
       </div>

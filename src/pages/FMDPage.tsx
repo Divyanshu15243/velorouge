@@ -7,11 +7,12 @@ import gallery1 from "@/assets/approach.png";
 import { Check, Download, Building2, Users, FileText, Headphones, ChevronDown, TrendingUp } from "lucide-react";
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
 
 const FMDPage = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const { t } = useTranslation();
+  const contactEmail = 'Bonjour@velorouge.fr';
+  const contactMailto = `mailto:${contactEmail}`;
 
   const faqItems = [
     { q: t('fmd.faq1Q'), a: t('fmd.faq1A') },
@@ -48,10 +49,10 @@ const FMDPage = () => {
               {t('fmd.description')}
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link to="/#pricing" className="bg-primary text-primary-foreground px-8 py-4 font-semibold hover:bg-primary/90 transition-colors">
+              <a href={contactMailto} className="bg-primary text-primary-foreground px-8 py-4 font-semibold hover:bg-primary/90 transition-colors">
                 {t('fmd.startRental')}
-              </Link>
-              <a href="#companies" className="border-2 border-primary text-primary px-8 py-4 font-semibold hover:bg-primary/10 transition-colors">
+              </a>
+              <a href={contactMailto} className="border-2 border-primary text-primary px-8 py-4 font-semibold hover:bg-primary/10 transition-colors">
                 {t('fmd.forCompanies')}
               </a>
             </div>
@@ -170,9 +171,9 @@ const FMDPage = () => {
           </div>
         </div>
         <div className="text-center mt-12">
-          <Link to="/contact" className="inline-block bg-primary text-primary-foreground px-10 py-4 font-semibold hover:bg-primary/90 transition-colors">
+          <a href={contactMailto} className="inline-block bg-primary text-primary-foreground px-10 py-4 font-semibold hover:bg-primary/90 transition-colors">
             {t('fmd.startAnnual')}
-          </Link>
+          </a>
         </div>
       </div>
     </section>
@@ -262,9 +263,9 @@ const FMDPage = () => {
           </div>
         </div>
         <div className="text-center">
-          <Link to="/contact" className="inline-block bg-primary text-primary-foreground px-10 py-4 font-semibold hover:bg-primary/90 transition-colors">
+          <a href={contactMailto} className="inline-block bg-primary text-primary-foreground px-10 py-4 font-semibold hover:bg-primary/90 transition-colors">
             {t('fmd.contactTeam')}
-          </Link>
+          </a>
         </div>
       </div>
     </section>
@@ -306,11 +307,11 @@ const FMDPage = () => {
           {t('fmd.downloadTemplate')}
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <a href="#" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 font-semibold hover:bg-primary/90 transition-colors">
+          <a href={contactMailto} className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 font-semibold hover:bg-primary/90 transition-colors">
             <Download className="w-5 h-5" />
             {t('fmd.downloadEmail')}
           </a>
-          <a href="#" className="inline-flex items-center gap-2 border-2 border-primary text-primary px-8 py-4 font-semibold hover:bg-primary/10 transition-colors">
+          <a href={contactMailto} className="inline-flex items-center gap-2 border-2 border-primary text-primary px-8 py-4 font-semibold hover:bg-primary/10 transition-colors">
             <Download className="w-5 h-5" />
             {t('fmd.downloadSheet')}
           </a>
@@ -330,12 +331,12 @@ const FMDPage = () => {
           {t('fmd.finalDesc')}
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <Link to="/#pricing" className="bg-white text-primary px-10 py-4 font-semibold hover:bg-gray-100 transition-colors">
+          <a href={contactMailto} className="bg-white text-primary px-10 py-4 font-semibold hover:bg-gray-100 transition-colors">
             {t('fmd.seePricing')}
-          </Link>
-          <Link to="/contact" className="border-2 border-white text-white px-10 py-4 font-semibold hover:bg-white/10 transition-colors">
+          </a>
+          <a href={contactMailto} className="border-2 border-white text-white px-10 py-4 font-semibold hover:bg-white/10 transition-colors">
             {t('fmd.contactUs')}
-          </Link>
+          </a>
         </div>
       </div>
     </section>
