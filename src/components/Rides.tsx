@@ -96,9 +96,9 @@ const Rides = () => {
               
               <h3 className="font-body text-2xl font-semibold mb-1 leading-tight">{r.title}</h3>
               
-              <p className="text-sm text-muted-foreground mb-0.5 leading-relaxed">{r.hook}</p>
+              <p className="text-sm text-muted-foreground italic mb-0.5 leading-snug">{r.unique}</p>
               
-              <p className="text-xs text-muted-foreground italic mb-4 leading-snug">{r.unique}</p>
+              <p className="text-xs text-muted-foreground mb-4 leading-relaxed">{r.hook}</p>
 
               <span className="inline-block bg-primary text-primary-foreground text-xs font-semibold px-5 py-2.5 hover:bg-primary/90 transition-colors">
                 {t('ridesPage.bookButton')}
