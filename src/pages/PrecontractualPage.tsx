@@ -38,8 +38,8 @@ const fr = {
         {
           heading: "Équipements fournis par TourDeWheel",
           items: [
-            "Vélo à assistance électrique (modèle / puissance nominale : [●])",
-            "Trottinettes Segway (modèle / puissance nominale : [●])",
+            "Vélo à assistance électrique (modèle : [à préciser] / puissance nominale : 25 km/h)",
+            "Trottinettes Segway (modèle : L60E / puissance nominale : 25 km/h)",
             "Casque",
             "Antivol",
             "Batterie et chargeur",
@@ -141,8 +141,8 @@ const en = {
         {
           heading: "Equipment provided by TourDeWheel",
           items: [
-            "Electric bike (model / nominal power: [●])",
-            "Segway scooters (model / nominal power: [●])",
+            "Electric bike (model: model: L60E / nominal power: 25km/hrs)",
+            "Segway scooters (model: L60E / nominal power: 25km/hrs)",
             "Helmet",
             "Lock",
             "Battery and charger",
