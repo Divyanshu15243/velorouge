@@ -525,7 +525,7 @@ export const translations = {
         subtitle: "VéloRouge, c'est l'expérience Strasbourg réinventée. Chaque parcours raconte une histoire. Chaque coup de pédale vous rapproche de l'âme de la ville.",
         stat1: "vélos disponibles",
         stat2: "Explorateurs dans la communauté komoot",
-        stat3: "Photos, conseils et points forts partagés par la communauté"
+        stat3: "Photos, conseils et points forts partagés par la komoot"
       },
       rides: {
         title: "Quatre façons",
