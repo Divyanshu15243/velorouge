@@ -90,7 +90,7 @@ const Footer = () => {
               <Instagram className="w-4 h-4" />
               Instagram
             </a>
-            <a href="http://tiktok.com/@velorougefrance" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-dark-foreground transition-colors">
+            <a href="https://www.tiktok.com/@velorougeofficial" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-dark-foreground transition-colors">
               <Music2 className="w-4 h-4" />
               TikTok
             </a>
