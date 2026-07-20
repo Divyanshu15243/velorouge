@@ -20,13 +20,13 @@ const CTA = () => {
       </p>
       <div className="mt-10 flex flex-wrap justify-center gap-4">
         <Link
-          to="/contact"
+          to="/#pricing"
           className="bg-primary text-primary-foreground px-10 py-4 font-semibold text-sm hover:bg-primary/90 transition-colors"
         >
           {t('cta.letsGo')}
         </Link>
         <Link
-          to="/about"
+          to="/#pricing"
           className="border border-dark-foreground/30 text-dark-foreground px-10 py-4 font-semibold text-sm hover:border-dark-foreground/60 transition-colors"
         >
           {t('cta.learnMore')}

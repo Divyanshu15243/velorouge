@@ -31,7 +31,7 @@ const DeliverSection = () => {
               </div>
             </div>
             <Link
-              to="/contact"
+              to="/#pricing"
               className="inline-block mt-8 bg-primary text-primary-foreground px-8 py-3 font-semibold text-sm hover:bg-primary/90 transition-colors"
             >
               Start riding today

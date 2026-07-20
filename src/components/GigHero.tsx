@@ -32,7 +32,7 @@ const GigHero = () => {
             </div>
           </div>
           
-          <Link to="/contact" className="bg-[#F5F5DC] text-black px-6 md:px-8 py-3 md:py-4 text-xs md:text-sm tracking-wide uppercase font-medium hover:bg-[#ECECD0] transition-colors w-full sm:w-auto inline-block text-center">
+          <Link to="/#pricing" className="bg-[#F5F5DC] text-black px-6 md:px-8 py-3 md:py-4 text-xs md:text-sm tracking-wide uppercase font-medium hover:bg-[#ECECD0] transition-colors w-full sm:w-auto inline-block text-center">
             {t('gigHero.cta')}
           </Link>
         </div>

@@ -408,7 +408,7 @@ const BlogPage = () => {
               </h2>
             </div>
             <Link
-              to="/visitors"
+              to="/#pricing"
               className="shrink-0 inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 text-sm font-semibold hover:bg-primary/90 transition-colors"
             >
               {isFr ? "Voir les balades" : "Explore Rides"} <ArrowRight size={16} />

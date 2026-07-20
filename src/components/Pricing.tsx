@@ -130,7 +130,7 @@ const Pricing = () => {
                 </button>
               ) : (
                 <a
-                  href="#contact"
+                  href="/#pricing"
                   className="mt-6 block text-center py-3 text-sm font-semibold text-white transition-colors bg-red-600 hover:bg-red-700"
                 >
                   {t('pricing.bookNowBtn')}
@@ -163,8 +163,7 @@ const Pricing = () => {
               )}
               <div className="text-sm text-dark-foreground/60 mb-1">{p.name}</div>
               <div className="font-display text-3xl font-bold">
-                {p.price}
-                <span className="text-sm font-body text-dark-foreground/50 ml-1">{p.period}</span>
+                {p.period}
               </div>
               <div className="mt-1 text-xs text-dark-foreground/40 italic">{p.target}</div>
               <ul className="mt-5 space-y-2 flex-1">
@@ -185,7 +184,7 @@ const Pricing = () => {
                 </button>
               ) : (
                 <a
-                  href="#contact"
+                  href="/#pricing"
                   className="mt-6 block text-center py-3 text-sm font-semibold text-white transition-colors bg-red-600 hover:bg-red-700"
                 >
                   {t('pricing.bookNowBtn')}
@@ -198,8 +197,7 @@ const Pricing = () => {
           <div className="p-6 border border-primary bg-dark-surface flex flex-col">
             <div className="text-sm text-dark-foreground/60 mb-1">{featuredPlan.name}</div>
             <div className="font-display text-3xl font-bold">
-              {featuredPlan.price}
-              <span className="text-sm font-body text-dark-foreground/50 ml-1">{featuredPlan.period}</span>
+              {featuredPlan.period}
             </div>
             <div className="mt-1 text-xs text-dark-foreground/40 italic">{featuredPlan.target}</div>
             <ul className="mt-5 space-y-2 flex-1">
