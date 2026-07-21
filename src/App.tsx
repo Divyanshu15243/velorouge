@@ -23,6 +23,7 @@ import NotFound from "./pages/NotFound";
 import PrivacyPage from "./pages/PrivacyPage";
 import PrecontractualPage from "./pages/PrecontractualPage";
 import CGSPage from "./pages/CGSPage";
+import BookingConfirmationPage from "./pages/BookingConfirmationPage";
 
 const queryClient = new QueryClient();
 
@@ -50,6 +51,7 @@ const App = () => (
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/precontractual" element={<PrecontractualPage />} />
           <Route path="/cgs" element={<CGSPage />} />
+          <Route path="/booking-confirmation" element={<BookingConfirmationPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>}

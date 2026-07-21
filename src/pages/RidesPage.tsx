@@ -2,11 +2,11 @@ import Navbar from "@/components/Navbar";
 import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
 import rideSundowner from "@/assets/Circuit Culturel.png";
-
 import rideRiver from "@/assets/Forêt de Robertsau & Rhin.png";
 import rideLocal from "@/assets/Découverte Campagnarde.png";
 import abt1 from "@/assets/abt1.jpeg";
 import { useTranslation } from "react-i18next";
+import { trackAddToCart } from "@/utils/analytics";
 
 const RidesPage = () => {
   const { t } = useTranslation();
@@ -103,7 +103,15 @@ const RidesPage = () => {
                 <h2 className="font-display text-3xl md:text-4xl font-black">{r.title}</h2>
                 <p className="mt-2 text-lg text-muted-foreground italic">{r.subtitle}</p>
                 <p className="mt-4 text-base text-muted-foreground max-w-md leading-relaxed">{r.description}</p>
-
+                <a
+                  href="https://bokun.io" // ← replace with your real Bokun booking URL
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackAddToCart(r.title, Number(r.price) || 49)}
+                  className="mt-6 inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3 text-sm font-semibold hover:bg-primary/90 transition-colors"
+                >
+                  {t('ridesPage.bookButton')}
+                </a>
               </div>
             </div>
           ))}
