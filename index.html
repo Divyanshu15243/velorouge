@@ -6,7 +6,7 @@
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TG9B5M4K');</script>
+    })(window,document,'script','dataLayer','GTM-5BC2NJ9Q');</script>
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/logo.png" />
@@ -25,62 +25,129 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@VeloRouge" />
     <meta name="twitter:image" content="/logo.png" />
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5N7E9CTD2Q"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-5N7E9CTD2Q');
-  gtag('config', 'AW-18294352919');
-</script>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KFTJJWJD');</script>
-    <!-- End Google Tag Manager -->
-    
 
-    <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wbzejvla8v");
-    </script>
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://www.clarity.ms" />
+    <link rel="preconnect" href="https://connect.facebook.net" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+      />
+    </noscript>
+
+    <!--
+      Analytics/tracking are deferred until the page is idle (or first user
+      interaction for Meta Pixel) so they don't block first paint / TBT.
+      dataLayer + gtag() are initialized synchronously (no network cost) so
+      any early gtag() calls (including gtag_report_conversion below) still
+      queue correctly even before gtag.js has loaded.
+    -->
     <script>
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5N7E9CTD2Q');
+      gtag('config', 'AW-18294352919');
+
+      function loadGTM(id) {
+        var f = document.getElementsByTagName('script')[0];
+        var j = document.createElement('script');
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + id;
+        f.parentNode.insertBefore(j, f);
+      }
+
+      function loadDeferredAnalytics() {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-5N7E9CTD2Q';
+        document.head.appendChild(s);
+
+        loadGTM('GTM-TG9B5M4K');
+        loadGTM('GTM-KFTJJWJD');
+
+        (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "wbzejvla8v");
+      }
+
+      function scheduleDeferredAnalytics() {
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(loadDeferredAnalytics, { timeout: 4000 });
+        } else {
+          setTimeout(loadDeferredAnalytics, 1000);
         }
-      };
-      gtag('event', 'conversion', {
-          'send_to': 'AW-18294352919/wS_6CK2fxcscEJfYtpNE',
-          'event_callback': callback
+      }
+
+      if (document.readyState === 'complete') {
+        scheduleDeferredAnalytics();
+      } else {
+        window.addEventListener('load', scheduleDeferredAnalytics);
+      }
+
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-18294352919/wS_6CK2fxcscEJfYtpNE',
+            'event_callback': callback
+        });
+        return false;
+      }
+
+      function loadMetaPixel() {
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1552783096485928');
+        fbq('track', 'PageView');
+      }
+
+      var metaPixelLoaded = false;
+      function loadMetaPixelOnce() {
+        if (metaPixelLoaded) return;
+        metaPixelLoaded = true;
+        loadMetaPixel();
+      }
+      ['pointerdown', 'scroll', 'keydown'].forEach(function (evt) {
+        window.addEventListener(evt, loadMetaPixelOnce, { once: true, passive: true });
       });
-      return false;
-    }
+      // Fallback for visits with no interaction (e.g. someone just reading the page)
+      window.addEventListener('load', function () {
+        setTimeout(loadMetaPixelOnce, 8000);
+      });
     </script>
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1552783096485928');
-    fbq('track', 'PageView');
-    </script>
-    <!-- End Meta Pixel Code -->
   </head>
 
   <body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BC2NJ9Q"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    Google Tag Manager (noscript) 
+    <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BC2NJ9Q"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+    <!-- End Google Tag Manager (noscript)
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TG9B5M4K"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

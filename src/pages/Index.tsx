@@ -1,23 +1,22 @@
+import { Suspense, lazy } from "react";
 import Navbar from "@/components/Navbar";
 import SEO from "@/components/SEO";
 import Hero from "@/components/Hero";
-import GigHero from "@/components/GigHero";
 import About from "@/components/About";
 import Rides from "@/components/Rides";
-import Marquee from "@/components/Marquee";
-import HowItWorks from "@/components/HowItWorks";
-import Pricing from "@/components/Pricing";
-import Showcase from "@/components/Showcase";
-import FounderStory from "@/components/FounderStory";
-import CityStats from "@/components/CityStats";
-import Gallery from "@/components/Gallery";
-import ReliableSection from "@/components/ReliableSection";
-import DeliverSection from "@/components/DeliverSection";
-import Difference from "@/components/Difference";
-import Features from "@/components/Features";
-import Newsletter from "@/components/Newsletter";
-import CTA from "@/components/CTA";
-import Footer from "@/components/Footer";
+
+const GigHero = lazy(() => import("@/components/GigHero"));
+const Marquee = lazy(() => import("@/components/Marquee"));
+const HowItWorks = lazy(() => import("@/components/HowItWorks"));
+const Pricing = lazy(() => import("@/components/Pricing"));
+const Showcase = lazy(() => import("@/components/Showcase"));
+const FounderStory = lazy(() => import("@/components/FounderStory"));
+const CityStats = lazy(() => import("@/components/CityStats"));
+const Gallery = lazy(() => import("@/components/Gallery"));
+const ReliableSection = lazy(() => import("@/components/ReliableSection"));
+const Features = lazy(() => import("@/components/Features"));
+const CTA = lazy(() => import("@/components/CTA"));
+const Footer = lazy(() => import("@/components/Footer"));
 
 const Index = () => (
   <main>
@@ -32,19 +31,21 @@ const Index = () => (
     <About />
     <Rides />
 
-    <Marquee />
-    <HowItWorks />
-    <Pricing />
-    <Showcase />
-    <FounderStory />
-    <CityStats />
-    <Gallery />
-    <ReliableSection />
-    <GigHero />
-    <Features />
-    {/* <Newsletter /> */}
-    <CTA />
-    <Footer />
+    <Suspense fallback={null}>
+      <Marquee />
+      <HowItWorks />
+      <Pricing />
+      <Showcase />
+      <FounderStory />
+      <CityStats />
+      <Gallery />
+      <ReliableSection />
+      <GigHero />
+      <Features />
+      {/* <Newsletter /> */}
+      <CTA />
+      <Footer />
+    </Suspense>
   </main>
 );
 

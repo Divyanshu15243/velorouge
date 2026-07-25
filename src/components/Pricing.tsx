@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Check } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { trackAddToCart } from "@/utils/analytics";
 
 const BOKUN_CHANNEL = "79fde21a-45fd-4202-b90d-bfd9333501fd";
@@ -8,11 +8,15 @@ const BOKUN_CHANNEL = "79fde21a-45fd-4202-b90d-bfd9333501fd";
 const Pricing = () => {
   const { t, i18n } = useTranslation();
   const isFrench = i18n.language?.startsWith("fr");
+  const sectionRef = useRef<HTMLElement>(null);
   const baseFeatures = [
     isFrench ? "Location de vélo électrique" : "E-bike rental",
     isFrench ? "Casque et antivol" : "Helmet & lock",
   ];
 
+  // The Bokun widget script is the heaviest third-party script on the page,
+  // so it's only fetched once the Pricing section is about to scroll into
+  // view, instead of eagerly on homepage load.
   useEffect(() => {
     const attachTracking = () => {
       document.querySelectorAll<HTMLElement>(".bokunButton").forEach((btn) => {
@@ -26,17 +30,33 @@ const Pricing = () => {
       });
     };
 
-    const script = document.createElement("script");
-    script.src = `https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=${BOKUN_CHANNEL}`;
-    script.async = true;
-    script.onload = attachTracking;
-    document.body.appendChild(script);
+    let script: HTMLScriptElement | null = null;
+    const loadBokun = () => {
+      if (script) return;
+      script = document.createElement("script");
+      script.src = `https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=${BOKUN_CHANNEL}`;
+      script.async = true;
+      script.onload = attachTracking;
+      document.body.appendChild(script);
+    };
 
-    // attach immediately too in case buttons already rendered
-    attachTracking();
+    const node = sectionRef.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          loadBokun();
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "300px" }
+    );
+    observer.observe(node);
 
     return () => {
-      if (document.body.contains(script)) document.body.removeChild(script);
+      observer.disconnect();
+      if (script && document.body.contains(script)) document.body.removeChild(script);
     };
   }, []);
 
@@ -86,7 +106,7 @@ const Pricing = () => {
   };
 
   return (
-    <section id="pricing" className="py-24 bg-dark text-dark-foreground">
+    <section id="pricing" ref={sectionRef} className="py-24 bg-dark text-dark-foreground">
       <div className="container">
         <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">
           {t("pricing.title")}
