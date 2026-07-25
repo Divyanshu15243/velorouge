@@ -141,6 +141,7 @@ const Pricing = () => {
               <button
                 className="bokunButton mt-6 w-full py-3 text-sm font-semibold text-white transition-colors border-none cursor-pointer bg-red-600 hover:bg-red-700"
                 id={p.bokunId}
+                data-gtm-id="pricing-book-now"
                 data-src={p.bokunSrc}
                 data-plan-name={p.name}
                 data-plan-price={p.price.replace(/[^0-9.]/g, "")}
@@ -166,6 +167,7 @@ const Pricing = () => {
             <button
               className="bokunButton mt-6 w-full py-3 text-sm font-semibold bg-red-600 text-white hover:bg-red-700 transition-colors border-none cursor-pointer"
               id={featuredPlan.bokunId}
+              data-gtm-id="pricing-book-now"
               data-src={featuredPlan.bokunSrc}
               data-plan-name={featuredPlan.name}
               data-plan-price={featuredPlan.price.replace(/[^0-9.]/g, "")}
