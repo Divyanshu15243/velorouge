@@ -1,4 +1,4 @@
-import differenceimg from "@/assets/difference.png";
+import differenceimg from "@/assets/difference.webp";
 import { useTranslation } from "react-i18next";
 
 const Difference = () => {
@@ -46,6 +46,9 @@ const Difference = () => {
           src={differenceimg}
           alt="VeloRouge mechanic maintaining a bicycle"
           className="max-w-[80%] max-h-[80%] object-contain"
+          width={928}
+          height={1152}
+          loading="lazy"
         />
         <div className="absolute top-1/2 left-8 md:left-14 -translate-y-1/2 w-4 h-4 md:w-5 md:h-5 rounded-full bg-primary shadow-[0_0_0_6px_rgba(192,24,42,0.2)] animate-pulse" />
         <div className="absolute bottom-12 md:bottom-20 left-8 md:left-14 bg-primary p-6 md:p-9 w-48 md:w-60">

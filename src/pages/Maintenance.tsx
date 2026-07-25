@@ -1,4 +1,4 @@
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.webp";
 
 const Maintenance = () => (
   <div className="min-h-screen bg-dark flex flex-col items-center justify-center text-center px-6">

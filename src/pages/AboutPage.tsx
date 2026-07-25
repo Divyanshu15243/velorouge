@@ -2,10 +2,10 @@ import { useTranslation } from "react-i18next";
 import Navbar from "@/components/Navbar";
 import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
-import aboutHero from "@/assets/about-hero.jpg";
-import teamPhoto from "@/assets/7.png";
-import travelersPhoto from "@/assets/deliver-bike.jpg";
-import ctaBg from "@/assets/hero-bg.jpg";
+import aboutHero from "@/assets/about-hero.webp";
+import teamPhoto from "@/assets/7.webp";
+import travelersPhoto from "@/assets/deliver-bike.webp";
+import ctaBg from "@/assets/hero-bg.webp";
 import { Bike, Heart, Users, Globe, ChevronDown } from "lucide-react";
 import { useState } from "react";
 
@@ -82,7 +82,7 @@ const AboutPage = () => {
             </p>
           </div>
           <div className="aspect-video overflow-hidden">
-            <img src={teamPhoto} alt="VeloRouge team" className="w-full h-full object-cover" loading="lazy" />
+            <img src={teamPhoto} alt="VeloRouge team" className="w-full h-full object-cover" width={1200} height={670} loading="lazy" />
           </div>
         </div>
       </div>
@@ -93,7 +93,7 @@ const AboutPage = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="aspect-[4/5] overflow-hidden">
-            <img src={travelersPhoto} alt="Travelers exploring Strasbourg" className="w-full h-full object-cover" loading="lazy" />
+            <img src={travelersPhoto} alt="Travelers exploring Strasbourg" className="w-full h-full object-cover" width={640} height={800} loading="lazy" />
           </div>
           <div>
             <h2 className="font-display text-4xl md:text-5xl font-black leading-tight mb-8">

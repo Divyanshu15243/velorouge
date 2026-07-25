@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/hooks/useLanguage";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.webp";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);

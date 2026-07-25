@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
-import rideSundowner from "@/assets/Circuit Culturel.png";
-import rideRiver from "@/assets/Forêt de Robertsau & Rhin.png";
-import rideLocal from "@/assets/Découverte Campagnarde.png";
-import abt1 from "@/assets/abt1.jpeg";
+import rideSundowner from "@/assets/Circuit Culturel.webp";
+import rideRiver from "@/assets/Forêt de Robertsau & Rhin.webp";
+import rideLocal from "@/assets/Découverte Campagnarde.webp";
+import abt1 from "@/assets/abt1.webp";
 import { useTranslation } from "react-i18next";
 import { trackAddToCart } from "@/utils/analytics";
 

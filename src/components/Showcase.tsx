@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
-import sundowner from "@/assets/petite-france.jpg";
-import cathedrale from "@/assets/cathedral.jpg";
-import neustadt from "@/assets/Neustadt.jpeg";
-import marcheNoel from "@/assets/marché-de-noël1.jpg";
-import barrageVauban from "@/assets/barrage-vauban.jpg";
-import rhineBorder from "@/assets/rhine1.jpeg";
+import sundowner from "@/assets/petite-france.webp";
+import cathedrale from "@/assets/cathedral.webp";
+import neustadt from "@/assets/Neustadt.webp";
+import marcheNoel from "@/assets/marché-de-noël1.webp";
+import barrageVauban from "@/assets/barrage-vauban.webp";
+import rhineBorder from "@/assets/rhine1.webp";
 
 const Showcase = () => {
   const { t } = useTranslation();
@@ -28,10 +28,11 @@ const Showcase = () => {
           {locations.map((location, index) => (
             <div key={index} className="border-2 border-border rounded-lg overflow-hidden hover:border-primary transition-colors">
               <div className="h-64 overflow-hidden">
-                <img 
-                  src={location.image} 
+                <img
+                  src={location.image}
                   alt={t(location.titleKey)}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
               </div>
               <div className="p-6 text-center">

@@ -1,4 +1,4 @@
-import deliverBike from "@/assets/deliver-bike.jpg";
+import deliverBike from "@/assets/deliver-bike.webp";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
@@ -38,7 +38,7 @@ const DeliverSection = () => {
             </Link>
           </div>
           <div className="aspect-square overflow-hidden rounded-full">
-            <img src={deliverBike} alt="Cyclist in city" className="w-full h-full object-cover" loading="lazy" />
+            <img src={deliverBike} alt="Cyclist in city" className="w-full h-full object-cover" width={640} height={800} loading="lazy" />
           </div>
         </div>
       </div>

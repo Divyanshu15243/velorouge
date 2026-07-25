@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 import { Calendar, User, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-bg.webp";
 import { useLanguage } from "@/hooks/useLanguage";
-import imgEbike from "@/assets/Strasbourg on an E-Bike.png";
-import imgKids from "@/assets/Strasbourg with Kids.png";
-import imgWine from "@/assets/The Alsace Wine Route by E-Bike.png";
-import imgGermany from "@/assets/Ride Into Germany.png";
+import imgEbike from "@/assets/Strasbourg on an E-Bike.webp";
+import imgKids from "@/assets/Strasbourg with Kids.webp";
+import imgWine from "@/assets/The Alsace Wine Route by E-Bike.webp";
+import imgGermany from "@/assets/Ride Into Germany.webp";
 
 const categoryStyles: Record<string, string> = {
   "City Guide":    "bg-blue-900/60 text-blue-300 border border-blue-700/50",
@@ -328,6 +328,9 @@ const BlogPage = () => {
                   src={featured.image}
                   alt={featured.title[lang]}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  width={1200}
+                  height={800}
+                  loading="lazy"
                 />
                 <div className="absolute top-4 left-4">
                   <CategoryTag category={featured.category} />
@@ -372,6 +375,9 @@ const BlogPage = () => {
                       src={post.image}
                       alt={post.title[lang]}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      width={1200}
+                      height={800}
+                      loading="lazy"
                     />
                     <div className="absolute top-3 left-3">
                       <CategoryTag category={post.category} />

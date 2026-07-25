@@ -1,4 +1,4 @@
-import reliableImg from "@/assets/8.png";
+import reliableImg from "@/assets/8.webp";
 import { useTranslation } from "react-i18next";
 
 const ReliableSection = () => {
@@ -28,6 +28,8 @@ const ReliableSection = () => {
               src={reliableImg}
               alt="Cyclist riding through Strasbourg"
               className="w-full h-full object-cover"
+              width={1152}
+              height={896}
               loading="lazy"
             />
           </div>

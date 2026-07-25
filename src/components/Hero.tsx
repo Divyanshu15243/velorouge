@@ -1,15 +1,20 @@
 import { useTranslation } from "react-i18next";
-import heroBg from "@/assets/hero-bg.jpg";
+import { Helmet } from "react-helmet-async";
+import heroBg from "@/assets/hero-bg.webp";
 
 const Hero = () => {
   const { t } = useTranslation();
-  
+
   return (
   <section className="relative min-h-screen flex items-center justify-center bg-dark overflow-hidden">
+    <Helmet>
+      <link rel="preload" as="image" href={heroBg} fetchPriority="high" />
+    </Helmet>
     <img
       src={heroBg}
       alt="Strasbourg"
       className="absolute inset-0 w-full h-full object-cover opacity-40"
+      fetchPriority="high"
     />
     <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/60 to-transparent" />
 

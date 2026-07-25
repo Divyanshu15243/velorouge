@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import founderImg from "@/assets/founder2.png";
+import founderImg from "@/assets/founder2.webp";
 
 const FounderStory = () => {
   const { t } = useTranslation();
@@ -13,9 +13,11 @@ const FounderStory = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <div className="aspect-[4/5] overflow-hidden rounded-lg">
             <img 
-              src={founderImg} 
+              src={founderImg}
               alt="Founder of VéloRouge"
               className="w-full h-full object-cover"
+              width={576}
+              height={720}
               loading="lazy"
             />
           </div>
