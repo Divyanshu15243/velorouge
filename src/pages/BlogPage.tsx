@@ -8,6 +8,10 @@ import imgEbike from "@/assets/Strasbourg on an E-Bike.webp";
 import imgKids from "@/assets/Strasbourg with Kids.webp";
 import imgWine from "@/assets/The Alsace Wine Route by E-Bike.webp";
 import imgGermany from "@/assets/Ride Into Germany.webp";
+import imgPortOfCall from "@/assets/blogs/Strasbourg Port of Call See the Essentials in Half a Day by E-Bike.webp";
+import imgChristmasMarket from "@/assets/blogs/Strasbourg's Christmas Market by E-Bike The Practical Guide generate image.webp";
+import imgSegway from "@/assets/blogs/E-Bike or Segway in Strasbourg Which Should You Choose generate image.webp";
+import imgConnectedSafety from "@/assets/blogs/Connected E-Bikes How VéloRouge Keeps Every Ride in Strasbourg Safe.webp";
 
 const categoryStyles: Record<string, string> = {
   "City Guide":    "bg-blue-900/60 text-blue-300 border border-blue-700/50",
@@ -16,6 +20,7 @@ const categoryStyles: Record<string, string> = {
   "Family":        "bg-violet-900/60 text-violet-300 border border-violet-700/50",
   "Route":         "bg-sky-900/60 text-sky-300 border border-sky-700/50",
   "Cross-Border":  "bg-rose-900/60 text-rose-300 border border-rose-700/50",
+  "Safety":        "bg-red-900/60 text-red-300 border border-red-700/50",
 };
 
 export function CategoryTag({ category, className = "" }: { category: string; className?: string }) {
@@ -275,6 +280,212 @@ export const blogPosts = [
 <h2>Deux Pays, Une Matinée</h2>
 <p>Le parcours transfrontalier de Strasbourg vers l'Allemagne illustre parfaitement l'esprit européen : les frontières bougent, les villes restent, et le paysage relie plus qu'il ne divise. Un vélo électrique vous donne la liberté de le ressentir pleinement.</p>
 <p><a href="https://velorouge.fr" target="_blank" rel="noopener noreferrer">Réservez votre excursion transfrontalière sur velorouge.fr</a></p>`,
+    },
+  },
+  {
+    slug: "strasbourg-en-escale-croisiere-velo-electrique",
+    category: "Experience",
+    image: imgPortOfCall,
+    author: "Prashant K.",
+    date: { en: "May 6, 2025", fr: "6 mai 2025" },
+    title: {
+      en: "Strasbourg Port of Call: See the Essentials in Half a Day by E-Bike",
+      fr: "Escale à Strasbourg : voir l'essentiel en une demi-journée à vélo électrique",
+    },
+    excerpt: {
+      en: "Only a few hours in Strasbourg on a cruise stop? Here's how an e-bike lets you see the best of the city without risking a late return to the ship.",
+      fr: "Vous êtes en escale à Strasbourg pour quelques heures ? Voici comment un vélo électrique vous permet de voir le meilleur de la ville sans stress ni retard sur votre croisière.",
+    },
+    content: {
+      en: `<p>When you step off a river cruise with only a few hours before departure, every minute counts. The question isn't "what should I see in Strasbourg" — it's "what can I see without missing the boat." That's exactly the problem an e-bike ride solves for cruise passengers.</p>
+
+<h2>The Real Challenge of a Short Stop</h2>
+<p>Strasbourg rewards wandering, but a port call doesn't allow for that. On foot, you'll struggle to cover more than one district before needing to turn back. By taxi or tour bus, you lose time in the traffic of a historic centre that's largely pedestrianised anyway. An e-bike solves this dilemma: it moves as fast as a motorised vehicle over short distances, without the traffic or parking constraints.</p>
+
+<h2>A Route Built for 3 to 4 Hours</h2>
+<p>Starting from the dock, a well-designed route links Strasbourg Cathedral, the canals and half-timbered houses of Petite France, then the Covered Bridges and the Vauban Dam, before returning at a relaxed pace to the ship. It's enough to leave feeling like you actually saw the city — not just passed through the port.</p>
+
+<h2>Why Audio Guiding Makes All the Difference on a Layover</h2>
+<p>With no human guide to follow and no group schedule to keep, a GPS-guided audio tour lets you move at your own pace while missing none of the highlights. Stop when you want, speed up if time is tight, and stay fully in control of your timing — a decisive advantage when your reboarding time is fixed.</p>
+
+<h2>What to Check Before You Leave the Ship</h2>
+<p>The main risk on a port call is a tight schedule. It's worth booking your slot in advance, confirming your reboarding time with cruise staff, and building in a 30-minute buffer before the official departure to return the bike without rushing.</p>
+
+<h2>Want to Make the Most of Your Port Call?</h2>
+<p>Our Half-Day Cruise package is designed specifically for passengers in port: e-bike, helmet and lock included, no complications.</p>
+<p><a href="https://velorouge.fr" target="_blank" rel="noopener noreferrer">Book your port-call slot →</a></p>`,
+      fr: `<p>Quand on descend d'un bateau de croisière fluviale avec seulement quelques heures devant soi, chaque minute compte. La question n'est pas "que voir à Strasbourg", mais "que voir sans risquer de rater le départ". C'est exactement le problème que résout une balade à vélo électrique en escale.</p>
+
+<h2>Le vrai défi d'une escale courte</h2>
+<p>Strasbourg récompense la flânerie, mais une escale ne le permet pas. À pied, on couvre difficilement plus d'un quartier avant de devoir faire demi-tour. En taxi ou en bus touristique, on perd du temps dans la circulation du centre historique, largement piétonnisé. Le vélo électrique règle ce dilemme : il va aussi vite qu'un véhicule motorisé sur les petites distances, sans les contraintes de circulation ni de stationnement.</p>
+
+<h2>Un itinéraire pensé pour 3 à 4 heures</h2>
+<p>En partant du point d'accostage, un circuit bien conçu relie la Cathédrale Notre-Dame, les canaux et maisons à colombages de la Petite France, puis un passage par les Ponts Couverts et le Barrage Vauban, avant de revenir tranquillement vers le bateau. C'est suffisant pour repartir avec le sentiment d'avoir vraiment vu la ville, pas seulement traversé le port.</p>
+
+<h2>Pourquoi le guidage audio change tout en escale</h2>
+<p>Sans guide humain à suivre et sans horaire de groupe à respecter, un circuit audio guidé par GPS permet d'avancer à son propre rythme tout en ne manquant aucun point d'intérêt. On s'arrête quand on veut, on accélère si le temps presse, et on garde le contrôle total de son timing — un avantage décisif quand l'heure de réembarquement est fixe.</p>
+
+<h2>Ce qu'il faut vérifier avant de descendre du bateau</h2>
+<p>Le principal risque en escale, c'est le timing serré. Il est conseillé de réserver son créneau à l'avance, de confirmer l'heure de réembarquement auprès du personnel de croisière, et de prévoir une marge de 30 minutes avant le départ officiel pour restituer le vélo sans précipitation.</p>
+
+<h2>Envie de profiter de votre escale autrement ?</h2>
+<p>Notre formule Croisière Demi-Journée est pensée spécifiquement pour les passagers en escale : vélo électrique, casque et antivol inclus, sans complication.</p>
+<p><a href="https://velorouge.fr" target="_blank" rel="noopener noreferrer">Réservez votre créneau d'escale →</a></p>`,
+    },
+  },
+  {
+    slug: "marche-noel-strasbourg-velo-electrique",
+    category: "Seasonal",
+    image: imgChristmasMarket,
+    author: "Prashant K.",
+    date: { en: "May 13, 2025", fr: "13 mai 2025" },
+    title: {
+      en: "Strasbourg's Christmas Market by E-Bike: The Practical Guide",
+      fr: "Le Marché de Noël de Strasbourg à vélo électrique : le guide pratique",
+    },
+    excerpt: {
+      en: "Europe's oldest Christmas market draws huge crowds every winter. Here's why an e-bike is the smartest way to see it, and how to plan your visit.",
+      fr: "Le plus ancien marché de Noël d'Europe attire des foules immenses chaque hiver. Voici pourquoi le vélo électrique est le moyen le plus malin de le visiter, et comment bien s'organiser.",
+    },
+    content: {
+      en: `<p>Since 1570, Strasbourg's Christmas Market has been an institution — and every year, a more crowded one. Between packed pedestrian streets and impossible city-centre parking, the logistics question comes up fast: how do you actually get around the market without losing an hour before you've even started?</p>
+
+<h2>The City-Centre Problem in December</h2>
+<p>December turns Grande Île into one enormous open-air market spread across roughly a dozen different squares. Cars are practically unusable — parking is scarce and expensive, and streets are closed to traffic. The tram drops visitors at a handful of fixed stops, but doesn't reach every corner of the market.</p>
+
+<h2>What an E-Bike Changes in Winter</h2>
+<p>Contrary to what you'd expect, riding an e-bike in Strasbourg in winter is comfortable over short distances — the electric assist limits effort, and with it, the sweat that usually makes cold weather uncomfortable. A bike lets you move between market squares — Place Kléber, Place Broglie, Place de la Cathédrale — in a few minutes, a trip that can take 20 to 30 minutes on foot through the crowds.</p>
+
+<h2>A Route Built for the Season</h2>
+<p>An efficient winter route links the main market squares while passing through the illuminated streets of Petite France and Neustadt, where the decorations are often less photographed than on Grande Île but just as striking.</p>
+
+<h2>Practical Tips for a Successful Winter Outing</h2>
+<p>Bring gloves and a warm jacket, book a slot in late morning or early afternoon to make the most of the daylight, and keep in mind that the market squares themselves are often closed to cyclists during peak hours — the bike is best used to connect the zones between them, not to ride through the markets directly.</p>
+
+<h2>Ready for Your Christmas Outing?</h2>
+<p>Discover Europe's oldest Christmas market at your own pace, without losing time in the crowds.</p>
+<p><a href="https://velorouge.fr" target="_blank" rel="noopener noreferrer">Book your winter ride →</a></p>`,
+      fr: `<p>Depuis 1570, le Marché de Noël de Strasbourg est une institution — et chaque année, une institution de plus en plus fréquentée. Entre les rues piétonnes bondées et les parkings saturés du centre-ville, la question logistique se pose vite : comment rejoindre le marché sans y perdre une heure avant même d'y être ?</p>
+
+<h2>Le problème du centre-ville en décembre</h2>
+<p>Décembre transforme la Grande Île en un immense marché à ciel ouvert, réparti sur une dizaine de places différentes. La voiture est quasiment inutilisable — stationnement rare et cher, rues fermées à la circulation. Le tram, lui, dépose les visiteurs à quelques arrêts fixes, loin de rejoindre tous les recoins du marché.</p>
+
+<h2>Ce que change le vélo électrique en hiver</h2>
+<p>Contrairement aux idées reçues, rouler à vélo électrique en hiver à Strasbourg reste confortable sur de courtes distances : l'assistance électrique limite l'effort et donc la sensation de froid liée à la transpiration. Un vélo permet de passer d'une place de marché à l'autre — place Kléber, place Broglie, place de la Cathédrale — en quelques minutes, alors qu'elles peuvent représenter 20 à 30 minutes de marche dans la foule.</p>
+
+<h2>Un parcours pensé pour la saison</h2>
+<p>Un circuit hivernal efficace relie les principales places de marché entre elles tout en passant par les rues illuminées de la Petite France et de la Neustadt, où les décorations sont souvent moins photographiées que sur la Grande Île mais tout aussi marquantes.</p>
+
+<h2>Conseils pratiques pour une sortie hivernale réussie</h2>
+<p>Mieux vaut prévoir des gants et une veste chaude, réserver un créneau en fin de matinée ou en début d'après-midi pour profiter de la lumière, et garder à l'esprit que les places du marché sont souvent fermées à la circulation cycliste aux heures de forte affluence — le vélo sert surtout à relier les zones entre elles, pas à traverser les marchés eux-mêmes.</p>
+
+<h2>Prêt pour votre sortie de Noël ?</h2>
+<p>Découvrez la magie du plus ancien marché de Noël d'Europe à votre rythme, sans perdre de temps dans la foule.</p>
+<p><a href="https://velorouge.fr" target="_blank" rel="noopener noreferrer">Réservez votre balade hivernale →</a></p>`,
+    },
+  },
+  {
+    slug: "velo-electrique-ou-segway-strasbourg",
+    category: "Experience",
+    image: imgSegway,
+    author: "Prashant K.",
+    date: { en: "May 20, 2025", fr: "20 mai 2025" },
+    title: {
+      en: "E-Bike or Segway in Strasbourg: Which Should You Choose?",
+      fr: "Vélo électrique ou Segway à Strasbourg : lequel choisir ?",
+    },
+    excerpt: {
+      en: "E-bike or Segway to explore Strasbourg? An honest comparison based on your profile, your route, and your comfort level.",
+      fr: "Vélo électrique ou Segway pour explorer Strasbourg ? Comparatif honnête selon votre profil, votre itinéraire et votre niveau d'aisance.",
+    },
+    content: {
+      en: `<p>Faced with the choice between an e-bike and a Segway, many visitors hesitate — both promise to cover more ground with less effort, but the experience each one offers is actually quite different.</p>
+
+<h2>The Segway: Ideal for Very Short Visits</h2>
+<p>A Segway requires zero physical effort and only a few minutes to learn. It's a great fit for a very short outing, in a small group, on a compact route like the Cultural Circuit through the historic centre. It's also a comfortable option for anyone not confident on a bike, or who simply prefers standing over pedalling.</p>
+<p>Its main limitation is distance. A Segway isn't well suited to multi-hour rides or countryside routes, and its use is restricted in certain strict pedestrian zones.</p>
+
+<h2>The E-Bike: Freedom Over the Long Haul</h2>
+<p>An e-bike covers everything a Segway doesn't do well: long distances, countryside routes into Alsace, half-day to multi-day itineraries. The electric assist removes most of the effort while keeping the familiar feel of a bicycle, making it accessible to most fitness levels.</p>
+
+<h2>How to Choose Based on Your Profile</h2>
+<p>For a cruise stop or a spare hour between appointments, a Segway on the Cultural Circuit does the job perfectly. For a half-day, a full day, or a multi-day getaway — the Canal Loop, Robertsau Forest, or Countryside Discovery route — an e-bike remains the more versatile and comfortable choice over time.</p>
+
+<h2>Can You Combine Both?</h2>
+<p>Nothing stops you from trying a Segway on a first visit to Strasbourg, then coming back for a wider e-bike exploration on a future trip. The two experiences complement each other more than they compete.</p>
+
+<h2>Ready to Choose Your Ride?</h2>
+<p>E-bike or Segway, every VéloRouge route is designed around its own kind of experience.</p>
+<p><a href="https://velorouge.fr" target="_blank" rel="noopener noreferrer">Explore our routes and book →</a></p>`,
+      fr: `<p>Face au choix entre vélo électrique et Segway, beaucoup de visiteurs hésitent — les deux promettent de couvrir plus de terrain sans effort, mais l'expérience qu'ils offrent est en réalité assez différente.</p>
+
+<h2>Le Segway : idéal pour la découverte ultra-courte</h2>
+<p>Le Segway demande zéro effort physique et une prise en main de quelques minutes seulement. Il convient parfaitement à une sortie très courte, en petit groupe, sur un itinéraire compact comme le Circuit Culturel du centre historique. C'est aussi une option confortable pour les personnes peu à l'aise à vélo ou qui préfèrent rester debout plutôt que pédaler.</p>
+<p>Sa limite principale : la distance. Le Segway reste peu adapté aux trajets de plusieurs heures ou aux routes de campagne, et son usage est restreint sur certaines zones piétonnes strictes.</p>
+
+<h2>Le vélo électrique : la liberté sur la durée</h2>
+<p>Le vélo électrique couvre tout ce que le Segway ne fait pas bien : les longues distances, les routes de campagne vers l'Alsace, les itinéraires d'une demi-journée à plusieurs jours. L'assistance électrique retire l'essentiel de l'effort tout en gardant la sensation familière du vélo, ce qui le rend accessible à la plupart des niveaux.</p>
+
+<h2>Comment choisir selon votre profil</h2>
+<p>Pour une escale de croisière ou une pause d'une heure entre deux rendez-vous, le Segway sur le Circuit Culturel fait parfaitement l'affaire. Pour une demi-journée, une journée complète ou une escapade sur plusieurs jours — Boucle des Canaux, Forêt de Robertsau, Découverte Campagnarde — le vélo électrique reste le choix le plus polyvalent et le plus confortable sur la durée.</p>
+
+<h2>Peut-on combiner les deux ?</h2>
+<p>Rien n'empêche de tester le Segway lors d'un premier passage à Strasbourg, puis de revenir pour une exploration plus large à vélo électrique lors d'un futur séjour. Les deux expériences se complètent plus qu'elles ne s'opposent.</p>
+
+<h2>Prêt à choisir votre monture ?</h2>
+<p>Vélo électrique ou Segway, chaque itinéraire VéloRouge est pensé pour son propre usage.</p>
+<p><a href="https://velorouge.fr" target="_blank" rel="noopener noreferrer">Découvrez nos parcours et réservez →</a></p>`,
+    },
+  },
+  {
+    slug: "velo-electrique-connecte-securite-strasbourg",
+    category: "Safety",
+    image: imgConnectedSafety,
+    author: "Prashant K.",
+    date: { en: "May 27, 2025", fr: "27 mai 2025" },
+    title: {
+      en: "Connected E-Bikes: How VéloRouge Keeps Every Ride in Strasbourg Safe",
+      fr: "Vélo électrique connecté : comment VéloRouge sécurise chaque trajet à Strasbourg",
+    },
+    excerpt: {
+      en: "GPS tracking, anti-theft alerts, automatic lighting: discover the technology that makes every VéloRouge e-bike rental safer.",
+      fr: "Suivi GPS, alertes anti-vol, éclairage automatique : découvrez la technologie qui rend chaque location de vélo électrique VéloRouge plus sûre.",
+    },
+    content: {
+      en: `<p>Renting a bike in an unfamiliar city always raises the same question: what happens if something goes wrong? At VéloRouge, the answer lies in the technology built into every e-bike — designed so that question stops needing to be asked.</p>
+
+<h2>Always-On GPS Tracking</h2>
+<p>Every e-bike is fitted with active GPS tracking, live 24/7, with real-time position visible directly in the app. If the bike moves without authorisation, an instant alert is sent — a lost or stolen bike has nowhere to disappear to for long.</p>
+
+<h2>Visible Even at Night</h2>
+<p>Integrated LED lighting adjusts automatically to ambient light, keeping every rider visible from over 200 metres away. A late-afternoon ride or a night-time trip to the Christmas Market poses no extra safety concern.</p>
+
+<h2>Everything Managed From One App</h2>
+<p>The VéloRouge app centralises trip tracking, bike maintenance status, route booking, and — for subscribers — battery level along with the nearest charging station. A bike that updates itself, too, thanks to over-the-air firmware updates that improve performance over time.</p>
+
+<h2>Numbers That Speak for Themselves</h2>
+<p>Zero recorded accidents in 2025, 99.8% reliability, an average response time under 10 minutes, and active 24/7 monitoring: safety isn't a marketing line at VéloRouge, it's a continuously measured metric.</p>
+
+<h2>Ride With Peace of Mind</h2>
+<p>The best way to enjoy Strasbourg by bike is to never have to think about safety.</p>
+<p><a href="https://velorouge.fr" target="_blank" rel="noopener noreferrer">Discover the technology built into our e-bikes →</a></p>`,
+      fr: `<p>Louer un vélo dans une ville inconnue soulève toujours la même question : que se passe-t-il en cas de problème ? Chez VéloRouge, la réponse tient dans la technologie embarquée sur chaque vélo électrique, pensée pour que ce genre de question ne se pose plus.</p>
+
+<h2>Un suivi GPS permanent</h2>
+<p>Chaque vélo électrique est équipé d'un suivi GPS actif 24h/24 et 7j/7, avec position en temps réel consultable directement dans l'application. En cas de déplacement non autorisé, une alerte instantanée est envoyée — un vélo égaré ou volé n'a nulle part où disparaître longtemps.</p>
+
+<h2>Visible même la nuit</h2>
+<p>L'éclairage LED intégré s'ajuste automatiquement selon la luminosité ambiante, rendant chaque cycliste visible à plus de 200 mètres. Une sortie en fin d'après-midi ou une balade nocturne au Marché de Noël ne pose donc aucun problème de sécurité supplémentaire.</p>
+
+<h2>Tout se gère depuis une seule application</h2>
+<p>L'application VéloRouge centralise le suivi des trajets, l'état de l'entretien du vélo, la réservation des itinéraires et, pour les abonnés, le niveau de batterie ainsi que la borne de recharge la plus proche. Un vélo qui se met à jour tout seul, grâce à des mises à jour du micrologiciel déployées sans fil, qui améliorent ses performances au fil du temps.</p>
+
+<h2>Des chiffres qui rassurent</h2>
+<p>Zéro accident recensé en 2025, une fiabilité de 99,8 %, un temps de réponse moyen inférieur à 10 minutes et une surveillance active 24h/24 et 7j/7 : la sécurité n'est pas un argument marketing chez VéloRouge, c'est une donnée mesurée en continu.</p>
+
+<h2>Roulez l'esprit tranquille</h2>
+<p>La meilleure façon de profiter de Strasbourg à vélo, c'est de ne pas avoir à penser à la sécurité.</p>
+<p><a href="https://velorouge.fr" target="_blank" rel="noopener noreferrer">Découvrez la technologie embarquée sur nos vélos électriques →</a></p>`,
     },
   },
 ];
