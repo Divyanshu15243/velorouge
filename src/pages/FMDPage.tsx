@@ -1,9 +1,12 @@
 import Navbar from "@/components/Navbar";
 import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
+import Picture from "@/components/ui/picture";
 import cycleImg from "@/assets/resident.webp";
+import cycleImgAvif from "@/assets/resident.avif";
 import heroBg from "@/assets/hero-bg.webp";
 import gallery1 from "@/assets/approach.webp";
+import gallery1Avif from "@/assets/approach.avif";
 import { Check, Download, Building2, Users, FileText, Headphones, ChevronDown, TrendingUp } from "lucide-react";
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -58,7 +61,7 @@ const FMDPage = () => {
             </div>
           </div>
           <div className="aspect-square overflow-hidden rounded-lg flex items-center justify-center">
-            <img src={cycleImg} alt="Professional on electric bike" className="w-full h-full object-contain mix-blend-multiply" width={1200} height={2133} loading="lazy" />
+            <Picture avif={cycleImgAvif} src={cycleImg} alt="Professional on electric bike" className="w-full h-full object-contain mix-blend-multiply" width={1200} height={2133} loading="lazy" />
           </div>
         </div>
       </div>
@@ -213,7 +216,7 @@ const FMDPage = () => {
             </ul>
           </div>
           <div>
-            <img src={gallery1} alt="Eligible e-bike rental" className="w-full h-auto rounded-lg" width={1000} height={1217} loading="lazy" />
+            <Picture avif={gallery1Avif} src={gallery1} alt="Eligible e-bike rental" className="w-full h-auto rounded-lg" width={1000} height={1217} loading="lazy" />
           </div>
         </div>
       </div>

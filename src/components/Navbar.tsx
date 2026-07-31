@@ -25,7 +25,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-dark/90 backdrop-blur-sm">
       <div className="container flex items-center justify-between py-4">
         <Link to="/" className="flex items-center">
-          <img src={logo} alt="VeloRouge" className="h-10" />
+          <img src={logo} alt="VeloRouge" width={400} height={120} className="h-10 w-auto" />
         </Link>
 
         <div className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">

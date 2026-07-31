@@ -1,10 +1,15 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Clock } from "lucide-react";
+import Picture from "@/components/ui/picture";
 import rideSundowner from "@/assets/Circuit Culturel.webp";
+import rideSundownerAvif from "@/assets/Circuit Culturel.avif";
 import rideMarket from "@/assets/Boucle des Canaux.webp";
+import rideMarketAvif from "@/assets/Boucle des Canaux.avif";
 import rideRiver from "@/assets/Forêt de Robertsau & Rhin.webp";
+import rideRiverAvif from "@/assets/Forêt de Robertsau & Rhin.avif";
 import rideLocal from "@/assets/Découverte Campagnarde.webp";
+import rideLocalAvif from "@/assets/Découverte Campagnarde.avif";
 
 const Rides = () => {
   const { t } = useTranslation();
@@ -12,6 +17,7 @@ const Rides = () => {
   const rides = [
     {
       img: rideRiver,
+      imgAvif: rideRiverAvif,
       title: t('rides.ride1Title'),
       price: t('ridesPage.price1'),
       priceLabel: t('ridesPage.price1Label'),
@@ -23,6 +29,7 @@ const Rides = () => {
     },
     {
       img: rideMarket,
+      imgAvif: rideMarketAvif,
       title: t('rides.ride2Title'),
       price: t('ridesPage.price2'),
       priceLabel: t('ridesPage.price2Label'),
@@ -34,6 +41,7 @@ const Rides = () => {
     },
     {
       img: rideSundowner,
+      imgAvif: rideSundownerAvif,
       title: t('rides.ride3Title'),
       price: t('ridesPage.price3'),
       priceLabel: t('ridesPage.price3Label'),
@@ -45,6 +53,7 @@ const Rides = () => {
     },
     {
       img: rideLocal,
+      imgAvif: rideLocalAvif,
       title: t('rides.ride4Title'),
       price: t('ridesPage.price4'),
       priceLabel: t('ridesPage.price4Label'),
@@ -69,9 +78,12 @@ const Rides = () => {
         {rides.map((r) => (
           <Link key={r.title} to="/#pricing" className="group cursor-pointer block">
             <div className="relative overflow-hidden aspect-[3/4]">
-              <img
+              <Picture
+                avif={r.imgAvif}
                 src={r.img}
                 alt={r.title}
+                width={1200}
+                height={1594}
                 className="w-full h-full object-cover object-bottom group-hover:scale-105 transition-transform duration-700"
                 loading="lazy"
               />

@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { blogPosts, CategoryTag } from "@/pages/BlogPage";
 import { useLanguage } from "@/hooks/useLanguage";
+import Picture from "@/components/ui/picture";
 
 const Gallery = () => {
   const { t } = useTranslation();
@@ -36,9 +37,12 @@ const Gallery = () => {
                 className="group flex flex-col border border-border hover:border-primary transition-colors overflow-hidden"
               >
                 <div className="aspect-[16/9] overflow-hidden">
-                  <img
+                  <Picture
+                    avif={post.imageAvif}
                     src={post.image}
                     alt={post.title[lang] ?? post.title.en}
+                    width={1200}
+                    height={800}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />

@@ -1,13 +1,36 @@
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
+import Picture from "@/components/ui/picture";
 import aboutHero from "@/assets/about-hero.webp";
+import aboutHeroAvif from "@/assets/about-hero.avif";
+import aboutHero640 from "@/assets/about-hero-640w.webp";
+import aboutHero1024 from "@/assets/about-hero-1024w.webp";
+import aboutHero1600 from "@/assets/about-hero-1600w.webp";
+import aboutHeroAvif640 from "@/assets/about-hero-640w.avif";
+import aboutHeroAvif1024 from "@/assets/about-hero-1024w.avif";
+import aboutHeroAvif1600 from "@/assets/about-hero-1600w.avif";
 import teamPhoto from "@/assets/7.webp";
+import teamPhotoAvif from "@/assets/7.avif";
 import travelersPhoto from "@/assets/deliver-bike.webp";
+import travelersPhotoAvif from "@/assets/deliver-bike.avif";
 import ctaBg from "@/assets/hero-bg.webp";
+import ctaBgAvif from "@/assets/hero-bg.avif";
+import ctaBg640 from "@/assets/hero-bg-640w.webp";
+import ctaBg1024 from "@/assets/hero-bg-1024w.webp";
+import ctaBg1600 from "@/assets/hero-bg-1600w.webp";
+import ctaBgAvif640 from "@/assets/hero-bg-640w.avif";
+import ctaBgAvif1024 from "@/assets/hero-bg-1024w.avif";
+import ctaBgAvif1600 from "@/assets/hero-bg-1600w.avif";
 import { Bike, Heart, Users, Globe, ChevronDown } from "lucide-react";
 import { useState } from "react";
+
+const aboutHeroWebpSrcSet = `${aboutHero640} 640w, ${aboutHero1024} 1024w, ${aboutHero1600} 1600w, ${aboutHero} 1920w`;
+const aboutHeroAvifSrcSet = `${aboutHeroAvif640} 640w, ${aboutHeroAvif1024} 1024w, ${aboutHeroAvif1600} 1600w, ${aboutHeroAvif} 1920w`;
+const ctaBgWebpSrcSet = `${ctaBg640} 640w, ${ctaBg1024} 1024w, ${ctaBg1600} 1600w, ${ctaBg} 1920w`;
+const ctaBgAvifSrcSet = `${ctaBgAvif640} 640w, ${ctaBgAvif1024} 1024w, ${ctaBgAvif1600} 1600w, ${ctaBgAvif} 1920w`;
 
 const AboutPage = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -40,11 +63,24 @@ const AboutPage = () => {
       description="Découvrez l'histoire de VéloRouge, notre passion pour Strasbourg et notre engagement envers le tourisme durable. Visites guidées premium en vélo électrique."
       canonical="/about"
     />
+    <Helmet>
+      <link rel="preload" as="image" imageSrcSet={aboutHeroAvifSrcSet} imageSizes="100vw" type="image/avif" fetchPriority="high" />
+    </Helmet>
     <Navbar />
 
     {/* Hero */}
     <section className="relative min-h-[60vh] flex items-end pb-20 bg-dark overflow-hidden pt-20">
-      <img src={aboutHero} alt="Strasbourg aerial view" className="absolute inset-0 w-full h-full object-cover opacity-30" />
+      <Picture
+        avifSrcSet={aboutHeroAvifSrcSet}
+        webpSrcSet={aboutHeroWebpSrcSet}
+        sizes="100vw"
+        src={aboutHero}
+        alt="Strasbourg aerial view"
+        width={1920}
+        height={1080}
+        className="absolute inset-0 w-full h-full object-cover opacity-30"
+        fetchPriority="high"
+      />
       <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/60 to-transparent" />
       <div className="container relative z-10">
         <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">{t('aboutPage.tag')}</p>
@@ -82,7 +118,7 @@ const AboutPage = () => {
             </p>
           </div>
           <div className="aspect-video overflow-hidden">
-            <img src={teamPhoto} alt="VeloRouge team" className="w-full h-full object-cover" width={1200} height={670} loading="lazy" />
+            <Picture avif={teamPhotoAvif} src={teamPhoto} alt="VeloRouge team" className="w-full h-full object-cover" width={1200} height={670} loading="lazy" />
           </div>
         </div>
       </div>
@@ -93,7 +129,7 @@ const AboutPage = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="aspect-[4/5] overflow-hidden">
-            <img src={travelersPhoto} alt="Travelers exploring Strasbourg" className="w-full h-full object-cover" width={640} height={800} loading="lazy" />
+            <Picture avif={travelersPhotoAvif} src={travelersPhoto} alt="Travelers exploring Strasbourg" className="w-full h-full object-cover" width={640} height={800} loading="lazy" />
           </div>
           <div>
             <h2 className="font-display text-4xl md:text-5xl font-black leading-tight mb-8">
@@ -211,7 +247,17 @@ const AboutPage = () => {
 
     {/* Tourist CTA */}
     <section className="relative py-24 text-dark-foreground text-center overflow-hidden">
-      <img src={ctaBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+      <Picture
+        avifSrcSet={ctaBgAvifSrcSet}
+        webpSrcSet={ctaBgWebpSrcSet}
+        sizes="100vw"
+        src={ctaBg}
+        alt=""
+        width={1920}
+        height={1088}
+        loading="lazy"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
       <div className="absolute inset-0 bg-dark/80" />
       <div className="container max-w-2xl relative z-10">
         <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">

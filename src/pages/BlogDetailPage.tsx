@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/hooks/useLanguage";
 import SEO from "@/components/SEO";
+import Picture from "@/components/ui/picture";
 import { blogPosts, CategoryTag } from "./BlogPage";
 
 const BlogDetailPage = () => {
@@ -70,7 +71,15 @@ const BlogDetailPage = () => {
           </div>
         </div>
         <div className="aspect-[21/9] overflow-hidden">
-          <img src={post.image} alt={post.title[lang]} className="w-full h-full object-cover opacity-80" />
+          <Picture
+            avif={post.imageAvif}
+            src={post.image}
+            alt={post.title[lang]}
+            width={1200}
+            height={800}
+            fetchPriority="high"
+            className="w-full h-full object-cover opacity-80"
+          />
         </div>
       </section>
 
@@ -105,9 +114,13 @@ const BlogDetailPage = () => {
               {otherPosts.map((p) => (
                 <Link key={p.slug} to={`/blog/${p.slug}`} className="group block">
                   <div className="aspect-[3/2] overflow-hidden bg-muted mb-4 relative">
-                    <img
+                    <Picture
+                      avif={p.imageAvif}
                       src={p.image}
                       alt={p.title[lang]}
+                      width={1200}
+                      height={800}
+                      loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute top-3 left-3">

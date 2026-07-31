@@ -38,7 +38,7 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row justify-between items-start gap-8">
         <div>
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="VeloRouge" className="h-10" />
+            <img src={logo} alt="VeloRouge" width={400} height={120} className="h-10 w-auto" loading="lazy" />
           </Link>
           <p className="mt-2 text-base max-w-xs">{t('footer.tagline')}</p>
           

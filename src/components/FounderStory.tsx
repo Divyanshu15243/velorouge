@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
+import Picture from "@/components/ui/picture";
 import founderImg from "@/assets/founder2.webp";
+import founderImgAvif from "@/assets/founder2.avif";
 
 const FounderStory = () => {
   const { t } = useTranslation();
@@ -12,7 +14,8 @@ const FounderStory = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <div className="aspect-[4/5] overflow-hidden rounded-lg">
-            <img 
+            <Picture
+              avif={founderImgAvif}
               src={founderImg}
               alt="Founder of VéloRouge"
               className="w-full h-full object-cover"

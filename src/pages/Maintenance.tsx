@@ -2,7 +2,7 @@ import logo from "@/assets/logo.webp";
 
 const Maintenance = () => (
   <div className="min-h-screen bg-dark flex flex-col items-center justify-center text-center px-6">
-    <img src={logo} alt="VeloRouge" className="h-14 mb-8 opacity-90" />
+    <img src={logo} alt="VeloRouge" width={400} height={120} className="h-14 w-auto mb-8 opacity-90" />
     <h1 className="font-display text-4xl md:text-5xl font-black text-white mb-4">
       🚧 Under Maintenance
     </h1>

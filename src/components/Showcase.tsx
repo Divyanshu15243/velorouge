@@ -1,21 +1,28 @@
 import { useTranslation } from "react-i18next";
+import Picture from "@/components/ui/picture";
 import sundowner from "@/assets/petite-france.webp";
+import sundownerAvif from "@/assets/petite-france.avif";
 import cathedrale from "@/assets/cathedral.webp";
+import cathedraleAvif from "@/assets/cathedral.avif";
 import neustadt from "@/assets/Neustadt.webp";
+import neustadtAvif from "@/assets/Neustadt.avif";
 import marcheNoel from "@/assets/marché-de-noël1.webp";
+import marcheNoelAvif from "@/assets/marché-de-noël1.avif";
 import barrageVauban from "@/assets/barrage-vauban.webp";
+import barrageVaubanAvif from "@/assets/barrage-vauban.avif";
 import rhineBorder from "@/assets/rhine1.webp";
+import rhineBorderAvif from "@/assets/rhine1.avif";
 
 const Showcase = () => {
   const { t } = useTranslation();
 
   const locations = [
-    { image: sundowner, titleKey: 'showcase.location1Title', descKey: 'showcase.location1Desc' },
-    { image: cathedrale, titleKey: 'showcase.location2Title', descKey: 'showcase.location2Desc' },
-    { image: neustadt, titleKey: 'showcase.location3Title', descKey: 'showcase.location3Desc' },
-    { image: marcheNoel, titleKey: 'showcase.location4Title', descKey: 'showcase.location4Desc' },
-    { image: barrageVauban, titleKey: 'showcase.location5Title', descKey: 'showcase.location5Desc' },
-    { image: rhineBorder, titleKey: 'showcase.location6Title', descKey: 'showcase.location6Desc' }
+    { image: sundowner, imageAvif: sundownerAvif, w: 1200, h: 670, titleKey: 'showcase.location1Title', descKey: 'showcase.location1Desc' },
+    { image: cathedrale, imageAvif: cathedraleAvif, w: 1200, h: 670, titleKey: 'showcase.location2Title', descKey: 'showcase.location2Desc' },
+    { image: neustadt, imageAvif: neustadtAvif, w: 1200, h: 674, titleKey: 'showcase.location3Title', descKey: 'showcase.location3Desc' },
+    { image: marcheNoel, imageAvif: marcheNoelAvif, w: 1200, h: 670, titleKey: 'showcase.location4Title', descKey: 'showcase.location4Desc' },
+    { image: barrageVauban, imageAvif: barrageVaubanAvif, w: 1200, h: 800, titleKey: 'showcase.location5Title', descKey: 'showcase.location5Desc' },
+    { image: rhineBorder, imageAvif: rhineBorderAvif, w: 1200, h: 757, titleKey: 'showcase.location6Title', descKey: 'showcase.location6Desc' }
   ];
 
   return (
@@ -28,9 +35,12 @@ const Showcase = () => {
           {locations.map((location, index) => (
             <div key={index} className="border-2 border-border rounded-lg overflow-hidden hover:border-primary transition-colors">
               <div className="h-64 overflow-hidden">
-                <img
+                <Picture
+                  avif={location.imageAvif}
                   src={location.image}
                   alt={t(location.titleKey)}
+                  width={location.w}
+                  height={location.h}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />

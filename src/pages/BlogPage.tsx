@@ -2,16 +2,26 @@ import { Link } from "react-router-dom";
 import { Calendar, User, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Picture from "@/components/ui/picture";
 import heroBg from "@/assets/hero-bg.webp";
+import heroBgAvif from "@/assets/hero-bg.avif";
 import { useLanguage } from "@/hooks/useLanguage";
 import imgEbike from "@/assets/Strasbourg on an E-Bike.webp";
+import imgEbikeAvif from "@/assets/Strasbourg on an E-Bike.avif";
 import imgKids from "@/assets/Strasbourg with Kids.webp";
+import imgKidsAvif from "@/assets/Strasbourg with Kids.avif";
 import imgWine from "@/assets/The Alsace Wine Route by E-Bike.webp";
+import imgWineAvif from "@/assets/The Alsace Wine Route by E-Bike.avif";
 import imgGermany from "@/assets/Ride Into Germany.webp";
+import imgGermanyAvif from "@/assets/Ride Into Germany.avif";
 import imgPortOfCall from "@/assets/blogs/Strasbourg Port of Call See the Essentials in Half a Day by E-Bike.webp";
+import imgPortOfCallAvif from "@/assets/blogs/Strasbourg Port of Call See the Essentials in Half a Day by E-Bike.avif";
 import imgChristmasMarket from "@/assets/blogs/Strasbourg's Christmas Market by E-Bike The Practical Guide generate image.webp";
+import imgChristmasMarketAvif from "@/assets/blogs/Strasbourg's Christmas Market by E-Bike The Practical Guide generate image.avif";
 import imgSegway from "@/assets/blogs/E-Bike or Segway in Strasbourg Which Should You Choose generate image.webp";
+import imgSegwayAvif from "@/assets/blogs/E-Bike or Segway in Strasbourg Which Should You Choose generate image.avif";
 import imgConnectedSafety from "@/assets/blogs/Connected E-Bikes How VéloRouge Keeps Every Ride in Strasbourg Safe.webp";
+import imgConnectedSafetyAvif from "@/assets/blogs/Connected E-Bikes How VéloRouge Keeps Every Ride in Strasbourg Safe.avif";
 
 const categoryStyles: Record<string, string> = {
   "City Guide":    "bg-blue-900/60 text-blue-300 border border-blue-700/50",
@@ -37,6 +47,7 @@ export const blogPosts = [
     slug: "strasbourg-ebike-where-to-ride",
     category: "City Guide",
     image: imgEbike,
+    imageAvif: imgEbikeAvif,
     author: "Prashant K.",
     date: { en: "April 5, 2025", fr: "5 avril 2025" },
     title: {
@@ -98,6 +109,7 @@ export const blogPosts = [
     slug: "strasbourg-with-kids-ebike",
     category: "Family",
     image: imgKids,
+    imageAvif: imgKidsAvif,
     author: "Prashant K.",
     date: { en: "April 12, 2025", fr: "12 avril 2025" },
     title: {
@@ -162,6 +174,7 @@ export const blogPosts = [
     slug: "alsace-wine-route-ebike",
     category: "Route",
     image: imgWine,
+    imageAvif: imgWineAvif,
     author: "Prashant K.",
     date: { en: "April 20, 2025", fr: "20 avril 2025" },
     title: {
@@ -225,6 +238,7 @@ export const blogPosts = [
     slug: "cross-border-ebike-strasbourg-germany",
     category: "Cross-Border",
     image: imgGermany,
+    imageAvif: imgGermanyAvif,
     author: "Prashant K.",
     date: { en: "April 28, 2025", fr: "28 avril 2025" },
     title: {
@@ -286,6 +300,7 @@ export const blogPosts = [
     slug: "strasbourg-en-escale-croisiere-velo-electrique",
     category: "Experience",
     image: imgPortOfCall,
+    imageAvif: imgPortOfCallAvif,
     author: "Prashant K.",
     date: { en: "May 6, 2025", fr: "6 mai 2025" },
     title: {
@@ -337,6 +352,7 @@ export const blogPosts = [
     slug: "marche-noel-strasbourg-velo-electrique",
     category: "Seasonal",
     image: imgChristmasMarket,
+    imageAvif: imgChristmasMarketAvif,
     author: "Prashant K.",
     date: { en: "May 13, 2025", fr: "13 mai 2025" },
     title: {
@@ -388,6 +404,7 @@ export const blogPosts = [
     slug: "velo-electrique-ou-segway-strasbourg",
     category: "Experience",
     image: imgSegway,
+    imageAvif: imgSegwayAvif,
     author: "Prashant K.",
     date: { en: "May 20, 2025", fr: "20 mai 2025" },
     title: {
@@ -441,6 +458,7 @@ export const blogPosts = [
     slug: "velo-electrique-connecte-securite-strasbourg",
     category: "Safety",
     image: imgConnectedSafety,
+    imageAvif: imgConnectedSafetyAvif,
     author: "Prashant K.",
     date: { en: "May 27, 2025", fr: "27 mai 2025" },
     title: {
@@ -504,7 +522,7 @@ const BlogPage = () => {
 
       {/* ── Hero Banner ── */}
       <section className="relative min-h-[55vh] flex items-end pb-16 bg-dark overflow-hidden pt-24">
-        <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-25" />
+        <Picture avif={heroBgAvif} src={heroBg} alt="" width={1920} height={1088} loading="lazy" className="absolute inset-0 w-full h-full object-cover opacity-25" />
         <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/70 to-transparent" />
         <div className="container relative z-10 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
           <div>
@@ -535,7 +553,8 @@ const BlogPage = () => {
             </p>
             <Link to={`/blog/${featured.slug}`} className="group grid md:grid-cols-2 gap-0 items-stretch">
               <div className="aspect-[4/3] md:aspect-auto overflow-hidden bg-muted relative">
-                <img
+                <Picture
+                  avif={featured.imageAvif}
                   src={featured.image}
                   alt={featured.title[lang]}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -582,7 +601,8 @@ const BlogPage = () => {
               {rest.map((post) => (
                 <Link key={post.slug} to={`/blog/${post.slug}`} className="group block">
                   <div className="aspect-[3/2] overflow-hidden bg-muted mb-5 relative">
-                    <img
+                    <Picture
+                      avif={post.imageAvif}
                       src={post.image}
                       alt={post.title[lang]}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"

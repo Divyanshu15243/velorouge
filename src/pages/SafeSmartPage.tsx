@@ -1,8 +1,10 @@
 import Navbar from "@/components/Navbar";
 import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
+import Picture from "@/components/ui/picture";
 import smartHelmet from "@/assets/smart-helmet.webp";
 import smartGps from "@/assets/tech&saftey.webp";
+import smartGpsAvif from "@/assets/tech&saftey.avif";
 import { Shield, MapPin, Smartphone, Eye, Zap, Wifi } from "lucide-react";
 import { useTranslation } from 'react-i18next';
 
@@ -88,7 +90,7 @@ const SafeSmartPage = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="aspect-square overflow-hidden md:order-1 flex items-center justify-center">
-            <img src={smartGps} alt="GPS navigation on bike" className="w-full h-full object-contain" width={1200} height={2133} loading="lazy" />
+            <Picture avif={smartGpsAvif} src={smartGps} alt="GPS navigation on bike" className="w-full h-full object-contain" width={1200} height={2133} loading="lazy" />
           </div>
           <div className="md:order-2">
             <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">

@@ -1,4 +1,6 @@
+import Picture from "@/components/ui/picture";
 import differenceimg from "@/assets/difference.webp";
+import differenceimgAvif from "@/assets/difference.avif";
 import { useTranslation } from "react-i18next";
 
 const Difference = () => {
@@ -42,7 +44,8 @@ const Difference = () => {
       </div>
       
       <div className="bg-[#1A1612] relative overflow-hidden flex items-center justify-center min-h-[400px] md:min-h-0">
-        <img
+        <Picture
+          avif={differenceimgAvif}
           src={differenceimg}
           alt="VeloRouge mechanic maintaining a bicycle"
           className="max-w-[80%] max-h-[80%] object-contain"

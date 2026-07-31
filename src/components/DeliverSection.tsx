@@ -1,4 +1,6 @@
+import Picture from "@/components/ui/picture";
 import deliverBike from "@/assets/deliver-bike.webp";
+import deliverBikeAvif from "@/assets/deliver-bike.avif";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
@@ -38,7 +40,7 @@ const DeliverSection = () => {
             </Link>
           </div>
           <div className="aspect-square overflow-hidden rounded-full">
-            <img src={deliverBike} alt="Cyclist in city" className="w-full h-full object-cover" width={640} height={800} loading="lazy" />
+            <Picture avif={deliverBikeAvif} src={deliverBike} alt="Cyclist in city" className="w-full h-full object-cover" width={640} height={800} loading="lazy" />
           </div>
         </div>
       </div>

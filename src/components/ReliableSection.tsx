@@ -1,4 +1,6 @@
+import Picture from "@/components/ui/picture";
 import reliableImg from "@/assets/8.webp";
+import reliableImgAvif from "@/assets/8.avif";
 import { useTranslation } from "react-i18next";
 
 const ReliableSection = () => {
@@ -24,7 +26,8 @@ const ReliableSection = () => {
             </p>
           </div>
           <div className="aspect-[4/5] overflow-hidden">
-            <img
+            <Picture
+              avif={reliableImgAvif}
               src={reliableImg}
               alt="Cyclist riding through Strasbourg"
               className="w-full h-full object-cover"

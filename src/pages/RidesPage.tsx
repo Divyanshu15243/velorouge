@@ -2,10 +2,15 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
+import Picture from "@/components/ui/picture";
 import rideSundowner from "@/assets/Circuit Culturel.webp";
+import rideSundownerAvif from "@/assets/Circuit Culturel.avif";
 import rideRiver from "@/assets/Forêt de Robertsau & Rhin.webp";
+import rideRiverAvif from "@/assets/Forêt de Robertsau & Rhin.avif";
 import rideLocal from "@/assets/Découverte Campagnarde.webp";
+import rideLocalAvif from "@/assets/Découverte Campagnarde.avif";
 import abt1 from "@/assets/abt1.webp";
+import abt1Avif from "@/assets/abt1.avif";
 import { useTranslation } from "react-i18next";
 import { trackAddToCart } from "@/utils/analytics";
 
@@ -15,6 +20,9 @@ const RidesPage = () => {
   const rides = [
     {
       img: rideRiver,
+      imgAvif: rideRiverAvif,
+      imgW: 1200,
+      imgH: 1594,
       objPos: "object-bottom",
       title: t('rides.ride1Title'),
       subtitle: t('ridesPage.ride1Subtitle'),
@@ -27,6 +35,9 @@ const RidesPage = () => {
     },
     {
       img: abt1,
+      imgAvif: abt1Avif,
+      imgW: 1200,
+      imgH: 675,
       objPos: "object-center",
       title: t('rides.ride2Title'),
       subtitle: t('ridesPage.ride2Subtitle'),
@@ -39,6 +50,9 @@ const RidesPage = () => {
     },
     {
       img: rideSundowner,
+      imgAvif: rideSundownerAvif,
+      imgW: 1200,
+      imgH: 1594,
       objPos: "object-bottom",
       title: t('rides.ride3Title'),
       subtitle: t('ridesPage.ride3Subtitle'),
@@ -51,6 +65,9 @@ const RidesPage = () => {
     },
     {
       img: rideLocal,
+      imgAvif: rideLocalAvif,
+      imgW: 1200,
+      imgH: 1594,
       objPos: "object-bottom",
       title: t('rides.ride4Title'),
       subtitle: t('ridesPage.ride4Subtitle'),
@@ -93,7 +110,15 @@ const RidesPage = () => {
           {rides.map((r, i) => (
             <div key={r.title} className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${i % 2 === 1 ? "md:direction-rtl" : ""}`}>
               <div className={`aspect-[4/3] overflow-hidden ${i % 2 === 1 ? "md:order-2" : ""}`}>
-                <img src={r.img} alt={r.title} className={`w-full h-full object-cover ${r.objPos} hover:scale-105 transition-transform duration-500`} loading="lazy" />
+                <Picture
+                  avif={r.imgAvif}
+                  src={r.img}
+                  alt={r.title}
+                  width={r.imgW}
+                  height={r.imgH}
+                  className={`w-full h-full object-cover ${r.objPos} hover:scale-105 transition-transform duration-500`}
+                  loading="lazy"
+                />
               </div>
               <div className={i % 2 === 1 ? "md:order-1" : ""}>
                 {r.tag && (

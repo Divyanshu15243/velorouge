@@ -1,6 +1,17 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
+import Picture from "@/components/ui/picture";
 import heroBg from "@/assets/hero-bg.webp";
+import heroBgAvif from "@/assets/hero-bg.avif";
+import heroBg640 from "@/assets/hero-bg-640w.webp";
+import heroBg1024 from "@/assets/hero-bg-1024w.webp";
+import heroBg1600 from "@/assets/hero-bg-1600w.webp";
+import heroBgAvif640 from "@/assets/hero-bg-640w.avif";
+import heroBgAvif1024 from "@/assets/hero-bg-1024w.avif";
+import heroBgAvif1600 from "@/assets/hero-bg-1600w.avif";
+
+const heroBgWebpSrcSet = `${heroBg640} 640w, ${heroBg1024} 1024w, ${heroBg1600} 1600w, ${heroBg} 1920w`;
+const heroBgAvifSrcSet = `${heroBgAvif640} 640w, ${heroBgAvif1024} 1024w, ${heroBgAvif1600} 1600w, ${heroBgAvif} 1920w`;
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -8,11 +19,16 @@ const Hero = () => {
   return (
   <section className="relative min-h-screen flex items-center justify-center bg-dark overflow-hidden">
     <Helmet>
-      <link rel="preload" as="image" href={heroBg} fetchPriority="high" />
+      <link rel="preload" as="image" imageSrcSet={heroBgAvifSrcSet} imageSizes="100vw" type="image/avif" fetchPriority="high" />
     </Helmet>
-    <img
+    <Picture
+      avifSrcSet={heroBgAvifSrcSet}
+      webpSrcSet={heroBgWebpSrcSet}
+      sizes="100vw"
       src={heroBg}
       alt="Strasbourg"
+      width={1920}
+      height={1088}
       className="absolute inset-0 w-full h-full object-cover opacity-40"
       fetchPriority="high"
     />
