@@ -453,12 +453,15 @@ export const translations = {
         reserve: "Reserve"
       },
       founderStory: {
-        title: "Founder Story",
-        quote: "My name is Prashant. I discovered Strasbourg on an electric bike two years ago — and I never wanted to see it any other way again. VéloRouge was born from this belief: the best way to discover a city is at your own pace, guided by curiosity. Not by a guide.",
-        para2: "That first ride changed everything. I remember crossing the Ponts Couverts, the morning light hitting the water, and thinking — nobody told me to stop here. I stopped because I felt it. That feeling is what VéloRouge is built around.",
-        para3: "We spent months designing audio routes that don't just tell you what you're looking at — they make you feel why it matters. Every stop, every story, every turn was chosen by someone who loves this city deeply.",
-        para4: "Whether you have four hours or three days, VéloRouge gives you Strasbourg the way it deserves to be seen: slowly, freely, and with your own eyes.",
-        signature: "— Prashant, Founder of VéloRouge"
+        title: "Meet the Founder!",
+        intro: "I'm Prashant Kothari, the founder of TourDeWheel, a Strasbourg-based mobility company built on a simple belief: the right bike, with the right support, can change how people move — and how they earn.",
+        communitiesIntro: "At TourDeWheel (VéloRouge), we serve three distinct communities with the same level of care:",
+        community1: "Curated tours for tourists who want to experience Strasbourg beyond the postcard views",
+        community2: "Daily and short-term rentals for locals and students who need reliable, flexible mobility",
+        community3: "Long-term rentals for delivery riders who depend on their bike for their livelihood",
+        quietMoments: "While visitors and corporate groups keep our doors busy, the moments that matter most to me are quieter. They happen when a delivery rider returns month after month, starts discussing longer commitments, asks about ownership, and relies on our maintenance guarantee so he never faces unexpected downtime or hidden costs.",
+        shift: "That shift — from testing a bike to trusting it as a work tool — is the heart of what we do. We remove friction so riders can focus on their work, protect their income, and keep moving without interruption.",
+        closing: "TourDeWheel is more than a rental company. It is a practical, human-scale response to the real needs of people who live, study, work, and deliver in Strasbourg every day."
       },
       cityStats: {
         stat1: "Visitors per year",
@@ -1098,12 +1101,15 @@ export const translations = {
         reserve: "Réserver"
       },
       founderStory: {
-        title: "Histoire du fondateur",
-        quote: "Je m'appelle Prashant. J'ai découvert Strasbourg sur un vélo électrique il y a deux ans — et je n'ai plus jamais voulu la voir autrement. VéloRouge est né de cette conviction : la plus belle façon de découvrir une ville, c'est à votre propre rythme, guidé par la curiosité. Pas par un guide.",
-        para2: "Cette première balade a tout changé. Je me souviens d'avoir traversé les Ponts Couverts, la lumière du matin se reflétant sur l'eau, en me disant — personne ne m'avait dit de m'arrêter ici. Je me suis arrêté parce que je l'avais ressenti. C'est ce sentiment que VéloRouge cherche à recréer.",
-        para3: "Nous avons passé des mois à concevoir des circuits audio qui ne se contentent pas de vous expliquer ce que vous regardez — ils vous font ressentir pourquoi c'est important. Chaque arrêt, chaque histoire, chaque virage a été choisi par quelqu'un qui aime cette ville profondément.",
-        para4: "Que vous ayez quatre heures ou trois jours, VéloRouge vous offre Strasbourg telle qu'elle mérite d'être vue : lentement, librement, et avec vos propres yeux.",
-        signature: "— Prashant, fondateur de VéloRouge"
+        title: "Rencontrez le Fondateur !",
+        intro: "Je suis Prashant Kothari, le fondateur de TourDeWheel, une entreprise de mobilité basée à Strasbourg, fondée sur une conviction simple : le bon vélo, avec le bon accompagnement, peut changer la façon dont les gens se déplacent — et dont ils gagnent leur vie.",
+        communitiesIntro: "Chez TourDeWheel (VéloRouge), nous servons trois communautés distinctes avec le même niveau d'attention :",
+        community1: "Des visites organisées pour les touristes qui souhaitent découvrir Strasbourg au-delà des cartes postales",
+        community2: "Des locations journalières et de courte durée pour les habitants et les étudiants qui ont besoin d'une mobilité fiable et flexible",
+        community3: "Des locations longue durée pour les livreurs qui dépendent de leur vélo pour gagner leur vie",
+        quietMoments: "Si les visiteurs et les groupes d'entreprises occupent notre quotidien, les moments qui comptent le plus pour moi sont plus discrets. Ils se produisent lorsqu'un livreur revient mois après mois, commence à évoquer un engagement plus long, s'interroge sur l'achat de son vélo, et compte sur notre garantie d'entretien pour ne jamais subir d'immobilisation imprévue ni de frais cachés.",
+        shift: "Ce basculement — du simple essai d'un vélo à la confiance en un véritable outil de travail — est au cœur de notre métier. Nous supprimons les frictions pour que les livreurs puissent se concentrer sur leur travail, protéger leurs revenus et continuer d'avancer sans interruption.",
+        closing: "TourDeWheel est bien plus qu'une entreprise de location. C'est une réponse concrète et à taille humaine aux besoins réels des personnes qui vivent, étudient, travaillent et livrent à Strasbourg chaque jour."
       },
       cityStats: {
         stat1: "Visiteurs par an",

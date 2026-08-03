@@ -17,28 +17,36 @@ const FounderStory = () => {
             <Picture
               avif={founderImgAvif}
               src={founderImg}
-              alt="Founder of VéloRouge"
+              alt="Prashant Kothari, founder of TourDeWheel (VéloRouge)"
               className="w-full h-full object-cover"
-              width={576}
-              height={720}
+              width={900}
+              height={675}
               loading="lazy"
             />
           </div>
           <div className="space-y-5">
-            <p className="text-lg md:text-xl leading-relaxed text-foreground font-medium italic">
-              "{t('founderStory.quote')}"
+            <p className="text-base md:text-lg leading-relaxed text-foreground">
+              {t('founderStory.intro')}
             </p>
             <p className="text-base md:text-lg leading-relaxed text-foreground">
-              {t('founderStory.para2')}
+              {t('founderStory.communitiesIntro')}
+            </p>
+            <ul className="space-y-3">
+              {[t('founderStory.community1'), t('founderStory.community2'), t('founderStory.community3')].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
+                  <span className="text-base md:text-lg leading-relaxed text-foreground">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-base md:text-lg leading-relaxed text-foreground">
+              {t('founderStory.quietMoments')}
             </p>
             <p className="text-base md:text-lg leading-relaxed text-foreground">
-              {t('founderStory.para3')}
+              {t('founderStory.shift')}
             </p>
-            <p className="text-base md:text-lg leading-relaxed text-foreground">
-              {t('founderStory.para4')}
-            </p>
-            <p className="pt-2 text-base font-semibold text-primary">
-              {t('founderStory.signature')}
+            <p className="text-base md:text-lg leading-relaxed text-foreground font-medium">
+              {t('founderStory.closing')}
             </p>
           </div>
         </div>

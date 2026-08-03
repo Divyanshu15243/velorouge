@@ -61,7 +61,7 @@ const FMDPage = () => {
             </div>
           </div>
           <div className="aspect-square overflow-hidden rounded-lg flex items-center justify-center">
-            <Picture avif={cycleImgAvif} src={cycleImg} alt="Professional on electric bike" className="w-full h-full object-contain mix-blend-multiply" width={1200} height={2133} loading="lazy" />
+            <Picture avif={cycleImgAvif} src={cycleImg} alt="Professional on electric bike" className="w-full h-full object-contain mix-blend-multiply" width={928} height={1152} loading="lazy" />
           </div>
         </div>
       </div>

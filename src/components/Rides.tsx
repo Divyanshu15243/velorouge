@@ -4,8 +4,8 @@ import { Clock } from "lucide-react";
 import Picture from "@/components/ui/picture";
 import rideSundowner from "@/assets/Circuit Culturel.webp";
 import rideSundownerAvif from "@/assets/Circuit Culturel.avif";
-import rideMarket from "@/assets/Boucle des Canaux.webp";
-import rideMarketAvif from "@/assets/Boucle des Canaux.avif";
+import rideMarket from "@/assets/minica-hero.webp";
+import rideMarketAvif from "@/assets/minica-hero.avif";
 import rideRiver from "@/assets/Forêt de Robertsau & Rhin.webp";
 import rideRiverAvif from "@/assets/Forêt de Robertsau & Rhin.avif";
 import rideLocal from "@/assets/Découverte Campagnarde.webp";
@@ -18,6 +18,8 @@ const Rides = () => {
     {
       img: rideRiver,
       imgAvif: rideRiverAvif,
+      imgW: 1200,
+      imgH: 1594,
       title: t('rides.ride1Title'),
       price: t('ridesPage.price1'),
       priceLabel: t('ridesPage.price1Label'),
@@ -30,6 +32,8 @@ const Rides = () => {
     {
       img: rideMarket,
       imgAvif: rideMarketAvif,
+      imgW: 997,
+      imgH: 1577,
       title: t('rides.ride2Title'),
       price: t('ridesPage.price2'),
       priceLabel: t('ridesPage.price2Label'),
@@ -42,6 +46,8 @@ const Rides = () => {
     {
       img: rideSundowner,
       imgAvif: rideSundownerAvif,
+      imgW: 1200,
+      imgH: 1594,
       title: t('rides.ride3Title'),
       price: t('ridesPage.price3'),
       priceLabel: t('ridesPage.price3Label'),
@@ -54,6 +60,8 @@ const Rides = () => {
     {
       img: rideLocal,
       imgAvif: rideLocalAvif,
+      imgW: 1200,
+      imgH: 1594,
       title: t('rides.ride4Title'),
       price: t('ridesPage.price4'),
       priceLabel: t('ridesPage.price4Label'),
@@ -82,8 +90,8 @@ const Rides = () => {
                 avif={r.imgAvif}
                 src={r.img}
                 alt={r.title}
-                width={1200}
-                height={1594}
+                width={r.imgW}
+                height={r.imgH}
                 className="w-full h-full object-cover object-bottom group-hover:scale-105 transition-transform duration-700"
                 loading="lazy"
               />
