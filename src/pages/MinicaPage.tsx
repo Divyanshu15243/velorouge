@@ -81,31 +81,25 @@ const MinicaPage = () => {
   const comparisonHeaders = [
     t("minica.comparisonHeaderFeature"),
     t("minica.comparisonHeaderMinica"),
-    "Douze V2",
-    "Douze Hêta",
-    "Gaya Original Long",
-    "Gaya Incroyable Long",
     "Urban Arrow Family",
     "Babboe Curve/Go",
   ];
 
   const comparisonRows = [
-    [t("minica.rowPrice"), PRICE, "€4,950–€6,000+", "€5,990–€7,200+", "€2,800", "€3,400", "€5,000–€8,000+", "€4,400–€5,100"],
-    [t("minica.rowType"), t("minica.typeMinica"), t("minica.typeDouze"), t("minica.typeDouze"), t("minica.typeGaya"), t("minica.typeGaya"), t("minica.typeUrbanArrow"), t("minica.typeBabboe")],
-    [t("minica.rowMotor"), t("minica.motorMinica"), t("minica.motorDouzeV2"), t("minica.motorDouzeHeta"), t("minica.motorGaya"), t("minica.motorGaya"), t("minica.motorUrbanArrow"), t("minica.motorBabboe")],
-    [t("minica.rowBattery"), t("minica.batteryMinica"), t("minica.batteryDouze"), t("minica.batteryDouze"), t("minica.batteryGaya"), t("minica.batteryGaya"), t("minica.batteryUrbanArrow"), t("minica.batteryBabboe")],
-    [t("minica.rowRange"), t("minica.rangeMinica"), t("minica.rangeDouze"), t("minica.rangeDouze"), t("minica.rangeGaya"), t("minica.rangeGaya"), t("minica.rangeUrbanArrow"), t("minica.rangeBabboe")],
-    [t("minica.rowLoad"), t("minica.loadMinica"), t("minica.loadDouzeV2"), t("minica.loadDouzeHeta"), t("minica.loadGaya"), t("minica.loadGaya"), t("minica.loadUrbanArrow"), t("minica.loadBabboe")],
-    [t("minica.rowGear"), t("minica.gearMinica"), t("minica.gearDouze"), t("minica.gearDouze"), t("minica.gearGaya"), t("minica.gearGaya"), t("minica.gearUrbanArrow"), t("minica.gearBabboe")],
-    [t("minica.rowFrame"), t("minica.frameAluminium"), t("minica.frameAluminium"), t("minica.frameAluminium"), t("minica.frameAluminium"), t("minica.frameAluminium"), t("minica.frameAluminium"), t("minica.frameSteel")],
-    [t("minica.rowWheels"), t("minica.wheels20"), t("minica.wheels2026"), t("minica.wheels2026"), t("minica.wheels20"), t("minica.wheels20"), t("minica.wheels2026"), t("minica.wheels2026")],
-    [t("minica.rowCapacity"), t("minica.capacityMinica"), t("minica.capacityDouzeV2"), t("minica.capacityDouzeHeta"), t("minica.capacityGaya"), t("minica.capacityGaya"), t("minica.capacityUrbanArrow"), t("minica.capacityBabboe")],
+    [t("minica.rowPrice"), PRICE, "€5,000–€8,000+", "€4,400–€5,100"],
+    [t("minica.rowType"), t("minica.typeMinica"), t("minica.typeUrbanArrow"), t("minica.typeBabboe")],
+    [t("minica.rowMotor"), t("minica.motorMinica"), t("minica.motorUrbanArrow"), t("minica.motorBabboe")],
+    [t("minica.rowBattery"), t("minica.batteryMinica"), t("minica.batteryUrbanArrow"), t("minica.batteryBabboe")],
+    [t("minica.rowRange"), t("minica.rangeMinica"), t("minica.rangeUrbanArrow"), t("minica.rangeBabboe")],
+    [t("minica.rowLoad"), t("minica.loadMinica"), t("minica.loadUrbanArrow"), t("minica.loadBabboe")],
+    [t("minica.rowGear"), t("minica.gearMinica"), t("minica.gearUrbanArrow"), t("minica.gearBabboe")],
+    [t("minica.rowFrame"), t("minica.frameAluminium"), t("minica.frameAluminium"), t("minica.frameSteel")],
+    [t("minica.rowWheels"), t("minica.wheels20"), t("minica.wheels2026"), t("minica.wheels2026")],
+    [t("minica.rowCapacity"), t("minica.capacityMinica"), t("minica.capacityUrbanArrow"), t("minica.capacityBabboe")],
   ];
 
   const takeaways = [
     { rank: "1", name: t("minica.takeaway1Name"), desc: t("minica.takeaway1Desc") },
-    { rank: "2", name: t("minica.takeaway2Name"), desc: t("minica.takeaway2Desc") },
-    { rank: "3", name: t("minica.takeaway3Name"), desc: t("minica.takeaway3Desc") },
   ];
 
   const bullets = [t("minica.bullet1", { savings: SAVINGS }), t("minica.bullet2"), t("minica.bullet3")];
@@ -345,12 +339,10 @@ const MinicaPage = () => {
           <h3 className="font-display text-2xl font-bold text-center mb-8">
             {t("minica.keyTakeawaysTitle", { price: PRICE })}
           </h3>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="max-w-xl mx-auto">
             {takeaways.map((tk) => (
-              <div key={tk.rank} className="rounded-xl border border-border bg-white p-6">
-                <div className="font-display text-lg font-bold mb-2">
-                  {tk.rank}. {tk.name}
-                </div>
+              <div key={tk.rank} className="rounded-xl border border-border bg-white p-6 text-center">
+                <div className="font-display text-lg font-bold mb-2">{tk.name}</div>
                 <p className="text-sm text-foreground/70 leading-relaxed">{tk.desc}</p>
               </div>
             ))}
