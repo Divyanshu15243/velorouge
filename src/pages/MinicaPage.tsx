@@ -38,7 +38,7 @@ const MinicaPage = () => {
   const models = [
     {
       id: "minica",
-      name: "minica",
+      name: "Minica",
       subtitle: t("minica.modelMinicaSubtitle"),
       img: sideImg,
       imgAvif: sideImgAvif,
@@ -47,7 +47,7 @@ const MinicaPage = () => {
     },
     {
       id: "minica-pet",
-      name: "minica pet",
+      name: "Minica Pet",
       subtitle: t("minica.modelPetSubtitle"),
       img: angleImg,
       imgAvif: angleImgAvif,
@@ -129,10 +129,11 @@ const MinicaPage = () => {
       body.append("access_key", "1b2e69b7-2037-4a79-9727-75b38b97c06e");
       body.append("name", formData.name);
       body.append("email", formData.email);
-      body.append("subject", "VéloRouge x minica — Pre-book request");
+      body.append("subject", "VéloRouge x Minica — Pre-book request");
+      const modelLabel = modelOptions.find((o) => o.value === formData.model)?.label ?? formData.model;
       body.append(
         "message",
-        `Model: ${formData.model}\nColour: ${formData.colour}\nName: ${formData.name}\nEmail: ${formData.email}`
+        `Model: ${modelLabel}\nColour: ${formData.colour}\nName: ${formData.name}\nEmail: ${formData.email}`
       );
 
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -142,7 +143,7 @@ const MinicaPage = () => {
       const data = await response.json();
       if (data.success) {
         setSubmitted(true);
-        trackAddToCart(`minica (${formData.model})`, 3999);
+        trackAddToCart(`Minica (${formData.model})`, 3999);
       } else {
         setError(true);
       }
@@ -178,9 +179,9 @@ const MinicaPage = () => {
               {t("minica.presentedBy")}
             </p>
             <h1 className="font-display text-5xl md:text-6xl font-bold leading-[1.05] mb-6">
-              minica &amp;
+              Minica &amp;
               <br />
-              minica pet
+              Minica Pet
             </h1>
             <p className="text-lg text-foreground/70 leading-relaxed max-w-md mb-8">{t("minica.heroDesc")}</p>
 
