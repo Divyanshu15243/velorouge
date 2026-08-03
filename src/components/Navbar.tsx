@@ -16,7 +16,7 @@ const Navbar = () => {
     { label: t('nav.about'), to: "/about" },
     { label: t('nav.visitors'), to: "/visitors" },
     { label: t('nav.residents'), to: "/residents" },
-    { label: t('nav.safeSmart'), to: "/safe-smart" },
+    { label: "Minica", to: "/minica" },
     { label: "Blog", to: "/blog" },
     { label: t('nav.contact'), to: "/contact" },
   ];

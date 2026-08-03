@@ -18,6 +18,7 @@ const RidesPage = lazy(() => import("./pages/RidesPage"));
 const SafeSmartPage = lazy(() => import("./pages/SafeSmartPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 const FMDPage = lazy(() => import("./pages/FMDPage"));
+const MinicaPage = lazy(() => import("./pages/MinicaPage"));
 const BlogPage = lazy(() => import("./pages/BlogPage"));
 const BlogDetailPage = lazy(() => import("./pages/BlogDetailPage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -47,6 +48,7 @@ const App = () => (
             <Route path="/residents" element={<FMDPage />} />
             <Route path="/fmd" element={<FMDPage />} />
             <Route path="/safe-smart" element={<SafeSmartPage />} />
+            <Route path="/minica" element={<MinicaPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:slug" element={<BlogDetailPage />} />
