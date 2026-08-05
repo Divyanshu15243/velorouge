@@ -39,18 +39,17 @@ const ContactPage = () => {
     setLoading(true);
     try {
       const formDataObj = new FormData();
-      formDataObj.append('access_key', '1b2e69b7-2037-4a79-9727-75b38b97c06e');
       formDataObj.append('name', `${formData.firstName} ${formData.lastName}`);
       formDataObj.append('email', formData.email);
-      formDataObj.append('subject', `VéloRouge Contact: ${formData.subject}`);
+      formDataObj.append('_subject', `VéloRouge Contact: ${formData.subject}`);
       formDataObj.append('message', formData.message);
 
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch('https://formspree.io/f/mkoqnnyn', {
         method: 'POST',
+        headers: { Accept: 'application/json' },
         body: formDataObj,
       });
-      const data = await response.json();
-      if (data.success) setSubmitted(true);
+      if (response.ok) setSubmitted(true);
     } catch (error) {
       console.error('Form submission error:', error);
     } finally {

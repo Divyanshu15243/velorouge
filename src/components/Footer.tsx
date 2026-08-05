@@ -8,27 +8,45 @@ import { useState, type FormEvent } from "react";
 const Footer = () => {
   const { t } = useTranslation();
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
 
-  const handleNewsletterSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleNewsletterSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const trimmedEmail = email.trim();
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailPattern.test(trimmedEmail)) {
+      setErrorMsg("Please enter a valid email address.");
       setStatus("error");
       return;
     }
 
-    const recipient = "Bonjour@velorouge.fr";
-    const subject = "Newsletter Subscription";
-    const body = `New newsletter subscription request from: ${trimmedEmail}`;
-    const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setStatus("loading");
+    try {
+      const body = new FormData();
+      body.append("email", trimmedEmail);
+      body.append("_subject", "VéloRouge Newsletter Subscription");
+      body.append("message", `New newsletter subscription request from: ${trimmedEmail}`);
 
-    window.location.href = mailtoLink;
-    setEmail("");
-    setStatus("success");
+      const response = await fetch("https://formspree.io/f/mkoqnnyn", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body,
+      });
+
+      if (response.ok) {
+        setEmail("");
+        setStatus("success");
+      } else {
+        setErrorMsg("Something went wrong. Please try again.");
+        setStatus("error");
+      }
+    } catch {
+      setErrorMsg("Network error. Please check your connection and try again.");
+      setStatus("error");
+    }
   };
   
   return (
@@ -54,17 +72,22 @@ const Footer = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={t('footer.emailPlaceholder')}
                 required
-                className="flex-1 bg-dark-surface border border-dark-surface rounded-none px-4 py-2.5 text-sm text-dark-foreground placeholder:text-dark-foreground/40 focus:outline-none focus:border-primary transition-colors"
+                disabled={status === "loading"}
+                className="flex-1 bg-dark-surface border border-dark-surface rounded-none px-4 py-2.5 text-sm text-dark-foreground placeholder:text-dark-foreground/40 focus:outline-none focus:border-primary transition-colors disabled:opacity-60"
               />
-              <button type="submit" className="bg-primary text-primary-foreground px-5 py-2.5 text-sm font-semibold hover:bg-primary/90 transition-colors whitespace-nowrap">
-                {t('footer.subscribe')}
+              <button
+                type="submit"
+                disabled={status === "loading"}
+                className="bg-primary text-primary-foreground px-5 py-2.5 text-sm font-semibold hover:bg-primary/90 transition-colors whitespace-nowrap disabled:opacity-60"
+              >
+                {status === "loading" ? "..." : t('footer.subscribe')}
               </button>
             </form>
             {status === "success" && (
-              <p className="mt-2 text-sm text-primary">Thanks! Your request has been prepared for the newsletter team.</p>
+              <p className="mt-2 text-sm text-primary">Thanks for subscribing!</p>
             )}
             {status === "error" && (
-              <p className="mt-2 text-sm text-red-400">Please enter a valid email address.</p>
+              <p className="mt-2 text-sm text-red-400">{errorMsg}</p>
             )}
           </div>
         </div>

@@ -120,22 +120,21 @@ const MinicaPage = () => {
     setError(false);
     try {
       const body = new FormData();
-      body.append("access_key", "1b2e69b7-2037-4a79-9727-75b38b97c06e");
       body.append("name", formData.name);
       body.append("email", formData.email);
-      body.append("subject", "VéloRouge x Minica — Pre-book request");
+      body.append("_subject", "VéloRouge x Minica — Pre-book request");
       const modelLabel = modelOptions.find((o) => o.value === formData.model)?.label ?? formData.model;
       body.append(
         "message",
         `Model: ${modelLabel}\nColour: ${formData.colour}\nName: ${formData.name}\nEmail: ${formData.email}`
       );
 
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("https://formspree.io/f/mkoqnnyn", {
         method: "POST",
+        headers: { Accept: "application/json" },
         body,
       });
-      const data = await response.json();
-      if (data.success) {
+      if (response.ok) {
         setSubmitted(true);
         trackAddToCart(`Minica (${formData.model})`, 3999);
       } else {
