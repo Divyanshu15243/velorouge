@@ -642,7 +642,22 @@ export const translations = {
         formErrorMsg: "Something went wrong — please try again.",
         reserveButton: "Reserve my Minica",
         sendingButton: "Sending…",
-        formFinePrint: "Offer valid till {{deadline}} · Delivery in October."
+        formFinePrint: "Offer valid till {{deadline}} · Delivery in October.",
+
+        savingsEyebrow: "Financing",
+        savingsTitle: "Savings for Employees",
+        savingsExampleTitle: "Real example (12-month Lease-to-Own)",
+        savingsRowPrice: "Price",
+        savingsRowAid: "Eurométropole assistance",
+        savingsRowRemaining: "Remaining",
+        savingsRowDeposit: "25% deposit",
+        savingsRowMonthly: "12 monthly payments",
+        savingsRowReimbursement: "Employer reimbursement (FMD)",
+        savingsReimbursementValue: "up to €75/month",
+        savingsResult: "→ Your real monthly cost: {{amount}}",
+        savingsResultAmount: "€140–150/month",
+        savingsBullet1: "We provide the FMD-compliant invoice ready for your HR department",
+        savingsBullet2: "Live in the Eurométropole? We handle the €500 assistance application for you"
       }
     }
   },
@@ -1290,7 +1305,22 @@ export const translations = {
         formErrorMsg: "Une erreur s'est produite — veuillez réessayer.",
         reserveButton: "Réserver ma Minica",
         sendingButton: "Envoi…",
-        formFinePrint: "Offre valable jusqu'au {{deadline}} · Livraison en octobre."
+        formFinePrint: "Offre valable jusqu'au {{deadline}} · Livraison en octobre.",
+
+        savingsEyebrow: "Financement",
+        savingsTitle: "Économies pour les salarié·es",
+        savingsExampleTitle: "Exemple concret (Lease-to-Own 12 mois)",
+        savingsRowPrice: "Prix",
+        savingsRowAid: "Aide Eurométropole",
+        savingsRowRemaining: "Reste",
+        savingsRowDeposit: "Acompte 25 %",
+        savingsRowMonthly: "12 mensualités",
+        savingsRowReimbursement: "Remboursement employeur (FMD)",
+        savingsReimbursementValue: "jusqu'à 75 € / mois",
+        savingsResult: "→ Votre vrai reste à charge : {{amount}}",
+        savingsResultAmount: "140–150 € / mois",
+        savingsBullet1: "Nous vous fournissons la facture conforme FMD prête pour vos RH",
+        savingsBullet2: "Vous habitez l'Eurométropole ? On s'occupe du dossier d'aide de 500 €"
       }
     }
   },

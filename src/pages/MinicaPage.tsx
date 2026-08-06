@@ -104,6 +104,17 @@ const MinicaPage = () => {
 
   const bullets = [t("minica.bullet1", { savings: SAVINGS }), t("minica.bullet2"), t("minica.bullet3")];
 
+  const savingsRows = [
+    { label: t("minica.savingsRowPrice"), value: "3 999 €" },
+    { label: t("minica.savingsRowAid"), value: "– 500 €" },
+    { label: t("minica.savingsRowRemaining"), value: "3 499 €" },
+    { label: t("minica.savingsRowDeposit"), value: "875 €" },
+    { label: t("minica.savingsRowMonthly"), value: "≈ 219 €" },
+    { label: t("minica.savingsRowReimbursement"), value: t("minica.savingsReimbursementValue") },
+  ];
+
+  const savingsBullets = [t("minica.savingsBullet1"), t("minica.savingsBullet2")];
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -348,6 +359,48 @@ const MinicaPage = () => {
           </div>
 
           <p className="text-center text-xs text-muted-foreground mt-8">{t("minica.comparisonDisclaimer")}</p>
+        </div>
+      </section>
+
+      {/* ── Savings for employees ── */}
+      <section id="savings" className="bg-[#FBF3E7] py-20">
+        <div className="container">
+          <p className="text-xs font-semibold text-primary tracking-[0.15em] uppercase mb-4 text-center">
+            {t("minica.savingsEyebrow")}
+          </p>
+          <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight text-center mb-10">
+            {t("minica.savingsTitle")}
+          </h2>
+
+          <div className="max-w-2xl mx-auto bg-white rounded-xl border border-border p-6 md:p-8">
+            <h3 className="font-display text-lg font-bold mb-6">{t("minica.savingsExampleTitle")}</h3>
+            <ul className="space-y-3">
+              {savingsRows.map((row) => (
+                <li
+                  key={row.label}
+                  className="flex items-center justify-between text-sm border-b border-border/60 pb-3 last:border-0 last:pb-0"
+                >
+                  <span className="text-foreground/70">{row.label}</span>
+                  <span className="font-semibold">{row.value}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-6 bg-primary/10 border border-primary rounded-lg p-4 text-center">
+              <p className="font-display text-lg font-bold text-primary">
+                {t("minica.savingsResult", { amount: t("minica.savingsResultAmount") })}
+              </p>
+            </div>
+          </div>
+
+          <div className="max-w-2xl mx-auto mt-8 space-y-3">
+            {savingsBullets.map((item) => (
+              <div key={item} className="flex items-start gap-2.5 text-sm">
+                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                <span className="text-foreground/80">{item}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
